@@ -1,0 +1,14 @@
+{
+  "parents": 46,
+  "children": 52,
+  "fragmented_rows": 0,
+  "min_observed_tokens": 35,
+  "max_observed_tokens": 439,
+  "over_limit": 0,
+  "schema_errors": 0,
+  "attribute_value_errors": 0,
+  "tokenizer_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "target_tokens": 480,
+  "max_tokens": 512,
+  "row_overlap": 0
+}

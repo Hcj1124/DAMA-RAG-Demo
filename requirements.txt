@@ -1,0 +1,6 @@
+# PDF conversion and DoclingDocument serialization
+docling==2.123.1
+
+# Direct imports used by build_table_chunks.py
+jsonschema==4.26.0
+transformers==5.16.1
