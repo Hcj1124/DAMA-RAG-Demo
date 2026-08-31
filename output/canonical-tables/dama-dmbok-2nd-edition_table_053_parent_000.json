@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:053:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      579
+    ],
+    "locators": {
+      "docling_ref": "#/tables/53",
+      "table_index": 53,
+      "bounding_boxes": [
+        {
+          "l": 83.17327117919922,
+          "t": 351.5339050292969,
+          "r": 546.0421752929688,
+          "b": 123.12835693359375,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Transition Phase\tDescription\nThe Ending\t• When we acknowledge that there are things we need to let go of. • When we recognize that we have lost something. • Example: Changing jobs - even when an individual chooses to change jobs, there are still losses such as losing close working friends.\nThe Neutral Zone\t• When the old way has finished but the new way isn't here yet. • When everything is in flux and it feels like no one knows what they should be doing. • When things are confusing and disorderly. • Example: Moving to a new house. The first few days or even months after moving, the new house is not home yet and things are quite probably in turmoil.\nThe New Beginning\t• When the new way feels comfortable, right, and the only way. • Example: Having a baby. After a few months in the neutral zone of turmoil, you come to a stage when you cannot imagine life without your new baby.",
+    "markdown": "| Transition Phase | Description |\n| --- | --- |\n| The Ending | • When we acknowledge that there are things we need to let go of. • When we recognize that we have lost something. • Example: Changing jobs - even when an individual chooses to change jobs, there are still losses such as losing close working friends. |\n| The Neutral Zone | • When the old way has finished but the new way isn't here yet. • When everything is in flux and it feels like no one knows what they should be doing. • When things are confusing and disorderly. • Example: Moving to a new house. The first few days or even months after moving, the new house is not home yet and things are quite probably in turmoil. |\n| The New Beginning | • When the new way feels comfortable, right, and the only way. • Example: Having a baby. After a few months in the neutral zone of turmoil, you come to a stage when you cannot imagine life without your new baby. |",
+    "structured": {
+      "num_rows": 4,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Transition Phase",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 98.28,
+            "t": 447.72648,
+            "r": 170.61549599999998,
+            "b": 456.36798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 340.2,
+            "t": 447.72648,
+            "r": 389.5438320000002,
+            "b": 456.36798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The Ending",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 459.36647999999997,
+            "r": 136.858812,
+            "b": 467.9063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "• When we acknowledge that there are things we need to let go of. • When we recognize that we have lost something. • Example: Changing jobs - even when an individual chooses to change jobs, there are still losses such as losing close working friends.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 207.83999999999997,
+            "t": 462.588,
+            "r": 529.7581559999999,
+            "b": 516.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The Neutral Zone",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 519.8464799999999,
+            "r": 160.90125599999993,
+            "b": 528.3863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "• When the old way has finished but the new way isn't here yet. • When everything is in flux and it feels like no one knows what they should be doing. • When things are confusing and disorderly. • Example: Moving to a new house. The first few days or even months after moving, the new house is not home yet and things are quite probably in turmoil.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 207.83999999999997,
+            "t": 523.068,
+            "r": 537.8207760000016,
+            "b": 621.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The New Beginning",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 625.44648,
+            "r": 171.05945999999983,
+            "b": 633.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "• When the new way feels comfortable, right, and the only way. • Example: Having a baby. After a few months in the neutral zone of turmoil, you come to a stage when you cannot imagine life without your new baby.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 207.84,
+            "t": 628.668,
+            "r": 529.289,
+            "b": 667.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 34 Bridges's Transition Phases"
+    ],
+    "num_rows": 4,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

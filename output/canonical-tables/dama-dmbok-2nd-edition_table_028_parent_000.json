@@ -1,0 +1,768 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:028:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      168
+    ],
+    "locators": {
+      "docling_ref": "#/tables/28",
+      "table_index": 28,
+      "bounding_boxes": [
+        {
+          "l": 65.6384048461914,
+          "t": 334.0093994140625,
+          "r": 527.0507202148438,
+          "b": 140.35797119140625,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "#\tCategory\tTotal score\tModel score\t%\tComments\n1\tHow well does the model capture the requirements?\t15\t\t\t\n2\tHow complete is the model?\t15\t\t\t\n3\tHow well does the model match its scheme?\t10\t\t\t\n4\tHow structurally sound is the model?\t15\t\t\t\n5\tHow well does the model leverage generic structures?\t10\t\t\t\n6\tHow well does the model follow naming standards?\t5\t\t\t\n7\tHow well has the model been arranged for readability?\t5\t\t\t\n8\tHow good are the definitions?\t10\t\t\t\n9\tHow consistent is the model with the enterprise?\t5\t\t\t\n10\tHow well does the metadata match the data?\t10\t\t\t\n\tTOTAL SCORE\t100\t\t\t",
+    "markdown": "| # | Category | Total score | Model score | % | Comments |\n| --- | --- | --- | --- | --- | --- |\n| 1 | How well does the model capture the requirements? | 15 |  |  |  |\n| 2 | How complete is the model? | 15 |  |  |  |\n| 3 | How well does the model match its scheme? | 10 |  |  |  |\n| 4 | How structurally sound is the model? | 15 |  |  |  |\n| 5 | How well does the model leverage generic structures? | 10 |  |  |  |\n| 6 | How well does the model follow naming standards? | 5 |  |  |  |\n| 7 | How well has the model been arranged for readability? | 5 |  |  |  |\n| 8 | How good are the definitions? | 10 |  |  |  |\n| 9 | How consistent is the model with the enterprise? | 5 |  |  |  |\n| 10 | How well does the metadata match the data? | 10 |  |  |  |\n|  | TOTAL SCORE | 100 |  |  |  |",
+    "structured": {
+      "num_rows": 12,
+      "num_cols": 6,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "#",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 78.0,
+            "t": 465.36647999999997,
+            "r": 82.98,
+            "b": 474.00798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Category",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 189.48,
+            "t": 465.36647999999997,
+            "r": 229.020204,
+            "b": 474.00798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Total score",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 339.6,
+            "t": 465.36647999999997,
+            "r": 362.40740400000004,
+            "b": 489.00798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Model score",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 386.88,
+            "t": 465.36647999999997,
+            "r": 414.12657599999994,
+            "b": 489.00798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "%",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 433.68,
+            "t": 465.36647999999997,
+            "r": 443.64,
+            "b": 474.00798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Comments",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 467.52,
+            "t": 465.36647999999997,
+            "r": 513.5083079999999,
+            "b": 474.00798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "1",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 493.80647999999997,
+            "r": 76.98,
+            "b": 502.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How well does the model capture the requirements?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 493.80647999999997,
+            "r": 307.80229200000036,
+            "b": 502.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "15",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 493.80647999999997,
+            "r": 339.41976,
+            "b": 502.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "2",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 507.48648,
+            "r": 76.98,
+            "b": 516.0263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How complete is the model?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 507.48648,
+            "r": 214.31175600000006,
+            "b": 516.0263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "15",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 507.48648,
+            "r": 339.41976,
+            "b": 516.0263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "3",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 521.28648,
+            "r": 76.98,
+            "b": 529.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How well does the model match its scheme?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 521.28648,
+            "r": 277.9143240000003,
+            "b": 529.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 521.28648,
+            "r": 339.41976,
+            "b": 529.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "4",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 534.96648,
+            "r": 76.98,
+            "b": 543.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How structurally sound is the model?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 534.96648,
+            "r": 249.45661199999952,
+            "b": 543.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "15",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 534.96648,
+            "r": 339.41976,
+            "b": 543.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "5",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 548.76648,
+            "r": 76.98,
+            "b": 557.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How well does the model leverage generic structures?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 548.76648,
+            "r": 316.0615800000003,
+            "b": 557.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 548.76648,
+            "r": 339.41976,
+            "b": 557.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "6",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 562.44648,
+            "r": 76.98,
+            "b": 570.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How well does the model follow naming standards?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 562.44648,
+            "r": 307.90189200000003,
+            "b": 570.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "5",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 562.44648,
+            "r": 334.38,
+            "b": 570.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "7",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 576.24648,
+            "r": 76.98,
+            "b": 584.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How well has the model been arranged for readability?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 576.24648,
+            "r": 270.0947280000004,
+            "b": 596.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "5",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 576.24648,
+            "r": 334.38,
+            "b": 584.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "8",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 601.44648,
+            "r": 76.98,
+            "b": 609.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How good are the definitions?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 601.44648,
+            "r": 220.89730799999964,
+            "b": 609.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 601.44648,
+            "r": 339.41976,
+            "b": 609.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "9",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 615.24648,
+            "r": 76.98,
+            "b": 623.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How consistent is the model with the enterprise?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 615.24648,
+            "r": 294.4578839999999,
+            "b": 623.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "5",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 615.24648,
+            "r": 334.38,
+            "b": 623.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 629.04648,
+            "r": 82.01976,
+            "b": 637.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How well does the metadata match the data?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 629.04648,
+            "r": 278.40172800000016,
+            "b": 637.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 629.04648,
+            "r": 339.41976,
+            "b": 637.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "TOTAL SCORE",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 11,
+          "end_row_offset_idx": 12,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.96,
+            "t": 642.72648,
+            "r": 167.368284,
+            "b": 651.2663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "100",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 11,
+          "end_row_offset_idx": 12,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 329.4,
+            "t": 642.72648,
+            "r": 344.45952,
+            "b": 651.2663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 11 Data Model Scorecard ® Template"
+    ],
+    "num_rows": 12,
+    "num_cols": 6,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

@@ -1,0 +1,540 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:058:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      612
+    ],
+    "locators": {
+      "docling_ref": "#/tables/58",
+      "table_index": 58,
+      "bounding_boxes": [
+        {
+          "l": 65.69097137451172,
+          "t": 622.4728546142578,
+          "r": 528.03466796875,
+          "b": 94.2689208984375,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Element\tDescription\nMessage\tThe information that needs to be conveyed.\nGoal / Objective\tThe desired outcome of conveying a message or set of messages (i.e., why the message needs to be conveyed).\nAudience\tGroup or individual targeted by the communication. The plan will have different objectives for different audiences.\nStyle\tBoth the level of formality and the level of detail in messages should be tailored to the audience. Executives need less detail than teams responsible for implementation of projects. Style is also influenced by organizational culture.\nChannel, Method, Medium\tThe means and format through which the message will be conveyed (e.g., web page, blog, email, one-on-one meetings, small group or large group presentations, lunch and learn sessions, workshops, etc.) Different media have different effects.\nTiming\tHow a message is received may be influenced by when it is received. Employees are more likely to read an email that comes out first thing Monday morning than one that comes out last thing on Friday afternoon. If the purpose of a communication is to gain support in advance to a budget cycle, then it should be timed in relation to the budget cycle. Information about impending changes to processes should be shared in a timely manner and in advance of a change taking place.\nFrequency\tMost messages need to be repeated in order to ensure all stakeholders hear them. The communications plan should schedule the sharing of messages so that repetition is helpful in getting the message across and does not become an annoyance. In addition, ongoing communications (for example, a newsletter) should be published based on an agreed-to schedule.\nMaterials\tThe communications plan should identify any materials that need to be created to execute the plan. For example, short and long versions of presentation and other written communications, elevator speeches, executive summaries, and marketing materials like posters, mugs, and other means of visual branding.\nCommunicators\tThe communications plan should identify the person or people who will deliver communications. Often the person delivering the message has a profound influence on the target audience. If the data management sponsor or other executive delivers a message, stakeholders will have a different response than if a lower level manager delivers it. Decisions about who will communicate which messages to which stakeholders should be based on the goals of the message.\nExpected Response\tThe communications plan should anticipate how different stakeholder groups, and sometimes how individual stakeholders, will respond to communications. This work can be accomplished by anticipating questions or objections and formulating responses. Thinking through potential responses is a good way to clarify goals and build robust messages to support them.\nMetrics\tThe communications plan should include measures of its own effectiveness. The goal is to ensure that people have understood and are willing and able to act on the messages in the plan. This can be accomplished through surveys, interviews, focus groups, and other feedback mechanisms. Changes in behavior are the ultimate test of a communications plan's success.\nBudget and Resource Plan\tThe communications plan must account for what resources are needed to carry out goals within a given budget.",
+    "markdown": "| Element | Description |\n| --- | --- |\n| Message | The information that needs to be conveyed. |\n| Goal / Objective | The desired outcome of conveying a message or set of messages (i.e., why the message needs to be conveyed). |\n| Audience | Group or individual targeted by the communication. The plan will have different objectives for different audiences. |\n| Style | Both the level of formality and the level of detail in messages should be tailored to the audience. Executives need less detail than teams responsible for implementation of projects. Style is also influenced by organizational culture. |\n| Channel, Method, Medium | The means and format through which the message will be conveyed (e.g., web page, blog, email, one-on-one meetings, small group or large group presentations, lunch and learn sessions, workshops, etc.) Different media have different effects. |\n| Timing | How a message is received may be influenced by when it is received. Employees are more likely to read an email that comes out first thing Monday morning than one that comes out last thing on Friday afternoon. If the purpose of a communication is to gain support in advance to a budget cycle, then it should be timed in relation to the budget cycle. Information about impending changes to processes should be shared in a timely manner and in advance of a change taking place. |\n| Frequency | Most messages need to be repeated in order to ensure all stakeholders hear them. The communications plan should schedule the sharing of messages so that repetition is helpful in getting the message across and does not become an annoyance. In addition, ongoing communications (for example, a newsletter) should be published based on an agreed-to schedule. |\n| Materials | The communications plan should identify any materials that need to be created to execute the plan. For example, short and long versions of presentation and other written communications, elevator speeches, executive summaries, and marketing materials like posters, mugs, and other means of visual branding. |\n| Communicators | The communications plan should identify the person or people who will deliver communications. Often the person delivering the message has a profound influence on the target audience. If the data management sponsor or other executive delivers a message, stakeholders will have a different response than if a lower level manager delivers it. Decisions about who will communicate which messages to which stakeholders should be based on the goals of the message. |\n| Expected Response | The communications plan should anticipate how different stakeholder groups, and sometimes how individual stakeholders, will respond to communications. This work can be accomplished by anticipating questions or objections and formulating responses. Thinking through potential responses is a good way to clarify goals and build robust messages to support them. |\n| Metrics | The communications plan should include measures of its own effectiveness. The goal is to ensure that people have understood and are willing and able to act on the messages in the plan. This can be accomplished through surveys, interviews, focus groups, and other feedback mechanisms. Changes in behavior are the ultimate test of a communications plan's success. |\n| Budget and Resource Plan | The communications plan must account for what resources are needed to carry out goals within a given budget. |",
+    "structured": {
+      "num_rows": 13,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Element",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.10888436436653,
+            "t": 172.995564609766,
+            "r": 126.66933730244637,
+            "b": 184.04969450831413,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 313.95287132263184,
+            "t": 173.05162523686886,
+            "r": 362.4721326828003,
+            "b": 183.43831133842468,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Message",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.93656685948372,
+            "t": 185.0381662249565,
+            "r": 103.3251409381628,
+            "b": 196.35909169912338,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The information that needs to be conveyed.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 158.10007837414742,
+            "t": 184.39666211605072,
+            "r": 305.4747008085251,
+            "b": 195.06748592853546,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Goal / Objective",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.59897965192795,
+            "t": 198.74458706378937,
+            "r": 140.43025848269463,
+            "b": 209.98238122463226,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The desired outcome of conveying a message or set of messages (i.e., why the message needs to be conveyed).",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.60717064142227,
+            "t": 197.563014626503,
+            "r": 505.9641201496124,
+            "b": 218.05102813243866,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Audience",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.95217687636614,
+            "t": 221.40334594249725,
+            "r": 109.8929734826088,
+            "b": 232.81980240345,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Group or individual targeted by the communication. The plan will have different objectives for different audiences.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.4836243391037,
+            "t": 221.4188061952591,
+            "r": 519.4690128564835,
+            "b": 242.160906791687,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Style",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.16232318431139,
+            "t": 245.71515202522278,
+            "r": 91.95091422647238,
+            "b": 257.1199405193329,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Both the level of formality and the level of detail in messages should be tailored to the audience. Executives need less detail than teams responsible for implementation of projects. Style is also influenced by organizational culture.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 156.08853721618652,
+            "t": 244.98160433769226,
+            "r": 501.5136995315552,
+            "b": 277.1048152446747,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Channel, Method, Medium",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.22131334245205,
+            "t": 280.28206634521484,
+            "r": 143.57330918312073,
+            "b": 302.61013317108154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The means and format through which the message will be conveyed (e.g., web page, blog, email, one-on-one meetings, small group or large group presentations, lunch and learn sessions, workshops, etc.) Different media have different effects.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 154.7719904780388,
+            "t": 280.5401463508606,
+            "r": 517.6025040149689,
+            "b": 312.4464101791382,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Timing",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.35100391507149,
+            "t": 316.14749240875244,
+            "r": 101.32505875825882,
+            "b": 327.6636734008789,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How a message is received may be influenced by when it is received. Employees are more likely to read an email that comes out first thing Monday morning than one that comes out last thing on Friday afternoon. If the purpose of a communication is to gain support in advance to a budget cycle, then it should be timed in relation to the budget cycle. Information about impending changes to processes should be shared in a timely manner and in advance of a change taking place.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.21816432476044,
+            "t": 317.4466886520386,
+            "r": 519.2894693613052,
+            "b": 382.7074918746948,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Frequency",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.01432049274445,
+            "t": 384.6840124130249,
+            "r": 111.32631643116474,
+            "b": 396.0682029724121,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Most messages need to be repeated in order to ensure all stakeholders hear them. The communications plan should schedule the sharing of messages so that repetition is helpful in getting the message across and does not become an annoyance. In addition, ongoing communications (for example, a newsletter) should be published based on an agreed-to schedule.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.30529248714447,
+            "t": 383.47784519195557,
+            "r": 517.1579686403275,
+            "b": 440.0569887161255,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Materials",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.82816609740257,
+            "t": 442.70447635650635,
+            "r": 108.47939890623093,
+            "b": 454.22906017303467,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The communications plan should identify any materials that need to be created to execute the plan. For example, short and long versions of presentation and other written communications, elevator speeches, executive summaries, and marketing materials like posters, mugs, and other means of visual branding.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.87141901254654,
+            "t": 441.8075141906738,
+            "r": 514.3755125999451,
+            "b": 487.8721752166748,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Communicators",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.33393269777298,
+            "t": 489.2391290664673,
+            "r": 134.4925113916397,
+            "b": 500.6761598587036,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The communications plan should identify the person or people who will deliver communications. Often the person delivering the message has a profound influence on the target audience. If the data management sponsor or other executive delivers a message, stakeholders will have a different response than if a lower level manager delivers it. Decisions about who will communicate which messages to which stakeholders should be based on the goals of the message.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 156.01323634386063,
+            "t": 486.94264030456543,
+            "r": 517.6337864398956,
+            "b": 556.938985824585,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Expected Response",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.96076358109713,
+            "t": 558.7309274673462,
+            "r": 109.77995333075523,
+            "b": 582.6739416122437,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The communications plan should anticipate how different stakeholder groups, and sometimes how individual stakeholders, will respond to communications. This work can be accomplished by anticipating questions or objections and formulating responses. Thinking through potential responses is a good way to clarify goals and build robust messages to support them.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 154.88240146636963,
+            "t": 558.9800224304199,
+            "r": 521.5293295383453,
+            "b": 616.8431930541992,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Metrics",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 11,
+          "end_row_offset_idx": 12,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.91634928435087,
+            "t": 616.801399230957,
+            "r": 101.1927142739296,
+            "b": 627.9777221679688,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The communications plan should include measures of its own effectiveness. The goal is to ensure that people have understood and are willing and able to act on the messages in the plan. This can be accomplished through surveys, interviews, focus groups, and other feedback mechanisms. Changes in behavior are the ultimate test of a communications plan's success.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 11,
+          "end_row_offset_idx": 12,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.9161121249199,
+            "t": 618.6184234619141,
+            "r": 519.4724550247192,
+            "b": 671.4521732330322,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Budget and Resource Plan",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 12,
+          "end_row_offset_idx": 13,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.53869007527828,
+            "t": 674.755805015564,
+            "r": 130.31265896558762,
+            "b": 697.7369947433472,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The communications plan must account for what resources are needed to carry out goals within a given budget.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 12,
+          "end_row_offset_idx": 13,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 154.46310406923294,
+            "t": 674.3036890029907,
+            "r": 506.68444204330444,
+            "b": 697.5355787277222,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 39 Communication Plan Elements"
+    ],
+    "num_rows": 13,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

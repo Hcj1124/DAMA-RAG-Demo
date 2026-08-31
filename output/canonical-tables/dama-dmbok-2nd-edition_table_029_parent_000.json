@@ -1,0 +1,635 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:029:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      184
+    ],
+    "locators": {
+      "docling_ref": "#/tables/29",
+      "table_index": 29,
+      "bounding_boxes": [
+        {
+          "l": 65.4169692993164,
+          "t": 635.6166534423828,
+          "r": 528.0045166015625,
+          "b": 487.749267578125,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Item\tACID\tBASE\nCasting (data structure)\tSchema must exist\tDynamic\nCasting (data structure)\tTable structure exists\tAdjust on the fly\nCasting (data structure)\tColumns data typed\tStore dissimilar data\nConsistency\tStrong Consistency Available\tStrong, Eventual, or None\nProcessing Focus\tTransactional\tKey-value stores\nProcessing Focus\tRow/Column\tWide-column stores\nHistory\t1970s application storage\t2000s unstructured storage\nScaling\tProduct Dependent\tAutomatically spreads data across commodity servers\nOrigin\tMixture\tOpen-source\nTransaction\tYes\tPossible",
+    "markdown": "| Item | ACID | BASE |\n| --- | --- | --- |\n| Casting (data structure) | Schema must exist | Dynamic |\n| Casting (data structure) | Table structure exists | Adjust on the fly |\n| Casting (data structure) | Columns data typed | Store dissimilar data |\n| Consistency | Strong Consistency Available | Strong, Eventual, or None |\n| Processing Focus | Transactional | Key-value stores |\n| Processing Focus | Row/Column | Wide-column stores |\n| History | 1970s application storage | 2000s unstructured storage |\n| Scaling | Product Dependent | Automatically spreads data across commodity servers |\n| Origin | Mixture | Open-source |\n| Transaction | Yes | Possible |",
+    "structured": {
+      "num_rows": 11,
+      "num_cols": 3,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Item",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 133.32,
+            "t": 163.44647999999995,
+            "r": 153.37147199999998,
+            "b": 172.08798727272722,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "ACID",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 284.16,
+            "t": 163.44647999999995,
+            "r": 309.59286,
+            "b": 172.08798727272722,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "BASE",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 437.52,
+            "t": 163.44647999999995,
+            "r": 463.601256,
+            "b": 172.08798727272722,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Casting (data structure)",
+          "row_span": 3,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.36,
+            "t": 175.32647999999995,
+            "r": 175.14022799999992,
+            "b": 183.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Schema must exist",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 175.08647999999994,
+            "r": 300.8552160000003,
+            "b": 183.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Dynamic",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 175.08647999999994,
+            "r": 416.0215680000001,
+            "b": 183.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Table structure exists",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 187.08647999999994,
+            "r": 311.44468800000027,
+            "b": 195.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Adjust on the fly",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 187.08647999999994,
+            "r": 447.0609120000005,
+            "b": 195.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Columns data typed",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 199.08647999999994,
+            "r": 305.81928,
+            "b": 207.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Store dissimilar data",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 199.08647999999994,
+            "r": 461.73796800000065,
+            "b": 207.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Consistency",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.36,
+            "t": 211.32647999999995,
+            "r": 123.29444400000006,
+            "b": 219.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Strong Consistency Available",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 211.08647999999994,
+            "r": 345.3425520000004,
+            "b": 219.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Strong, Eventual, or None",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 211.08647999999994,
+            "r": 484.18382400000064,
+            "b": 219.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Processing Focus",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.36,
+            "t": 223.32647999999995,
+            "r": 145.36580400000003,
+            "b": 231.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Transactional",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 223.08647999999994,
+            "r": 280.33960800000017,
+            "b": 231.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Key-value stores",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 223.08647999999994,
+            "r": 446.92047600000024,
+            "b": 231.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Processing Focus",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.36,
+            "t": 235.32647999999995,
+            "r": 145.36580400000003,
+            "b": 243.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Row/Column",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 235.08647999999994,
+            "r": 279.78782399999994,
+            "b": 243.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Wide-column stores",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 235.08647999999994,
+            "r": 460.3537679999999,
+            "b": 243.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "History",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.36,
+            "t": 247.32647999999995,
+            "r": 104.57960400000003,
+            "b": 255.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "1970s application storage",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 247.08647999999994,
+            "r": 328.06095600000003,
+            "b": 255.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "2000s unstructured storage",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 247.08647999999994,
+            "r": 487.1817839999999,
+            "b": 255.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Scaling",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.36,
+            "t": 259.32647999999995,
+            "r": 103.37544,
+            "b": 267.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Product Dependent",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 259.08647999999994,
+            "r": 302.7685320000001,
+            "b": 267.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Automatically spreads data across commodity servers",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 259.08647999999994,
+            "r": 515.9323200000006,
+            "b": 279.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Origin",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.36,
+            "t": 282.84648,
+            "r": 100.69619999999998,
+            "b": 291.48798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Mixture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 282.60648,
+            "r": 258.1029119999999,
+            "b": 291.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Open-source",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 282.60648,
+            "r": 430.54348800000014,
+            "b": 291.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Transaction",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.36,
+            "t": 294.84648,
+            "r": 123.97570800000001,
+            "b": 303.48798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.96,
+            "t": 294.60648,
+            "r": 241.47568800000002,
+            "b": 303.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Possible",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.56,
+            "t": 294.60648,
+            "r": 412.8971159999998,
+            "b": 303.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 12 ACID vs BASE"
+    ],
+    "num_rows": 11,
+    "num_cols": 3,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

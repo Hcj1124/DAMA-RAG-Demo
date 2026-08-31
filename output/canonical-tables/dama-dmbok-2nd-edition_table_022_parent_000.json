@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:022:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      131
+    ],
+    "locators": {
+      "docling_ref": "#/tables/22",
+      "table_index": 22,
+      "bounding_boxes": [
+        {
+          "l": 83.36486053466797,
+          "t": 184.84979248046875,
+          "r": 554.2269287109375,
+          "b": 88.59625244140625,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Category\tDefinition\tExamples\nWho\tPerson or organization of interest. That is, Who is important to the business? Often a 'who' is associated with a party generalization, or role such as Customer or Vendor. Persons or organizations can have multiple roles or be included in multiple parties.\tEmployee, Patient, Player, Suspect, Customer, Vendor, Student, Passenger, Competitor, Author",
+    "markdown": "| Category | Definition | Examples |\n| --- | --- | --- |\n| Who | Person or organization of interest. That is, Who is important to the business? Often a 'who' is associated with a party generalization, or role such as Customer or Vendor. Persons or organizations can have multiple roles or be included in multiple parties. | Employee, Patient, Player, Suspect, Customer, Vendor, Student, Passenger, Competitor, Author |",
+    "structured": {
+      "num_rows": 2,
+      "num_cols": 3,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Category",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 103.68,
+            "t": 620.16648,
+            "r": 143.220204,
+            "b": 628.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Definition",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 258.84,
+            "t": 620.16648,
+            "r": 301.57437600000037,
+            "b": 628.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Examples",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 454.92,
+            "t": 620.16648,
+            "r": 496.4721240000002,
+            "b": 628.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Who",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 642.48648,
+            "r": 110.45784000000002,
+            "b": 651.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Person or organization of interest. That is, Who is important to the business? Often a 'who' is associated with a party generalization, or role such as Customer or Vendor. Persons or organizations can have multiple roles or be included in multiple parties.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 167.04,
+            "t": 642.24648,
+            "r": 389.26254000000085,
+            "b": 696.8663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Employee, Patient, Player, Suspect, Customer, Vendor, Student, Passenger, Competitor, Author",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 403.56,
+            "t": 642.24648,
+            "r": 545.9850120000002,
+            "b": 673.8300763846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 7 Commonly Used Entity Categories"
+    ],
+    "num_rows": 2,
+    "num_cols": 3,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

@@ -1,0 +1,768 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:027:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      141
+    ],
+    "locators": {
+      "docling_ref": "#/tables/27",
+      "table_index": 27,
+      "bounding_boxes": [
+        {
+          "l": 126.1215591430664,
+          "t": 691.715217590332,
+          "r": 503.5552062988281,
+          "b": 412.0795593261719,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Scheme\tRelational Database Management System (RDBMS)\tMultidimensional Database Management System (MDBMS)\tObject Databases\tDocument\tColumn\tGraph\tKey-Value\nRelational\tCDM LDM PDM\tCDM LDM\tCDM LDM\tCDM LDM\tCDM LDM\tCDM LDM\tCDM LDM\nDimensional\tCDM LDM PDM\tCDM LDM PDM\t\t\t\t\t\nObject-Oriented\tCDM LDM PDM\t\tCDM LDM PDM\t\t\t\t\nFact-Based\tCDM LDM PDM\tCDM LDM\tCDM LDM\tCDM LDM\tCDM LDM\tCDM LDM\tCDM LDM\nTime-Based\tPDM\t\t\t\t\t\t\nNoSQL\t\t\tPDM\tPDM\tPDM\tPDM\tPDM",
+    "markdown": "| Scheme | Relational Database Management System (RDBMS) | Multidimensional Database Management System (MDBMS) | Object Databases | Document | Column | Graph | Key-Value |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Relational | CDM LDM PDM | CDM LDM | CDM LDM | CDM LDM | CDM LDM | CDM LDM | CDM LDM |\n| Dimensional | CDM LDM PDM | CDM LDM PDM |  |  |  |  |  |\n| Object-Oriented | CDM LDM PDM |  | CDM LDM PDM |  |  |  |  |\n| Fact-Based | CDM LDM PDM | CDM LDM | CDM LDM | CDM LDM | CDM LDM | CDM LDM | CDM LDM |\n| Time-Based | PDM |  |  |  |  |  |  |\n| NoSQL |  |  | PDM | PDM | PDM | PDM | PDM |",
+    "structured": {
+      "num_rows": 7,
+      "num_cols": 8,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Scheme",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 152.52,
+            "t": 108.48648000000003,
+            "r": 185.13800399999988,
+            "b": 117.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Relational Database Management System (RDBMS)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 222.48648,
+            "t": 114.1136159999985,
+            "r": 261.12798727272724,
+            "b": 203.15999999999997,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Multidimensional Database Management System (MDBMS)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 280.92647999999997,
+            "t": 109.60355999999979,
+            "r": 319.56798727272724,
+            "b": 207.60000000000002,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Object Databases",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 338.88648,
+            "t": 121.15940400000022,
+            "r": 347.5279872727273,
+            "b": 195.96000000000004,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Document",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 377.28648,
+            "t": 136.8506999999995,
+            "r": 385.92798727272725,
+            "b": 180.60000000000002,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Column",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 411.60648,
+            "t": 141.4678799999997,
+            "r": 420.24798727272724,
+            "b": 175.79999999999995,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Graph",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 445.92647999999997,
+            "t": 144.46479599999964,
+            "r": 454.56798727272724,
+            "b": 172.79999999999995,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Key-Value",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 7,
+          "end_col_offset_idx": 8,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 480.24647999999996,
+            "t": 135.86303999999984,
+            "r": 488.88798727272723,
+            "b": 181.44000000000005,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Relational",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 132.96,
+            "t": 218.28647999999998,
+            "r": 176.88858000000005,
+            "b": 226.92798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 228.6,
+            "t": 218.04647999999997,
+            "r": 251.258004,
+            "b": 249.5063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 286.68,
+            "t": 218.04647999999997,
+            "r": 309.338004,
+            "b": 237.9863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 334.92,
+            "t": 218.04647999999997,
+            "r": 357.578004,
+            "b": 237.9863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 371.28,
+            "t": 218.04647999999997,
+            "r": 393.938004,
+            "b": 237.9863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 405.6,
+            "t": 218.04647999999997,
+            "r": 428.258004,
+            "b": 237.9863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 439.92,
+            "t": 218.04647999999997,
+            "r": 462.578004,
+            "b": 237.9863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 7,
+          "end_col_offset_idx": 8,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 474.24,
+            "t": 218.04647999999997,
+            "r": 496.898004,
+            "b": 237.9863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Dimensional",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 132.96,
+            "t": 253.20647999999994,
+            "r": 186.2479920000001,
+            "b": 261.8479872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 228.6,
+            "t": 252.96647999999993,
+            "r": 251.258004,
+            "b": 284.5463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 286.68,
+            "t": 252.96647999999993,
+            "r": 309.338004,
+            "b": 284.5463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Object-Oriented",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 132.96,
+            "t": 288.24647999999996,
+            "r": 203.54416800000004,
+            "b": 296.88798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 228.6,
+            "t": 288.00648,
+            "r": 251.258004,
+            "b": 319.5863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 334.92,
+            "t": 288.00648,
+            "r": 357.578004,
+            "b": 319.5863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Fact-Based",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 132.96,
+            "t": 323.28648,
+            "r": 180.73676399999997,
+            "b": 331.92798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 228.6,
+            "t": 323.04648,
+            "r": 251.258004,
+            "b": 354.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 286.68,
+            "t": 323.04648,
+            "r": 309.338004,
+            "b": 342.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 334.92,
+            "t": 323.04648,
+            "r": 357.578004,
+            "b": 342.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 371.28,
+            "t": 323.04648,
+            "r": 393.938004,
+            "b": 342.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 405.6,
+            "t": 323.04648,
+            "r": 428.258004,
+            "b": 342.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 439.92,
+            "t": 323.04648,
+            "r": 462.578004,
+            "b": 342.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CDM LDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 7,
+          "end_col_offset_idx": 8,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 474.24,
+            "t": 323.04648,
+            "r": 496.898004,
+            "b": 342.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Time-Based",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 132.96,
+            "t": 358.20648,
+            "r": 183.97727999999998,
+            "b": 366.84798727272727,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 229.08,
+            "t": 357.96648,
+            "r": 250.77586800000003,
+            "b": 366.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "NoSQL",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 132.96,
+            "t": 370.20648,
+            "r": 165.16167599999994,
+            "b": 378.84798727272727,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 335.4,
+            "t": 369.96648,
+            "r": 357.09586799999994,
+            "b": 378.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 371.76,
+            "t": 369.96648,
+            "r": 393.45586799999995,
+            "b": 378.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 406.08,
+            "t": 369.96648,
+            "r": 427.77586799999995,
+            "b": 378.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 440.4,
+            "t": 369.96648,
+            "r": 462.09586799999994,
+            "b": 378.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "PDM",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 7,
+          "end_col_offset_idx": 8,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 474.72,
+            "t": 369.96648,
+            "r": 496.415868,
+            "b": 378.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 10 Scheme to Database Cross Reference"
+    ],
+    "num_rows": 7,
+    "num_cols": 8,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

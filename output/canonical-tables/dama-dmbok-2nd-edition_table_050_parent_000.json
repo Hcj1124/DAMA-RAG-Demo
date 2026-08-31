@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:050:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      485
+    ],
+    "locators": {
+      "docling_ref": "#/tables/50",
+      "table_index": 50,
+      "bounding_boxes": [
+        {
+          "l": 101.4804916381836,
+          "t": 530.2353515625,
+          "r": 528.1322021484375,
+          "b": 420.3895263671875,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Granularity\tIn-stream (In-Process Flow) Treatment\tBatch Treatment\nData Element\tEdit checks in application Data element validation services Specially programmed applications\tDirect queries Data profiling or analyzer tool\nData Record\tEdit checks in application Data record validation services Specially programmed applications\tDirect queries Data profiling or analyzer tool\nData set\tInspection inserted between processing stages\tDirect queries Data profiling or analyzer tool",
+    "markdown": "| Granularity | In-stream (In-Process Flow) Treatment | Batch Treatment |\n| --- | --- | --- |\n| Data Element | Edit checks in application Data element validation services Specially programmed applications | Direct queries Data profiling or analyzer tool |\n| Data Record | Edit checks in application Data record validation services Specially programmed applications | Direct queries Data profiling or analyzer tool |\n| Data set | Inspection inserted between processing stages | Direct queries Data profiling or analyzer tool |",
+    "structured": {
+      "num_rows": 4,
+      "num_cols": 3,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Granularity",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 117.36,
+            "t": 269.04648,
+            "r": 168.89602799999977,
+            "b": 277.68798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "In-stream (In-Process Flow) Treatment",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 197.88,
+            "t": 269.04648,
+            "r": 365.84928000000036,
+            "b": 277.68798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Batch Treatment",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 417.12,
+            "t": 269.04648,
+            "r": 490.0461240000003,
+            "b": 277.68798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Element",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 108.0,
+            "t": 281.04648,
+            "r": 166.51699200000002,
+            "b": 289.68798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Edit checks in application Data element validation services Specially programmed applications",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 190.08,
+            "t": 280.80647999999997,
+            "r": 331.6086120000005,
+            "b": 312.2663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Direct queries Data profiling or analyzer tool",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 385.44,
+            "t": 280.80647999999997,
+            "r": 507.0217200000008,
+            "b": 300.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Record",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 108.0,
+            "t": 315.96648,
+            "r": 162.26407200000006,
+            "b": 324.60798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Edit checks in application Data record validation services Specially programmed applications",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 190.08,
+            "t": 315.72648,
+            "r": 331.6086120000005,
+            "b": 347.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Direct queries Data profiling or analyzer tool",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 385.44,
+            "t": 315.72648,
+            "r": 507.01375200000103,
+            "b": 335.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data set",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 108.0,
+            "t": 351.00648,
+            "r": 142.757412,
+            "b": 359.6479872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Inspection inserted between processing stages",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 190.08,
+            "t": 350.76648,
+            "r": 373.97347200000064,
+            "b": 359.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Direct queries Data profiling or analyzer tool",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 385.44,
+            "t": 350.76648,
+            "r": 507.0217200000008,
+            "b": 370.8263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 31 Data Quality Monitoring Techniques"
+    ],
+    "num_rows": 4,
+    "num_cols": 3,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

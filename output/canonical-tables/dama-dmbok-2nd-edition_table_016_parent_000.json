@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:016:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      78
+    ],
+    "locators": {
+      "docling_ref": "#/tables/16",
+      "table_index": 16,
+      "bounding_boxes": [
+        {
+          "l": 50.31086349487305,
+          "t": 377.4906921386719,
+          "r": 528.1369018554688,
+          "b": 99.68939208984375,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Data Governance Body\tDescription\nData Governance Steering Committee\tThe primary and highest authority organization for data governance in an organization, responsible for oversight, support, and funding of data governance activities. Consists of a cross-functional group of senior executives. Typically releases funding for data governance and data governance-sponsored activities as recommended by the DGC and CDO. This committee may in turn have oversight from higher-level funding or initiative-based steering committees.\nData Governance Council (DGC)\tManages data governance initiatives (e.g., development of policies or metrics), issues, and escalations. Consists of executive according to the operating model used. See Figure 17.\nData Governance Office (DGO)\tOngoing focus on enterprise-level data definitions and data management standards across all DAMA-DMBOK Knowledge Areas. Consists of coordinating roles that are labelled as data stewards or custodians, and data owners .\nData Stewardship Teams\tCommunities of interest focused on one or more specific subject-areas or projects, collaborating or consulting with project teams on data definitions and data management standards related to the focus. Consists of business and technical data stewards and data analysts.\nLocal Data Governance Committee\tLarge organizations may have divisional or departmental data governance councils working under the auspices of an Enterprise DGC. Smaller organizations should try to avoid such complexity.",
+    "markdown": "| Data Governance Body | Description |\n| --- | --- |\n| Data Governance Steering Committee | The primary and highest authority organization for data governance in an organization, responsible for oversight, support, and funding of data governance activities. Consists of a cross-functional group of senior executives. Typically releases funding for data governance and data governance-sponsored activities as recommended by the DGC and CDO. This committee may in turn have oversight from higher-level funding or initiative-based steering committees. |\n| Data Governance Council (DGC) | Manages data governance initiatives (e.g., development of policies or metrics), issues, and escalations. Consists of executive according to the operating model used. See Figure 17. |\n| Data Governance Office (DGO) | Ongoing focus on enterprise-level data definitions and data management standards across all DAMA-DMBOK Knowledge Areas. Consists of coordinating roles that are labelled as data stewards or custodians, and data owners . |\n| Data Stewardship Teams | Communities of interest focused on one or more specific subject-areas or projects, collaborating or consulting with project teams on data definitions and data management standards related to the focus. Consists of business and technical data stewards and data analysts. |\n| Local Data Governance Committee | Large organizations may have divisional or departmental data governance councils working under the auspices of an Enterprise DGC. Smaller organizations should try to avoid such complexity. |",
+    "structured": {
+      "num_rows": 6,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Data Governance Body",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 63.48,
+            "t": 422.04648,
+            "r": 138.221832,
+            "b": 445.68798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 314.16,
+            "t": 422.04648,
+            "r": 363.5038320000002,
+            "b": 430.68798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Governance Steering Committee",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 453.96648,
+            "r": 142.791864,
+            "b": 474.1317072727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The primary and highest authority organization for data governance in an organization, responsible for oversight, support, and funding of data governance activities. Consists of a cross-functional group of senior executives. Typically releases funding for data governance and data governance-sponsored activities as recommended by the DGC and CDO. This committee may in turn have oversight from higher-level funding or initiative-based steering committees.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.74008000000003,
+            "t": 448.68647999999996,
+            "r": 521.6525520000009,
+            "b": 526.2379963846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Governance Council (DGC)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 540.00648,
+            "r": 132.341832,
+            "b": 560.1679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Manages data governance initiatives (e.g., development of policies or metrics), issues, and escalations. Consists of executive according to the operating model used. See Figure 17.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.76,
+            "t": 534.72648,
+            "r": 517.2970440000013,
+            "b": 554.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Governance Office (DGO)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 568.56648,
+            "r": 132.341832,
+            "b": 588.6121872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Ongoing focus on enterprise-level data definitions and data management standards across all DAMA-DMBOK Knowledge Areas. Consists of coordinating roles that are labelled as data stewards or custodians, and data owners .",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.75003999999998,
+            "t": 563.28648,
+            "r": 515.6954760000017,
+            "b": 594.7824205278592,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Stewardship Teams",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 608.52648,
+            "r": 133.93144800000005,
+            "b": 628.5721872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Communities of interest focused on one or more specific subject-areas or projects, collaborating or consulting with project teams on data definitions and data management standards related to the focus. Consists of business and technical data stewards and data analysts.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.76,
+            "t": 603.24648,
+            "r": 506.870916,
+            "b": 646.2342763846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Local Data Governance Committee",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 660.00648,
+            "r": 109.18881600000003,
+            "b": 691.5679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Large organizations may have divisional or departmental data governance councils working under the auspices of an Enterprise DGC. Smaller organizations should try to avoid such complexity.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 155.76,
+            "t": 654.72648,
+            "r": 500.8172280000002,
+            "b": 686.3100763846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 4 Typical Data Governance Committees / Bodies"
+    ],
+    "num_rows": 6,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

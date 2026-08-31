@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:051:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      505
+    ],
+    "locators": {
+      "docling_ref": "#/tables/51",
+      "table_index": 51,
+      "bounding_boxes": [
+        {
+          "l": 88.89075469970703,
+          "t": 700.4484100341797,
+          "r": 516.6815185546875,
+          "b": 613.9199523925781,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "DW / Traditional BI\tData Science\tData Science\nDescriptive\tPredictive\tPrescriptive\nHindsight\tInsight\tForesight\nBased on history: What happened? Why did it happen?\tBased on predictive models: What is likely to happen?\tBased on scenarios: What should we do to make things happen?",
+    "markdown": "| DW / Traditional BI | Data Science | Data Science |\n| --- | --- | --- |\n| Descriptive | Predictive | Prescriptive |\n| Hindsight | Insight | Foresight |\n| Based on history: What happened? Why did it happen? | Based on predictive models: What is likely to happen? | Based on scenarios: What should we do to make things happen? |",
+    "structured": {
+      "num_rows": 4,
+      "num_cols": 3,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "DW / Traditional BI",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 117.48,
+            "t": 99.12648000000002,
+            "r": 204.38896799999975,
+            "b": 107.76798727272728,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Science",
+          "row_span": 1,
+          "col_span": 2,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 346.56,
+            "t": 99.12648000000002,
+            "r": 401.2682880000002,
+            "b": 107.76798727272728,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Descriptive",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 112.20647999999994,
+            "r": 141.33850799999993,
+            "b": 120.7463563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Predictive",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 237.36,
+            "t": 112.20647999999994,
+            "r": 277.9001880000001,
+            "b": 120.7463563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Prescriptive",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.44,
+            "t": 112.20647999999994,
+            "r": 427.1802720000004,
+            "b": 120.7463563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Hindsight",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 127.08647999999994,
+            "r": 134.76889200000002,
+            "b": 135.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Insight",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 237.36,
+            "t": 127.08647999999994,
+            "r": 265.08864000000005,
+            "b": 135.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Foresight",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.44,
+            "t": 127.08647999999994,
+            "r": 417.1276439999999,
+            "b": 135.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Based on history: What happened? Why did it happen?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.39999999999998,
+            "t": 143.16647999999998,
+            "r": 173.86189199999998,
+            "b": 174.6342763846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Based on predictive models: What is likely to happen?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 237.35988,
+            "t": 148.8137999999999,
+            "r": 350.9028840000006,
+            "b": 168.87739638461528,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Based on scenarios: What should we do to make things happen?",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 379.43928000000005,
+            "t": 143.17643999999996,
+            "r": 491.26119600000067,
+            "b": 174.64423638461528,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 32 Analytics Progression"
+    ],
+    "num_rows": 4,
+    "num_cols": 3,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

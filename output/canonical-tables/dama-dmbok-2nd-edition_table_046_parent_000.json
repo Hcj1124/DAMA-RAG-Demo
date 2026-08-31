@@ -1,0 +1,844 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:046:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      397
+    ],
+    "locators": {
+      "docling_ref": "#/tables/46",
+      "table_index": 46,
+      "bounding_boxes": [
+        {
+          "l": 78.39313507080078,
+          "t": 270.954833984375,
+          "r": 551.3195190429688,
+          "b": 75.84259033203125,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Method\tSource System Requirement\tComplexity\tFact Load\tDimension Load\tOverlap\tDeletes\nTime stamped Delta Load\tChanges in the source system are stamped with the system date and time.\tLow\tFast\tFast\tYes\tNo\nLog Table Delta Load\tSource system changes are captured and stored in log tables\tMedium\tNominal\tNominal\tYes\tYes\nDatabase Transaction Log\tDatabase captures changes in the transaction log\tHigh\tNominal\tNominal\tNo\tYes\nMessage Delta\tSource system changes are published as [near] real-time messages\tExtreme\tSlow\tSlow\tNo\tYes\nFull Load\tNo change indicator, tables extracted in full and compared to identify change\tSimple\tSlow\tNominal\tYes\tYes",
+    "markdown": "| Method | Source System Requirement | Complexity | Fact Load | Dimension Load | Overlap | Deletes |\n| --- | --- | --- | --- | --- | --- | --- |\n| Time stamped Delta Load | Changes in the source system are stamped with the system date and time. | Low | Fast | Fast | Yes | No |\n| Log Table Delta Load | Source system changes are captured and stored in log tables | Medium | Nominal | Nominal | Yes | Yes |\n| Database Transaction Log | Database captures changes in the transaction log | High | Nominal | Nominal | No | Yes |\n| Message Delta | Source system changes are published as [near] real-time messages | Extreme | Slow | Slow | No | Yes |\n| Full Load | No change indicator, tables extracted in full and compared to identify change | Simple | Slow | Nominal | Yes | Yes |",
+    "structured": {
+      "num_rows": 6,
+      "num_cols": 7,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Method",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 92.88,
+            "t": 528.48648,
+            "r": 126.26094000000003,
+            "b": 537.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Source System Requirement",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 150.96,
+            "t": 528.48648,
+            "r": 271.89033600000016,
+            "b": 537.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Complexity",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 290.4,
+            "t": 528.48648,
+            "r": 339.7786920000004,
+            "b": 537.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Fact Load",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 360.36,
+            "t": 528.48648,
+            "r": 382.576776,
+            "b": 552.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Dimension Load",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 402.6,
+            "t": 528.48648,
+            "r": 448.09628400000025,
+            "b": 552.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Overlap",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 461.88,
+            "t": 528.48648,
+            "r": 496.9431840000001,
+            "b": 537.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Deletes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 512.04,
+            "t": 528.48648,
+            "r": 542.5604279999998,
+            "b": 537.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Time stamped Delta Load",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 85.32,
+            "t": 555.12648,
+            "r": 129.90594,
+            "b": 586.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Changes in the source system are stamped with the system date and time.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 145.2,
+            "t": 555.12648,
+            "r": 277.67198400000024,
+            "b": 586.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Low",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 306.0,
+            "t": 566.64648,
+            "r": 324.35130000000004,
+            "b": 575.1863563846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Fast",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 363.12,
+            "t": 566.64648,
+            "r": 379.6834799999999,
+            "b": 575.1863563846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Fast",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 417.0,
+            "t": 566.64648,
+            "r": 433.5634799999999,
+            "b": 575.1863563846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 471.6,
+            "t": 566.64648,
+            "r": 487.115688,
+            "b": 575.1863563846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "No",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 521.16,
+            "t": 566.64648,
+            "r": 533.3410799999999,
+            "b": 575.1863563846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Log Table Delta Load",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 85.32,
+            "t": 590.04648,
+            "r": 129.90594,
+            "b": 610.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Source system changes are captured and stored in log tables",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 145.2,
+            "t": 590.04648,
+            "r": 274.84832400000016,
+            "b": 610.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Medium",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 298.2,
+            "t": 601.56648,
+            "r": 332.1108120000001,
+            "b": 610.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Nominal",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 353.88,
+            "t": 601.56648,
+            "r": 388.80872400000015,
+            "b": 610.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Nominal",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 407.88,
+            "t": 601.56648,
+            "r": 442.80872400000015,
+            "b": 610.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 471.6,
+            "t": 601.56648,
+            "r": 487.115688,
+            "b": 610.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 519.48,
+            "t": 601.56648,
+            "r": 534.995688,
+            "b": 610.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Database Transaction Log",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 85.32,
+            "t": 613.56648,
+            "r": 132.548328,
+            "b": 645.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Database captures changes in the transaction log",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 145.2,
+            "t": 613.56648,
+            "r": 277.32039600000024,
+            "b": 633.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "High",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 305.16,
+            "t": 625.0864799999999,
+            "r": 325.1387640000002,
+            "b": 633.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Nominal",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 353.88,
+            "t": 625.0864799999999,
+            "r": 388.80872400000015,
+            "b": 633.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Nominal",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 407.88,
+            "t": 625.0864799999999,
+            "r": 442.80872400000015,
+            "b": 633.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "No",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 473.28,
+            "t": 625.0864799999999,
+            "r": 485.46108,
+            "b": 633.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 519.48,
+            "t": 625.0864799999999,
+            "r": 534.995688,
+            "b": 633.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Message Delta",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 85.32,
+            "t": 648.6064799999999,
+            "r": 120.22382400000002,
+            "b": 668.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Source system changes are published as [near] real-time messages",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 145.2,
+            "t": 648.6064799999999,
+            "r": 259.78282800000005,
+            "b": 680.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Extreme",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 298.2,
+            "t": 660.12648,
+            "r": 331.8986640000001,
+            "b": 668.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Slow",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 361.2,
+            "t": 660.12648,
+            "r": 381.829152,
+            "b": 668.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Slow",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 415.08,
+            "t": 660.12648,
+            "r": 435.709152,
+            "b": 668.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "No",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 473.28,
+            "t": 660.12648,
+            "r": 485.46108,
+            "b": 668.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 519.48,
+            "t": 660.12648,
+            "r": 534.995688,
+            "b": 668.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Full Load",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 85.32,
+            "t": 683.64648,
+            "r": 124.37714399999996,
+            "b": 692.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "No change indicator, tables extracted in full and compared to identify change",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 145.2,
+            "t": 683.64648,
+            "r": 277.6361280000002,
+            "b": 715.1063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Simple",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 300.96,
+            "t": 695.04648,
+            "r": 329.1418200000001,
+            "b": 703.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Slow",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 361.2,
+            "t": 695.04648,
+            "r": 381.829152,
+            "b": 703.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Nominal",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 407.88,
+            "t": 695.04648,
+            "r": 442.80872400000015,
+            "b": 703.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 471.6,
+            "t": 695.04648,
+            "r": 487.115688,
+            "b": 703.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 6,
+          "end_col_offset_idx": 7,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 519.48,
+            "t": 695.04648,
+            "r": 534.995688,
+            "b": 703.5863563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 28 CDC Technique Comparison"
+    ],
+    "num_rows": 6,
+    "num_cols": 7,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

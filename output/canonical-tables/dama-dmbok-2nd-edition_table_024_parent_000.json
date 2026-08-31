@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:024:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      132
+    ],
+    "locators": {
+      "docling_ref": "#/tables/24",
+      "table_index": 24,
+      "bounding_boxes": [
+        {
+          "l": 156.89671325683594,
+          "t": 254.50689697265625,
+          "r": 436.50714111328125,
+          "b": 193.38531494140625,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Usage\tEntity\tEntity Type\tEntity Instance\nCommon Use\tJane\tEmployee\t\nRecommended Use\tEmployee\t\tJane",
+    "markdown": "| Usage | Entity | Entity Type | Entity Instance |\n| --- | --- | --- | --- |\n| Common Use | Jane | Employee |  |\n| Recommended Use | Employee |  | Jane |",
+    "structured": {
+      "num_rows": 3,
+      "num_cols": 4,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Usage",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 189.6,
+            "t": 545.16648,
+            "r": 215.14142400000003,
+            "b": 553.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Entity",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 259.2,
+            "t": 545.16648,
+            "r": 285.77328000000017,
+            "b": 553.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Entity Type",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 303.6,
+            "t": 545.16648,
+            "r": 354.35018399999984,
+            "b": 553.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Entity Instance",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 365.28,
+            "t": 545.16648,
+            "r": 430.41640799999965,
+            "b": 553.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Common Use",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 163.44,
+            "t": 561.96648,
+            "r": 218.62039200000007,
+            "b": 570.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Jane",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 252.2334,
+            "t": 561.96648,
+            "r": 269.9761440000001,
+            "b": 570.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Employee",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 303.58716,
+            "t": 561.96648,
+            "r": 344.00882400000006,
+            "b": 570.5063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Recommended Use",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 163.44,
+            "t": 583.92648,
+            "r": 241.42779600000011,
+            "b": 592.4663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Employee",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 252.24336,
+            "t": 583.92648,
+            "r": 292.6650240000001,
+            "b": 592.4663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Jane",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 365.2794,
+            "t": 583.92648,
+            "r": 383.026128,
+            "b": 592.4663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 8 Entity, Entity Type, and Entity Instance"
+    ],
+    "num_rows": 3,
+    "num_cols": 4,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

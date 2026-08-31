@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/chunk-schema-1.0.0.json",
+  "title": "Unified text and table RAG record",
+  "description": "Common envelope for text chunks, table parents, and table embedding children.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "parent_id",
+    "content_type",
+    "source",
+    "content",
+    "metadata"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*:(text|table):[0-9]{3,}(?::(parent|child):[0-9]{3,})?$"
+    },
+    "parent_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "content_type": {
+      "enum": [
+        "text",
+        "table_parent",
+        "table_child"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "document_id",
+        "source_filename",
+        "pages",
+        "locators"
+      ],
+      "properties": {
+        "document_id": {
+          "type": "string"
+        },
+        "source_filename": {
+          "type": "string"
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "locators": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "markdown",
+        "structured"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "markdown": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "structured": {
+          "type": [
+            "object",
+            "array",
+            "null"
+          ]
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "content_type": {
+            "const": "table_child"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "parent_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "content_type": {
+            "enum": [
+              "text",
+              "table_parent"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "parent_id": {
+            "const": null
+          }
+        }
+      }
+    }
+  ],
+  "x_id_rules": {
+    "document_id": "lowercase source stem; e.g. dama-dmbok-2nd-edition",
+    "text": "{document_id}:text:{zero-padded ordinal}",
+    "table_parent": "{document_id}:table:{Docling tables[] index zero-padded to 3 digits}:parent:000",
+    "table_child": "{document_id}:table:{Docling tables[] index zero-padded to 3 digits}:child:{zero-padded ordinal}",
+    "parent_id": "null for text/table_parent; exact table_parent record_id for table_child"
+  }
+}

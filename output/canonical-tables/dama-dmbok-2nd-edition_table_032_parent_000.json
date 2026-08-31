@@ -1,0 +1,863 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:032:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      331
+    ],
+    "locators": {
+      "docling_ref": "#/tables/32",
+      "table_index": 32,
+      "bounding_boxes": [
+        {
+          "l": 83.2206039428711,
+          "t": 691.2575836181641,
+          "r": 523.1333618164062,
+          "b": 458.74822998046875,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Data Asset\tFormal\tRevision\tCustody\nAction item lists\t\tx\t\nAgendas\t\t\tx\nAudit findings\t\tx\tx\nBudgets\tx\t\t\nDD 250s\t\t\tx\nFinal Proposal\t\t\tx\nFinancial data and reports\tx\tx\tx\nHuman Resources data\t\tx\t\nMeeting minutes\t\t\tx\nMeeting notices and attendance lists\t\tx\tx\nProject plans (including data management and configuration management plans)\tx\t\t\nProposal (in process)\t\tx\t\nSchedules\tx\t\t\nStatements of Work\tx\t\t\nTrade studies\t\tx\t\nTraining material\tx\tx\t\nWorking papers\t\t\tx",
+    "markdown": "| Data Asset | Formal | Revision | Custody |\n| --- | --- | --- | --- |\n| Action item lists |  | x |  |\n| Agendas |  |  | x |\n| Audit findings |  | x | x |\n| Budgets | x |  |  |\n| DD 250s |  |  | x |\n| Final Proposal |  |  | x |\n| Financial data and reports | x | x | x |\n| Human Resources data |  | x |  |\n| Meeting minutes |  |  | x |\n| Meeting notices and attendance lists |  | x | x |\n| Project plans (including data management and configuration management plans) | x |  |  |\n| Proposal (in process) |  | x |  |\n| Schedules | x |  |  |\n| Statements of Work | x |  |  |\n| Trade studies |  | x |  |\n| Training material | x | x |  |\n| Working papers |  |  | x |",
+    "structured": {
+      "num_rows": 18,
+      "num_cols": 4,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Data Asset",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 187.92,
+            "t": 108.48648000000003,
+            "r": 233.71109999999996,
+            "b": 117.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Formal",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 353.04,
+            "t": 108.48648000000003,
+            "r": 384.60921599999995,
+            "b": 117.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Revision",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 413.52,
+            "t": 108.48648000000003,
+            "r": 450.13594800000027,
+            "b": 117.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Custody",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 475.2,
+            "t": 108.48648000000003,
+            "r": 510.655608,
+            "b": 117.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Action item lists",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": true,
+          "bbox": {
+            "l": 90.0,
+            "t": 120.12648000000002,
+            "r": 156.0258359999999,
+            "b": 128.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": true,
+          "bbox": {
+            "l": 429.36,
+            "t": 120.12648000000002,
+            "r": 434.34000000000003,
+            "b": 128.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Agendas",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": true,
+          "bbox": {
+            "l": 90.0,
+            "t": 132.12648000000002,
+            "r": 124.95462000000003,
+            "b": 140.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": true,
+          "bbox": {
+            "l": 490.44,
+            "t": 132.12648000000002,
+            "r": 495.42,
+            "b": 140.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Audit findings",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 144.12648000000002,
+            "r": 147.99409199999994,
+            "b": 152.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 429.36,
+            "t": 144.12648000000002,
+            "r": 434.34000000000003,
+            "b": 152.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 490.44,
+            "t": 144.12648000000002,
+            "r": 495.42,
+            "b": 152.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Budgets",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": true,
+          "bbox": {
+            "l": 90.0,
+            "t": 156.12648000000002,
+            "r": 122.67378000000004,
+            "b": 164.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": true,
+          "bbox": {
+            "l": 366.36,
+            "t": 156.12648000000002,
+            "r": 371.34000000000003,
+            "b": 164.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "DD 250s",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 168.12648000000002,
+            "r": 125.91376799999999,
+            "b": 176.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 490.44,
+            "t": 168.12648000000002,
+            "r": 495.42,
+            "b": 176.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Final Proposal",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": true,
+          "bbox": {
+            "l": 90.0,
+            "t": 180.12648000000002,
+            "r": 148.08871200000002,
+            "b": 188.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": true,
+          "bbox": {
+            "l": 490.44,
+            "t": 180.12648000000002,
+            "r": 495.42,
+            "b": 188.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Financial data and reports",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 192.12648000000002,
+            "r": 193.60790400000002,
+            "b": 200.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 366.36,
+            "t": 192.12648000000002,
+            "r": 371.34000000000003,
+            "b": 200.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 429.36,
+            "t": 192.12648000000002,
+            "r": 434.34000000000003,
+            "b": 200.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 490.44,
+            "t": 192.12648000000002,
+            "r": 495.42,
+            "b": 200.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Human Resources data",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 204.12648000000002,
+            "r": 182.15290800000005,
+            "b": 212.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 429.36,
+            "t": 204.12648000000002,
+            "r": 434.34000000000003,
+            "b": 212.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Meeting minutes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 216.12648000000002,
+            "r": 157.35051599999986,
+            "b": 224.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 490.44,
+            "t": 216.12648000000002,
+            "r": 495.42,
+            "b": 224.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Meeting notices and attendance lists",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 228.12648000000002,
+            "r": 234.8672039999996,
+            "b": 236.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 429.36,
+            "t": 228.12648000000002,
+            "r": 434.34000000000003,
+            "b": 236.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 10,
+          "end_row_offset_idx": 11,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 490.44,
+            "t": 228.12648000000002,
+            "r": 495.42,
+            "b": 236.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Project plans (including data management and configuration management plans)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 11,
+          "end_row_offset_idx": 12,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 240.12648000000002,
+            "r": 331.6196400000001,
+            "b": 260.18635638461535,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 11,
+          "end_row_offset_idx": 12,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 366.36,
+            "t": 240.12648000000002,
+            "r": 371.34000000000003,
+            "b": 248.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Proposal (in process)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 12,
+          "end_row_offset_idx": 13,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 263.64648,
+            "r": 174.43689600000002,
+            "b": 272.18635638461535,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 12,
+          "end_row_offset_idx": 13,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 429.36,
+            "t": 263.64648,
+            "r": 434.34000000000003,
+            "b": 272.18635638461535,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Schedules",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 13,
+          "end_row_offset_idx": 14,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 275.64648,
+            "r": 130.47544800000003,
+            "b": 284.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 13,
+          "end_row_offset_idx": 14,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 366.36,
+            "t": 275.64648,
+            "r": 371.34000000000003,
+            "b": 284.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Statements of Work",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 14,
+          "end_row_offset_idx": 15,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 287.64648,
+            "r": 169.97879999999984,
+            "b": 296.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 14,
+          "end_row_offset_idx": 15,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 366.36,
+            "t": 287.64648,
+            "r": 371.34000000000003,
+            "b": 296.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Trade studies",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 15,
+          "end_row_offset_idx": 16,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 299.64648,
+            "r": 143.5529279999999,
+            "b": 308.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 15,
+          "end_row_offset_idx": 16,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 429.36,
+            "t": 299.64648,
+            "r": 434.34000000000003,
+            "b": 308.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Training material",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 16,
+          "end_row_offset_idx": 17,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 311.64648,
+            "r": 159.60346799999982,
+            "b": 320.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 16,
+          "end_row_offset_idx": 17,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 366.36,
+            "t": 311.64648,
+            "r": 371.34000000000003,
+            "b": 320.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 16,
+          "end_row_offset_idx": 17,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 429.36,
+            "t": 311.64648,
+            "r": 434.34000000000003,
+            "b": 320.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Working papers",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 17,
+          "end_row_offset_idx": 18,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 323.64648,
+            "r": 154.1145119999999,
+            "b": 332.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "x",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 17,
+          "end_row_offset_idx": 18,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 490.44,
+            "t": 323.64648,
+            "r": 495.42,
+            "b": 332.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 15 Levels of Control for Documents per ANSI-859"
+    ],
+    "num_rows": 18,
+    "num_cols": 4,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

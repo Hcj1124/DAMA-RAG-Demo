@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:052:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      551
+    ],
+    "locators": {
+      "docling_ref": "#/tables/52",
+      "table_index": 52,
+      "bounding_boxes": [
+        {
+          "l": 83.59883117675781,
+          "t": 404.2565612792969,
+          "r": 545.9349365234375,
+          "b": 96.585205078125,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Risk\tMitigation\nLack of organizational buy-in\tSocialize the concepts related to the assessment. Establish benefit statements before conducting the assessment. Share articles and success stories. Engage an executive sponsor to champion the effort and review the results.\nLack of DMMA expertise Lack of time or in-house expertise Lack of communication planning or standards\tUse third party resources or specialists. Require knowledge transfer and training as part of the engagement.\nLack of 'Data Speak' in the organization; Conversations on data quickly devolve into discussions about systems\tRelate the DMMA to specific business problems or scenarios. Address in the communications plan. The DMMA will educate all participants regardless of background and technical experience. Orient participants to key concepts prior to the DMMA.\nIncomplete or out-of-date assets for analysis\tFlag 'as of' or balance the rating accordingly. For example, give a -1 to everything that is over 1 year out-of-date.\nNarrow focus\tReduce the investigation depth to a simple DMMA and go to other areas for a quick assessment to establish ratings for a later comparative baseline. Conduct the first DMMA as a pilot, then apply lessons learned to address a broader scope. Present in-scope focus of proposed assessment in context of DAMA-DMBOK Knowledge Areas. Illustrate what is being left out of scope and discuss the need to include.\nInaccessible staff or systems\tReduce the horizontal scope of the DMMA by focusing only on available Knowledge Areas and staff\nSurprises arise such as a regulation changes\tAdd flexibility into the assessment work stream and focus.",
+    "markdown": "| Risk | Mitigation |\n| --- | --- |\n| Lack of organizational buy-in | Socialize the concepts related to the assessment. Establish benefit statements before conducting the assessment. Share articles and success stories. Engage an executive sponsor to champion the effort and review the results. |\n| Lack of DMMA expertise Lack of time or in-house expertise Lack of communication planning or standards | Use third party resources or specialists. Require knowledge transfer and training as part of the engagement. |\n| Lack of 'Data Speak' in the organization; Conversations on data quickly devolve into discussions about systems | Relate the DMMA to specific business problems or scenarios. Address in the communications plan. The DMMA will educate all participants regardless of background and technical experience. Orient participants to key concepts prior to the DMMA. |\n| Incomplete or out-of-date assets for analysis | Flag 'as of' or balance the rating accordingly. For example, give a -1 to everything that is over 1 year out-of-date. |\n| Narrow focus | Reduce the investigation depth to a simple DMMA and go to other areas for a quick assessment to establish ratings for a later comparative baseline. Conduct the first DMMA as a pilot, then apply lessons learned to address a broader scope. Present in-scope focus of proposed assessment in context of DAMA-DMBOK Knowledge Areas. Illustrate what is being left out of scope and discuss the need to include. |\n| Inaccessible staff or systems | Reduce the horizontal scope of the DMMA by focusing only on available Knowledge Areas and staff |\n| Surprises arise such as a regulation changes | Add flexibility into the assessment work stream and focus. |",
+    "structured": {
+      "num_rows": 8,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Risk",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 143.04,
+            "t": 395.16648,
+            "r": 162.49685999999997,
+            "b": 403.80798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Mitigation",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 361.08,
+            "t": 395.16648,
+            "r": 406.21772400000003,
+            "b": 403.80798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Lack of organizational buy-in",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 406.80647999999997,
+            "r": 209.09843999999998,
+            "b": 415.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Socialize the concepts related to the assessment. Establish benefit statements before conducting the assessment. Share articles and success stories. Engage an executive sponsor to champion the effort and review the results.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 227.16,
+            "t": 406.80647999999997,
+            "r": 534.548508000001,
+            "b": 449.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Lack of DMMA expertise Lack of time or in-house expertise Lack of communication planning or standards",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 89.99999999999999,
+            "t": 453.24647999999996,
+            "r": 194.02073999999985,
+            "b": 507.8663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Use third party resources or specialists. Require knowledge transfer and training as part of the engagement.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 227.16,
+            "t": 453.24647999999996,
+            "r": 514.7719320000015,
+            "b": 473.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Lack of 'Data Speak' in the organization; Conversations on data quickly devolve into discussions about systems",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 89.99999999999999,
+            "t": 511.32648,
+            "r": 214.9840559999999,
+            "b": 554.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Relate the DMMA to specific business problems or scenarios. Address in the communications plan. The DMMA will educate all participants regardless of background and technical experience. Orient participants to key concepts prior to the DMMA.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 227.16,
+            "t": 511.32648,
+            "r": 509.3218200000014,
+            "b": 554.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Incomplete or out-of-date assets for analysis",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 557.76648,
+            "r": 192.58407599999998,
+            "b": 577.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Flag 'as of' or balance the rating accordingly. For example, give a -1 to everything that is over 1 year out-of-date.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 227.16,
+            "t": 557.76648,
+            "r": 512.820552,
+            "b": 577.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Narrow focus",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 581.28648,
+            "r": 144.63856800000005,
+            "b": 589.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Reduce the investigation depth to a simple DMMA and go to other areas for a quick assessment to establish ratings for a later comparative baseline. Conduct the first DMMA as a pilot, then apply lessons learned to address a broader scope. Present in-scope focus of proposed assessment in context of DAMA-DMBOK Knowledge Areas. Illustrate what is being left out of scope and discuss the need to include.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 227.16,
+            "t": 581.28648,
+            "r": 538.7865960000008,
+            "b": 647.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Inaccessible staff or systems",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 650.76648,
+            "r": 204.04598400000012,
+            "b": 659.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Reduce the horizontal scope of the DMMA by focusing only on available Knowledge Areas and staff",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 227.16,
+            "t": 650.76648,
+            "r": 521.1702360000014,
+            "b": 670.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Surprises arise such as a regulation changes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 674.28648,
+            "r": 187.0692,
+            "b": 694.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Add flexibility into the assessment work stream and focus.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 227.16,
+            "t": 674.28648,
+            "r": 461.72198400000144,
+            "b": 682.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 33 Typical Risks and Mitigations for a DMMA"
+    ],
+    "num_rows": 8,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

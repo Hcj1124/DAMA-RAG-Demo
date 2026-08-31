@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:017:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      82
+    ],
+    "locators": {
+      "docling_ref": "#/tables/17",
+      "table_index": 17,
+      "bounding_boxes": [
+        {
+          "l": 50.76826095581055,
+          "t": 286.6214294433594,
+          "r": 528.0052490234375,
+          "b": 127.46380615234375,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Principle\tDescription\nAccountability Principle\tAn organization must identify individuals who are ultimately accountable for data and content of all types.\nAsset Principle\tData and content of all types are assets and have characteristics of other assets. They should be managed, secured, and accounted for as other material or financial assets.\nAudit Principle\tThe accuracy of data and content is subject to periodic audit by an independent body.\nDue Diligence Principle\tIf a risk is known, it must be reported. If a risk is possible, it must be confirmed. Data risks include risks related to poor data management practices.\nGoing Concern Principle\tData and content are critical to successful, ongoing business operations and management (i.e., they are not viewed as temporary means to achieve results or merely as a business by- product).",
+    "markdown": "| Principle | Description |\n| --- | --- |\n| Accountability Principle | An organization must identify individuals who are ultimately accountable for data and content of all types. |\n| Asset Principle | Data and content of all types are assets and have characteristics of other assets. They should be managed, secured, and accounted for as other material or financial assets. |\n| Audit Principle | The accuracy of data and content is subject to periodic audit by an independent body. |\n| Due Diligence Principle | If a risk is known, it must be reported. If a risk is possible, it must be confirmed. Data risks include risks related to poor data management practices. |\n| Going Concern Principle | Data and content are critical to successful, ongoing business operations and management (i.e., they are not viewed as temporary means to achieve results or merely as a business by- product). |",
+    "structured": {
+      "num_rows": 6,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 80.28,
+            "t": 513.24648,
+            "r": 119.01941999999995,
+            "b": 521.8879872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 312.96,
+            "t": 513.24648,
+            "r": 362.30383200000017,
+            "b": 521.8879872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Accountability Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 530.16648,
+            "r": 120.29421600000002,
+            "b": 550.3279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "An organization must identify individuals who are ultimately accountable for data and content of all types.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 153.36,
+            "t": 524.88648,
+            "r": 498.42627600000014,
+            "b": 544.9463563846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Asset Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 558.72648,
+            "r": 121.66869600000004,
+            "b": 567.3679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data and content of all types are assets and have characteristics of other assets. They should be managed, secured, and accounted for as other material or financial assets.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 153.36,
+            "t": 553.44648,
+            "r": 521.137980000001,
+            "b": 573.3863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Audit Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 587.16648,
+            "r": 123.33400800000001,
+            "b": 595.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The accuracy of data and content is subject to periodic audit by an independent body.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 153.36,
+            "t": 581.88648,
+            "r": 494.4893159999999,
+            "b": 590.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Due Diligence Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 604.20648,
+            "r": 116.62794000000001,
+            "b": 624.2479872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "If a risk is known, it must be reported. If a risk is possible, it must be confirmed. Data risks include risks related to poor data management practices.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 153.36,
+            "t": 598.92648,
+            "r": 517.3392360000018,
+            "b": 618.9863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Going Concern Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 632.64648,
+            "r": 122.77326000000002,
+            "b": 652.8117072727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data and content are critical to successful, ongoing business operations and management (i.e., they are not viewed as temporary means to achieve results or merely as a business by- product).",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 153.35999999999996,
+            "t": 627.36648,
+            "r": 517.87608,
+            "b": 658.9500763846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 5 Principles for Data Asset Accounting"
+    ],
+    "num_rows": 6,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

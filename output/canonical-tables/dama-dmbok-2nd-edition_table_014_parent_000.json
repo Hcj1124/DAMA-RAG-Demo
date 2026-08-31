@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:014:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      59
+    ],
+    "locators": {
+      "docling_ref": "#/tables/14",
+      "table_index": 14,
+      "bounding_boxes": [
+        {
+          "l": 83.35623168945312,
+          "t": 706.4157485961914,
+          "r": 560.9505615234375,
+          "b": 352.797119140625,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "PIPEDA Principle\tDescription of Principle\nAccountability\tAn organization is responsible for personal information under its control and must designate an individual to be accountable for the organization's compliance with the principle.\nIdentifying Purposes\tAn organization must identify the purposes for which personal information is collected at or before the time the information is collected.\nConsent\tAn organization must obtain the knowledge and consent of the individual for the collection, use, or disclosure of personal information, except where inappropriate.\nLimiting Collection, Use, Disclosure, and Retention\tThe collection of personal information must be limited to that which is necessary for the purposes identified by the organization. Information shall be collected by fair and lawful means. Personal information shall not be used or disclosed for purposes other than those for which it was collected, except with the consent of the individual or as required by law. Personal information shall be retained only as long as necessary for the fulfillment of those purposes.\nAccuracy\tPersonal information must be as accurate, complete, and up-to-date as is necessary for the purposes for which it is to be used.\nSafeguards\tPersonal information must be protected by security safeguards appropriate to the sensitivity of the information.\nOpenness\tAn organization must make specific information about its policies and practices relating to the management of their personal information readily available to individuals.\nIndividual Access\tUpon request, an individual shall be informed of the existence, use, and disclosure of his or her personal information, and shall be given access to that information. An individual shall be able to challenge the accuracy and completeness of the information and have it amended as appropriate.\nCompliance Challenges\tAn individual shall be able to address a challenge concerning compliance with the above principles to the designated individual or individuals accountable for the organization's compliance.",
+    "markdown": "| PIPEDA Principle | Description of Principle |\n| --- | --- |\n| Accountability | An organization is responsible for personal information under its control and must designate an individual to be accountable for the organization's compliance with the principle. |\n| Identifying Purposes | An organization must identify the purposes for which personal information is collected at or before the time the information is collected. |\n| Consent | An organization must obtain the knowledge and consent of the individual for the collection, use, or disclosure of personal information, except where inappropriate. |\n| Limiting Collection, Use, Disclosure, and Retention | The collection of personal information must be limited to that which is necessary for the purposes identified by the organization. Information shall be collected by fair and lawful means. Personal information shall not be used or disclosed for purposes other than those for which it was collected, except with the consent of the individual or as required by law. Personal information shall be retained only as long as necessary for the fulfillment of those purposes. |\n| Accuracy | Personal information must be as accurate, complete, and up-to-date as is necessary for the purposes for which it is to be used. |\n| Safeguards | Personal information must be protected by security safeguards appropriate to the sensitivity of the information. |\n| Openness | An organization must make specific information about its policies and practices relating to the management of their personal information readily available to individuals. |\n| Individual Access | Upon request, an individual shall be informed of the existence, use, and disclosure of his or her personal information, and shall be given access to that information. An individual shall be able to challenge the accuracy and completeness of the information and have it amended as appropriate. |\n| Compliance Challenges | An individual shall be able to address a challenge concerning compliance with the above principles to the designated individual or individuals accountable for the organization's compliance. |",
+    "structured": {
+      "num_rows": 10,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "PIPEDA Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.6,
+            "t": 93.24648000000002,
+            "r": 169.0589039999998,
+            "b": 101.88798727272729,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description of Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 316.92,
+            "t": 93.24648000000002,
+            "r": 418.41604799999993,
+            "b": 101.88798727272729,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Accountability",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 110.16647999999998,
+            "r": 152.6942159999999,
+            "b": 118.80798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "An organization is responsible for personal information under its control and must designate an individual to be accountable for the organization's compliance with the principle.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 181.2,
+            "t": 104.88648,
+            "r": 550.5416999999997,
+            "b": 124.94635638461534,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Identifying Purposes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 138.72648000000004,
+            "r": 137.09187599999998,
+            "b": 158.76798727272728,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "An organization must identify the purposes for which personal information is collected at or before the time the information is collected.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 181.2,
+            "t": 133.44647999999995,
+            "r": 549.6717839999999,
+            "b": 153.3863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Consent",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 167.16647999999998,
+            "r": 124.87195200000004,
+            "b": 175.80798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "An organization must obtain the knowledge and consent of the individual for the collection, use, or disclosure of personal information, except where inappropriate.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 181.2,
+            "t": 161.88648,
+            "r": 548.2479120000015,
+            "b": 181.94635638461534,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Limiting Collection, Use, Disclosure, and Retention",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 195.72648000000004,
+            "r": 156.32662799999994,
+            "b": 238.8196272727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The collection of personal information must be limited to that which is necessary for the purposes identified by the organization. Information shall be collected by fair and lawful means. Personal information shall not be used or disclosed for purposes other than those for which it was collected, except with the consent of the individual or as required by law. Personal information shall be retained only as long as necessary for the fulfillment of those purposes.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 181.2,
+            "t": 190.44647999999995,
+            "r": 548.5925279999999,
+            "b": 256.4812363846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Accuracy",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 270.12648,
+            "r": 130.508316,
+            "b": 278.7679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Personal information must be as accurate, complete, and up-to-date as is necessary for the purposes for which it is to be used.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 181.2,
+            "t": 264.84648000000004,
+            "r": 540.7170960000002,
+            "b": 284.9063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Safeguards",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 298.68647999999996,
+            "r": 137.78807999999998,
+            "b": 307.3279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Personal information must be protected by security safeguards appropriate to the sensitivity of the information.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 181.2,
+            "t": 293.40648,
+            "r": 547.6199399999999,
+            "b": 313.4663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Openness",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 327.12648,
+            "r": 131.06607600000004,
+            "b": 335.7679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "An organization must make specific information about its policies and practices relating to the management of their personal information readily available to individuals.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 181.2,
+            "t": 321.84648,
+            "r": 543.7031640000013,
+            "b": 341.9063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Individual Access",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 355.68647999999996,
+            "r": 165.14720399999987,
+            "b": 364.3279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Upon request, an individual shall be informed of the existence, use, and disclosure of his or her personal information, and shall be given access to that information. An individual shall be able to challenge the accuracy and completeness of the information and have it amended as appropriate.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 181.2,
+            "t": 350.40648,
+            "r": 547.2678480000003,
+            "b": 393.3942763846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Compliance Challenges",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 407.16648,
+            "r": 140.97727199999994,
+            "b": 427.21218727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "An individual shall be able to address a challenge concerning compliance with the above principles to the designated individual or individuals accountable for the organization's compliance.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 181.2,
+            "t": 401.88648,
+            "r": 536.3038800000012,
+            "b": 433.4700763846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 2 Canadian Privacy Statutory Obligations"
+    ],
+    "num_rows": 10,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

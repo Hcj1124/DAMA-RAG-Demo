@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:057:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      606
+    ],
+    "locators": {
+      "docling_ref": "#/tables/57",
+      "table_index": 57,
+      "bounding_boxes": [
+        {
+          "l": 62.399940490722656,
+          "t": 610.9810028076172,
+          "r": 531.312255859375,
+          "b": 430.903076171875,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Stage\tDefinition\nKnowledge\tIn the knowledge stage the individual is first exposed to an innovation but lacks information about the innovation. During this stage the individual has not yet been inspired to find more information about the innovation.\nPersuasion\tIn the persuasion stage the individual is interested in the innovation and actively seeks information about the innovation.\nDecision\tIn the Decision stage the individual weighs the advantages and disadvantages of using the innovation and decides whether to adopt or reject it. Rogers notes that the individualistic nature of this stage makes it the most difficult stage about which to acquire empirical evidence.\nImplementation\tIn the Implementation stage the individual employs the innovation and determines its usefulness or searches for further information about it.\nConfirmation\tIn the Confirmation stage, the individual finalizes his/her decision to continue using the innovation and may end up using it to its fullest potential.",
+    "markdown": "| Stage | Definition |\n| --- | --- |\n| Knowledge | In the knowledge stage the individual is first exposed to an innovation but lacks information about the innovation. During this stage the individual has not yet been inspired to find more information about the innovation. |\n| Persuasion | In the persuasion stage the individual is interested in the innovation and actively seeks information about the innovation. |\n| Decision | In the Decision stage the individual weighs the advantages and disadvantages of using the innovation and decides whether to adopt or reject it. Rogers notes that the individualistic nature of this stage makes it the most difficult stage about which to acquire empirical evidence. |\n| Implementation | In the Implementation stage the individual employs the innovation and determines its usefulness or searches for further information about it. |\n| Confirmation | In the Confirmation stage, the individual finalizes his/her decision to continue using the innovation and may end up using it to its fullest potential. |",
+    "structured": {
+      "num_rows": 6,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Stage",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 89.64,
+            "t": 190.20647999999994,
+            "r": 113.02209600000002,
+            "b": 198.8479872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Definition",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 313.2,
+            "t": 190.20647999999994,
+            "r": 355.9343760000004,
+            "b": 198.8479872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Knowledge",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 66.84,
+            "t": 205.20647999999994,
+            "r": 112.78249200000003,
+            "b": 213.7463563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "In the knowledge stage the individual is first exposed to an innovation but lacks information about the innovation. During this stage the individual has not yet been inspired to find more information about the innovation.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 141.96,
+            "t": 205.20647999999994,
+            "r": 510.8983200000014,
+            "b": 236.78635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Persuasion",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 66.84,
+            "t": 243.60648000000003,
+            "r": 110.09030400000005,
+            "b": 252.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "In the persuasion stage the individual is interested in the innovation and actively seeks information about the innovation.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 141.96,
+            "t": 243.60648000000003,
+            "r": 486.99133200000114,
+            "b": 263.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Decision",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 66.84,
+            "t": 273.12648,
+            "r": 102.29759999999997,
+            "b": 281.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "In the Decision stage the individual weighs the advantages and disadvantages of using the innovation and decides whether to adopt or reject it. Rogers notes that the individualistic nature of this stage makes it the most difficult stage about which to acquire empirical evidence.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 141.96,
+            "t": 273.12648,
+            "r": 523.7666400000019,
+            "b": 304.7063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Implementation",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 66.84,
+            "t": 311.52648,
+            "r": 130.13679599999992,
+            "b": 320.0663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "In the Implementation stage the individual employs the innovation and determines its usefulness or searches for further information about it.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 141.96,
+            "t": 311.52648,
+            "r": 483.2563320000015,
+            "b": 331.5863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Confirmation",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 66.84,
+            "t": 338.40648,
+            "r": 120.65587199999996,
+            "b": 346.9463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "In the Confirmation stage, the individual finalizes his/her decision to continue using the innovation and may end up using it to its fullest potential.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 141.96,
+            "t": 338.40648,
+            "r": 492.58251600000114,
+            "b": 358.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 38 The Stages of Adoption (Adapted from Rogers, 1964)"
+    ],
+    "num_rows": 6,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

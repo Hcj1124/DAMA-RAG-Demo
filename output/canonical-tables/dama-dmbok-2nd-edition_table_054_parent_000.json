@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:054:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      582
+    ],
+    "locators": {
+      "docling_ref": "#/tables/54",
+      "table_index": 54,
+      "bounding_boxes": [
+        {
+          "l": 63.514198303222656,
+          "t": 489.87890625,
+          "r": 529.9642333984375,
+          "b": 390.56097412109375,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Example Scenario\tHow it might manifest\nResponse to a Regulatory Change\t'We're OK. We haven't been fined under the current rules.'\nResponse to Business Change\t'We've been supporting the business successfully for years. We'll be OK.'\nResponse to Technology Change\t'That new technology is unproven. Our current systems are stable and we know how to work around issues.'\nResponse to Problems or Errors\t'We can assign a troubleshooting team to that and patch the issues up. There are bound to be some people available in [Insert name of Department or Team here].'",
+    "markdown": "| Example Scenario | How it might manifest |\n| --- | --- |\n| Response to a Regulatory Change | 'We're OK. We haven't been fined under the current rules.' |\n| Response to Business Change | 'We've been supporting the business successfully for years. We'll be OK.' |\n| Response to Technology Change | 'That new technology is unproven. Our current systems are stable and we know how to work around issues.' |\n| Response to Problems or Errors | 'We can assign a troubleshooting team to that and patch the issues up. There are bound to be some people available in [Insert name of Department or Team here].' |",
+    "structured": {
+      "num_rows": 5,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Example Scenario",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 100.68,
+            "t": 309.60648,
+            "r": 178.03035600000004,
+            "b": 318.24798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How it might manifest",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 324.0,
+            "t": 309.60648,
+            "r": 419.11241999999993,
+            "b": 318.24798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Response to a Regulatory Change",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.2,
+            "t": 321.24647999999996,
+            "r": 205.54145999999963,
+            "b": 329.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "'We're OK. We haven't been fined under the current rules.'",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 219.6,
+            "t": 321.24647999999996,
+            "r": 461.2624680000012,
+            "b": 329.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Response to Business Change",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.2,
+            "t": 333.24647999999996,
+            "r": 189.81461999999996,
+            "b": 341.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "'We've been supporting the business successfully for years. We'll be OK.'",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 219.6,
+            "t": 333.24647999999996,
+            "r": 521.1708720000013,
+            "b": 341.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Response to Technology Change",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.2,
+            "t": 345.24647999999996,
+            "r": 202.06044000000003,
+            "b": 353.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "'That new technology is unproven. Our current systems are stable and we know how to work around issues.'",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 219.6,
+            "t": 345.24647999999996,
+            "r": 515.0393280000014,
+            "b": 365.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Response to Problems or Errors",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.2,
+            "t": 368.76648,
+            "r": 197.42423999999994,
+            "b": 377.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "'We can assign a troubleshooting team to that and patch the issues up. There are bound to be some people available in [Insert name of Department or Team here].'",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 219.6,
+            "t": 368.76648,
+            "r": 522.0134880000012,
+            "b": 400.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 35 Complacency Scenarios"
+    ],
+    "num_rows": 5,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

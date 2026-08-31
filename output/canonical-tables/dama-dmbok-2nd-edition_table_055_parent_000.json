@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:055:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      585
+    ],
+    "locators": {
+      "docling_ref": "#/tables/55",
+      "table_index": 55,
+      "bounding_boxes": [
+        {
+          "l": 83.28656005859375,
+          "t": 362.5293273925781,
+          "r": 536.0479125976562,
+          "b": 193.41973876953125,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Example Scenario\tHow it might manifest\nAddressing Data Quality\t'We've bought a Data Quality tool. That's fixed that now.' • No one in the organization is reviewing or acting on data quality reports\nConfusing capability delivery with implementation and operation\t'We've implemented the reporting stack for Regulation X. We are now compliant with the legislation.' • Regulatory requirement changes • Nobody is reviewing or acting on issues identified in reporting\nMigration of data\t'All the data in System X is now in System Y.' • Record counts match, but the data in System Y is incomplete, or truncated due to failures in the migration process. Manual interventions needed",
+    "markdown": "| Example Scenario | How it might manifest |\n| --- | --- |\n| Addressing Data Quality | 'We've bought a Data Quality tool. That's fixed that now.' • No one in the organization is reviewing or acting on data quality reports |\n| Confusing capability delivery with implementation and operation | 'We've implemented the reporting stack for Regulation X. We are now compliant with the legislation.' • Regulatory requirement changes • Nobody is reviewing or acting on issues identified in reporting |\n| Migration of data | 'All the data in System X is now in System Y.' • Record counts match, but the data in System Y is incomplete, or truncated due to failures in the migration process. Manual interventions needed |",
+    "structured": {
+      "num_rows": 4,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Example Scenario",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 113.76,
+            "t": 437.04648,
+            "r": 191.11035600000008,
+            "b": 445.68798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "How it might manifest",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 330.24,
+            "t": 437.04648,
+            "r": 425.34505200000063,
+            "b": 445.68798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Addressing Data Quality",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 448.68647999999996,
+            "r": 189.41573999999983,
+            "b": 457.22635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "'We've bought a Data Quality tool. That's fixed that now.' • No one in the organization is reviewing or acting on data quality reports",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.84,
+            "t": 448.68647999999996,
+            "r": 519.9023160000014,
+            "b": 487.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Confusing capability delivery with implementation and operation",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 490.68647999999996,
+            "r": 208.85865600000005,
+            "b": 522.2700763846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "'We've implemented the reporting stack for Regulation X. We are now compliant with the legislation.' • Regulatory requirement changes • Nobody is reviewing or acting on issues identified in reporting",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.84,
+            "t": 490.68647999999996,
+            "r": 512.576028,
+            "b": 540.8663563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Migration of data",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 544.20648,
+            "r": 159.93812399999982,
+            "b": 552.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "'All the data in System X is now in System Y.' • Record counts match, but the data in System Y is incomplete, or truncated due to failures in the migration process. Manual interventions needed",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.84,
+            "t": 544.20648,
+            "r": 519.3355920000012,
+            "b": 597.8663563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 36 Declaring Victory Too Soon Scenarios"
+    ],
+    "num_rows": 4,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

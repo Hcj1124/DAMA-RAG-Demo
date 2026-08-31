@@ -1,0 +1,730 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:049:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      484
+    ],
+    "locators": {
+      "docling_ref": "#/tables/49",
+      "table_index": 49,
+      "bounding_boxes": [
+        {
+          "l": 66.02994537353516,
+          "t": 700.3957366943359,
+          "r": 528.18701171875,
+          "b": 101.0302734375,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Dimension and Business Rule\tMeasure\tMetrics\tStatus Indicator\nCompleteness Business Rule 1: Population of field is mandatory\tCount the number of records where data is populated, compare to the total number of records\tDivide the obtained number of records where data is populated by the total number of records in the table or database and multiply it by 100 to get to percentage complete\tUnacceptable: Below 80% populated Above 20% not populated\nExample 1: Postal Code must be populated in the address table\tCount populated: 700,000 Count not populated: 300,000 Total count: 1,000,000\tPositive measure: 700,000/1,000,000*100 = 70% populated Negative measure: 300,000/1,000,000 *100 = 30% not populated\tExample result: Unacceptable\nUniqueness Business Rule 2: There should be only one record per entity instance in a table\tCount the number of duplicate records identified; report on the percentage of records that represent duplicates\tDivide the number of duplicate records by the total number of records in the table or database and multiply it by 100\tUnacceptable: Above 0%\nExample 2: There should be one and only one current row per postal code on the Postal Codes master list\tCount of duplicates: 1,000 Total Count: 1,000,000\t10,000/1,000,000*100 = 1.0% of postal codes are present on more than one current row\tExample result: Unacceptable\nTimeliness Business Rule 3: Records must arrive within a scheduled timeframe\tCount the number of records failing to arrive on time from a data service for business transactions to be completed\tDivide the number of incomplete transactions by the total number of attempted transactions in a time period and multiply by 100\tUnacceptable: Below 99% completed on time Above 1% not completed on time\nExample 3: Equity market record should arrive within 5 minutes of being transacted\tCount of incomplete transactions: 2000 Count of attempted transactions: 1,000,000\tPositive: (1,000,000 - 2000) / 1,000,000*100 = 99.8% of transaction records arrived within defined timeframe Negative: 2000/1,000,000*100 = 0.20% of transactions did not arrive within defined timeframe\tExample Result: Acceptable\nValidity Business Rule 4: If field X = value 1, then field Y must = value 1-prime\tCount the number of records where the rule is met\tDivide the number of records that meet the condition by the total number of records\tUnacceptable : Below 100% adherence to the rule\nExample 4: Only shipped orders should be billed\tCount of records where status for shipping = Shipped and status for billing = Billed: 999,000 Count of total records: 1,000,000\tPositive: 999,000/1,000,000*100 = 99.9% of records conform to the rule Negative: (1,000,000-999,000) / 1,000,000 *100 = 0.10% do not conform to the rule\tExample Result: Unacceptable",
+    "markdown": "| Dimension and Business Rule | Measure | Metrics | Status Indicator |\n| --- | --- | --- | --- |\n| Completeness Business Rule 1: Population of field is mandatory | Count the number of records where data is populated, compare to the total number of records | Divide the obtained number of records where data is populated by the total number of records in the table or database and multiply it by 100 to get to percentage complete | Unacceptable: Below 80% populated Above 20% not populated |\n| Example 1: Postal Code must be populated in the address table | Count populated: 700,000 Count not populated: 300,000 Total count: 1,000,000 | Positive measure: 700,000/1,000,000*100 = 70% populated Negative measure: 300,000/1,000,000 *100 = 30% not populated | Example result: Unacceptable |\n| Uniqueness Business Rule 2: There should be only one record per entity instance in a table | Count the number of duplicate records identified; report on the percentage of records that represent duplicates | Divide the number of duplicate records by the total number of records in the table or database and multiply it by 100 | Unacceptable: Above 0% |\n| Example 2: There should be one and only one current row per postal code on the Postal Codes master list | Count of duplicates: 1,000 Total Count: 1,000,000 | 10,000/1,000,000*100 = 1.0% of postal codes are present on more than one current row | Example result: Unacceptable |\n| Timeliness Business Rule 3: Records must arrive within a scheduled timeframe | Count the number of records failing to arrive on time from a data service for business transactions to be completed | Divide the number of incomplete transactions by the total number of attempted transactions in a time period and multiply by 100 | Unacceptable: Below 99% completed on time Above 1% not completed on time |\n| Example 3: Equity market record should arrive within 5 minutes of being transacted | Count of incomplete transactions: 2000 Count of attempted transactions: 1,000,000 | Positive: (1,000,000 - 2000) / 1,000,000*100 = 99.8% of transaction records arrived within defined timeframe Negative: 2000/1,000,000*100 = 0.20% of transactions did not arrive within defined timeframe | Example Result: Acceptable |\n| Validity Business Rule 4: If field X = value 1, then field Y must = value 1-prime | Count the number of records where the rule is met | Divide the number of records that meet the condition by the total number of records | Unacceptable : Below 100% adherence to the rule |\n| Example 4: Only shipped orders should be billed | Count of records where status for shipping = Shipped and status for billing = Billed: 999,000 Count of total records: 1,000,000 | Positive: 999,000/1,000,000*100 = 99.9% of records conform to the rule Negative: (1,000,000-999,000) / 1,000,000 *100 = 0.10% do not conform to the rule | Example Result: Unacceptable |",
+    "structured": {
+      "num_rows": 9,
+      "num_cols": 4,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Dimension and Business Rule",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 74.67415036261082,
+            "t": 94.12560234218836,
+            "r": 145.3078590631485,
+            "b": 120.16933547332883,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Measure",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 194.86511313915253,
+            "t": 96.47473059315234,
+            "r": 233.56587874889374,
+            "b": 108.88572854176164,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Metrics",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 344.8372439146042,
+            "t": 96.18358508870006,
+            "r": 379.3714438676834,
+            "b": 108.81220230087638,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Status Indicator",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 471.63598215579987,
+            "t": 95.5394048448652,
+            "r": 507.4380565881729,
+            "b": 119.93345124274492,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Completeness Business Rule 1: Population of field is mandatory",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.53512398898602,
+            "t": 122.10449927300215,
+            "r": 148.35587149858475,
+            "b": 168.2590338587761,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Count the number of records where data is populated, compare to the total number of records",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.61943873763084,
+            "t": 124.31233943253756,
+            "r": 255.63510632514954,
+            "b": 179.59954273700714,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Divide the obtained number of records where data is populated by the total number of records in the table or database and multiply it by 100 to get to percentage complete",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 275.54565382003784,
+            "t": 124.00122190266848,
+            "r": 444.6930298805237,
+            "b": 180.98816445469856,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Unacceptable: Below 80% populated Above 20% not populated",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 457.40333247184753,
+            "t": 123.77861033007503,
+            "r": 518.5102450847626,
+            "b": 176.72983698546886,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Example 1: Postal Code must be populated in the address table",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.67391565442085,
+            "t": 182.30236288905144,
+            "r": 149.87220168113708,
+            "b": 228.89058849215508,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Count populated: 700,000 Count not populated: 300,000 Total count: 1,000,000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 163.56992465257645,
+            "t": 182.6073394715786,
+            "r": 257.8953854441643,
+            "b": 234.0982367992401,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Positive measure: 700,000/1,000,000*100 = 70% populated Negative measure: 300,000/1,000,000 *100 = 30% not populated",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 275.3883329629898,
+            "t": 181.3623695075512,
+            "r": 442.44127357006073,
+            "b": 237.950181722641,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Example result: Unacceptable",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 457.555228471756,
+            "t": 182.32318677008152,
+            "r": 514.3274323940277,
+            "b": 219.43093217909336,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Uniqueness Business Rule 2: There should be only one record per entity instance in a table",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.25225499272346,
+            "t": 240.58836126327515,
+            "r": 152.60414734482765,
+            "b": 307.6633584499359,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Count the number of duplicate records identified; report on the percentage of records that represent duplicates",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.8780763745308,
+            "t": 238.91675612330437,
+            "r": 263.7421973347664,
+            "b": 299.95895090699196,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Divide the number of duplicate records by the total number of records in the table or database and multiply it by 100",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 272.6791262626648,
+            "t": 235.86287550628185,
+            "r": 442.69580125808716,
+            "b": 280.75176352262497,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Unacceptable: Above 0%",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 458.2252947092056,
+            "t": 238.6935933828354,
+            "r": 517.4796599149704,
+            "b": 264.444120824337,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Example 2: There should be one and only one current row per postal code on the Postal Codes master list",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.04967994987965,
+            "t": 305.4953719675541,
+            "r": 148.62226778268814,
+            "b": 388.67246863245964,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Count of duplicates: 1,000 Total Count: 1,000,000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 161.24752128124237,
+            "t": 304.8081214129925,
+            "r": 261.4684249162674,
+            "b": 354.95120576024055,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10,000/1,000,000*100 = 1.0% of postal codes are present on more than one current row",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 272.4364809393883,
+            "t": 307.66725009679794,
+            "r": 444.99566531181335,
+            "b": 347.76620811223984,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Example result: Unacceptable",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 457.54470920562744,
+            "t": 309.54864713549614,
+            "r": 516.149248123169,
+            "b": 347.2362836301327,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Timeliness Business Rule 3: Records must arrive within a scheduled timeframe",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.45524653792381,
+            "t": 384.8259684443474,
+            "r": 142.72497993707657,
+            "b": 462.15156346559525,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Count the number of records failing to arrive on time from a data service for business transactions to be completed",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 161.30764907598495,
+            "t": 387.9385361671448,
+            "r": 261.13405269384384,
+            "b": 464.04258251190186,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Divide the number of incomplete transactions by the total number of attempted transactions in a time period and multiply by 100",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 273.27619099617004,
+            "t": 388.5678761601448,
+            "r": 447.6711938381195,
+            "b": 447.16579538583755,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Unacceptable: Below 99% completed on time Above 1% not completed on time",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 457.0493674278259,
+            "t": 387.7307614982128,
+            "r": 518.2751863002777,
+            "b": 469.96827536821365,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Example 3: Equity market record should arrive within 5 minutes of being transacted",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.15149584412575,
+            "t": 470.6508488059044,
+            "r": 140.18868711590767,
+            "b": 541.6993959546089,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Count of incomplete transactions: 2000 Count of attempted transactions: 1,000,000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 161.49169492721558,
+            "t": 470.25447207689285,
+            "r": 259.4009209871292,
+            "b": 523.7306270003319,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Positive: (1,000,000 - 2000) / 1,000,000*100 = 99.8% of transaction records arrived within defined timeframe Negative: 2000/1,000,000*100 = 0.20% of transactions did not arrive within defined timeframe",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 272.10329282283783,
+            "t": 470.88884621858597,
+            "r": 437.13972866535187,
+            "b": 559.0340049862862,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Example Result: Acceptable",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 457.87526750564575,
+            "t": 471.96658247709274,
+            "r": 506.1686124801636,
+            "b": 506.5521122813225,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Validity Business Rule 4: If field X = value 1, then field Y must = value 1-prime",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.73267690837383,
+            "t": 561.187585234642,
+            "r": 151.73002249002457,
+            "b": 622.6048419475555,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Count the number of records where the rule is met",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 161.79928708076477,
+            "t": 563.14004945755,
+            "r": 262.981299161911,
+            "b": 601.4987629652023,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Divide the number of records that meet the condition by the total number of records",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 274.46153604984283,
+            "t": 563.1653630137444,
+            "r": 444.98087775707245,
+            "b": 585.4055892825127,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Unacceptable : Below 100% adherence to the rule",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 457.08312821388245,
+            "t": 561.3586748838425,
+            "r": 520.5225641727448,
+            "b": 612.5598230361938,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Example 4: Only shipped orders should be billed",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 70.14674565196037,
+            "t": 619.7999642491341,
+            "r": 141.31146043539047,
+            "b": 666.2328810095787,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Count of records where status for shipping = Shipped and status for billing = Billed: 999,000 Count of total records: 1,000,000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.49273252487183,
+            "t": 620.8874831795692,
+            "r": 263.5278604030609,
+            "b": 693.1933178901672,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Positive: 999,000/1,000,000*100 = 99.9% of records conform to the rule Negative: (1,000,000-999,000) / 1,000,000 *100 = 0.10% do not conform to the rule",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 274.15021258592606,
+            "t": 623.3379353880882,
+            "r": 433.20984649658203,
+            "b": 691.0962557792664,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Example Result: Unacceptable",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 457.59166038036346,
+            "t": 621.6025108098984,
+            "r": 514.0208591222763,
+            "b": 658.5892938375473,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 30 DQ Metric Examples"
+    ],
+    "num_rows": 9,
+    "num_cols": 4,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

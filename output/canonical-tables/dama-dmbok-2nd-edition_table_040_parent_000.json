@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:040:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      361
+    ],
+    "locators": {
+      "docling_ref": "#/tables/40",
+      "table_index": 40,
+      "bounding_boxes": [
+        {
+          "l": 88.93077087402344,
+          "t": 475.1171875,
+          "r": 545.1494140625,
+          "b": 185.9666748046875,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Reference Data Set Key Information\tDescription\nFormal Name\tOfficial, especially if external name of the Reference Data set (e.g., ISO 3166-1991 Country Code List)\nInternal Name\tName associated with the data set within the organization (e.g., Country Codes - ISO)\nData Provider\tThe party that provides and maintains the Reference Data set. This can be external (ISO), internal (a specific department), or external - extended (obtained from an external party but then extended and modified internally).\nData Provider Data Set Source\tDescription of where data provider's data sets can be obtained. This is likely a Universal Resource Identifier (URI) within or outside of the enterprise network.\nData Provider Latest Version Number\tIf available and maintained, this describes the latest version of the external data provider's data set where information may be added or deprecated from the version in the organization\nData Provider Latest Version Date\tIf available and maintained, this describes when the standard list was last updated\nInternal Version Number\tVersion number of the current Reference Data set or version number of the last update that was applied against the data set\nInternal Version Reconciliation Date\tDate when data set was last updated based on the external source\nInternal Version Last Update Date\tDate data set was last changed. This does not mean reconciliation with an external version.",
+    "markdown": "| Reference Data Set Key Information | Description |\n| --- | --- |\n| Formal Name | Official, especially if external name of the Reference Data set (e.g., ISO 3166-1991 Country Code List) |\n| Internal Name | Name associated with the data set within the organization (e.g., Country Codes - ISO) |\n| Data Provider | The party that provides and maintains the Reference Data set. This can be external (ISO), internal (a specific department), or external - extended (obtained from an external party but then extended and modified internally). |\n| Data Provider Data Set Source | Description of where data provider's data sets can be obtained. This is likely a Universal Resource Identifier (URI) within or outside of the enterprise network. |\n| Data Provider Latest Version Number | If available and maintained, this describes the latest version of the external data provider's data set where information may be added or deprecated from the version in the organization |\n| Data Provider Latest Version Date | If available and maintained, this describes when the standard list was last updated |\n| Internal Version Number | Version number of the current Reference Data set or version number of the last update that was applied against the data set |\n| Internal Version Reconciliation Date | Date when data set was last updated based on the external source |\n| Internal Version Last Update Date | Date data set was last changed. This does not mean reconciliation with an external version. |",
+    "structured": {
+      "num_rows": 10,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Reference Data Set Key Information",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 126.12,
+            "t": 324.48648,
+            "r": 207.8109240000001,
+            "b": 348.12798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 369.36,
+            "t": 324.48648,
+            "r": 418.7038320000002,
+            "b": 333.12798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Formal Name",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 351.12648,
+            "r": 150.58138799999998,
+            "b": 359.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Official, especially if external name of the Reference Data set (e.g., ISO 3166-1991 Country Code List)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 249.24,
+            "t": 351.12648,
+            "r": 537.7360320000005,
+            "b": 371.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Internal Name",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 374.64648,
+            "r": 152.742708,
+            "b": 383.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Name associated with the data set within the organization (e.g., Country Codes - ISO)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 249.24,
+            "t": 374.64648,
+            "r": 537.9266160000012,
+            "b": 394.5863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Provider",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 398.04648,
+            "r": 151.28257200000002,
+            "b": 406.5863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The party that provides and maintains the Reference Data set. This can be external (ISO), internal (a specific department), or external - extended (obtained from an external party but then extended and modified internally).",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 249.24,
+            "t": 398.04648,
+            "r": 532.4975760000004,
+            "b": 441.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Provider Data Set Source",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 444.60648,
+            "r": 218.15799600000008,
+            "b": 453.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description of where data provider's data sets can be obtained. This is likely a Universal Resource Identifier (URI) within or outside of the enterprise network.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 249.24,
+            "t": 444.60648,
+            "r": 530.1913680000005,
+            "b": 476.1863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Provider Latest Version Number",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 479.64648,
+            "r": 212.23179600000006,
+            "b": 499.5863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "If available and maintained, this describes the latest version of the external data provider's data set where information may be added or deprecated from the version in the organization",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 249.24,
+            "t": 479.64648,
+            "r": 522.5782560000008,
+            "b": 511.1063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Provider Latest Version Date",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 514.56648,
+            "r": 233.6358360000001,
+            "b": 523.1063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "If available and maintained, this describes when the standard list was last updated",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 249.24,
+            "t": 514.56648,
+            "r": 525.5413560000012,
+            "b": 534.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Internal Version Number",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 538.0864799999999,
+            "r": 195.8057640000001,
+            "b": 546.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Version number of the current Reference Data set or version number of the last update that was applied against the data set",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 249.24,
+            "t": 538.0864799999999,
+            "r": 535.0515360000005,
+            "b": 558.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Internal Version Reconciliation Date",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 561.6064799999999,
+            "r": 221.4527639999996,
+            "b": 581.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Date when data set was last updated based on the external source",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 249.24,
+            "t": 561.6064799999999,
+            "r": 509.41412400000115,
+            "b": 570.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Internal Version Last Update Date",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 95.4,
+            "t": 585.12648,
+            "r": 233.02132799999995,
+            "b": 593.6663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Date data set was last changed. This does not mean reconciliation with an external version.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 249.24,
+            "t": 585.12648,
+            "r": 531.9267120000009,
+            "b": 605.0663563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 23 Critical Reference Data Metadata Attributes"
+    ],
+    "num_rows": 10,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

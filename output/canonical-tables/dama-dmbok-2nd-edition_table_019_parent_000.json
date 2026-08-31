@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:019:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      105
+    ],
+    "locators": {
+      "docling_ref": "#/tables/19",
+      "table_index": 19,
+      "bounding_boxes": [
+        {
+          "l": 83.30631256103516,
+          "t": 216.33599853515625,
+          "r": 546.0748291015625,
+          "b": 98.74395751953125,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Domain\tEnterprise Business Architecture\tEnterprise Data Architecture\tEnterprise Applications Architecture\tEnterprise Technology Architecture\nPurpose\tTo identify how an enterprise creates value for customers and other stakeholders\tTo describe how data should be organized and managed\tTo describe the structure and functionality of applications in an enterprise\tTo describe the physical technology needed to enable systems to function and deliver value",
+    "markdown": "| Domain | Enterprise Business Architecture | Enterprise Data Architecture | Enterprise Applications Architecture | Enterprise Technology Architecture |\n| --- | --- | --- | --- | --- |\n| Purpose | To identify how an enterprise creates value for customers and other stakeholders | To describe how data should be organized and managed | To describe the structure and functionality of applications in an enterprise | To describe the physical technology needed to enable systems to function and deliver value |",
+    "structured": {
+      "num_rows": 2,
+      "num_cols": 5,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Domain",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 102.24,
+            "t": 583.0864799999999,
+            "r": 135.97551599999997,
+            "b": 591.7279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Enterprise Business Architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 174.24,
+            "t": 583.0864799999999,
+            "r": 228.59271600000005,
+            "b": 621.7279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Enterprise Data Architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 266.52,
+            "t": 583.0864799999999,
+            "r": 335.1075480000002,
+            "b": 606.7279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Enterprise Applications Architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 371.52,
+            "t": 583.0864799999999,
+            "r": 425.8727160000001,
+            "b": 621.7279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Enterprise Technology Architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 468.0,
+            "t": 583.0864799999999,
+            "r": 522.352716,
+            "b": 621.7279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Purpose",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 633.12648,
+            "r": 124.89784800000002,
+            "b": 641.7679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "To identify how an enterprise creates value for customers and other stakeholders",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 159.12,
+            "t": 632.88648,
+            "r": 237.88268400000004,
+            "b": 687.4017163846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "To describe how data should be organized and managed",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 254.6364,
+            "t": 632.9064,
+            "r": 340.3023600000004,
+            "b": 664.3741963846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "To describe the structure and functionality of applications in an enterprise",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 357.83196000000004,
+            "t": 632.9163599999999,
+            "r": 428.3278440000006,
+            "b": 687.4315963846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "To describe the physical technology needed to enable systems to function and deliver value",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 450.35040000000004,
+            "t": 632.9362799999999,
+            "r": 530.5692359999999,
+            "b": 687.4515163846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 6 Architecture Domains"
+    ],
+    "num_rows": 2,
+    "num_cols": 5,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

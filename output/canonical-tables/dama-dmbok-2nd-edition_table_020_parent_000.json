@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:020:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      106
+    ],
+    "locators": {
+      "docling_ref": "#/tables/20",
+      "table_index": 20,
+      "bounding_boxes": [
+        {
+          "l": 65.40081024169922,
+          "t": 711.513916015625,
+          "r": 528.3035278320312,
+          "b": 469.6425476074219,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Domain\tEnterprise Business Architecture\tEnterprise Data Architecture\tEnterprise Applications Architecture\tEnterprise Technology Architecture\nElements\tBusiness models, processes, capabilities, services, events, strategies, vocabulary\tData models, data definitions, data mapping specifications, data flows, structured data APIs\tBusiness systems, software packages, databases\tTechnical platforms, networks, security, integration tools\nDependencies\tEstablishes requirements for the other domains\tManages data created and required by business architecture\tActs on specified data according to business requirements\tHosts and executes the application architecture\nRoles\tBusiness architects and analysts, business data stewards\tData architects and modelers, data stewards\tApplications architects\tInfrastructure architects",
+    "markdown": "| Domain | Enterprise Business Architecture | Enterprise Data Architecture | Enterprise Applications Architecture | Enterprise Technology Architecture |\n| --- | --- | --- | --- | --- |\n| Elements | Business models, processes, capabilities, services, events, strategies, vocabulary | Data models, data definitions, data mapping specifications, data flows, structured data APIs | Business systems, software packages, databases | Technical platforms, networks, security, integration tools |\n| Dependencies | Establishes requirements for the other domains | Manages data created and required by business architecture | Acts on specified data according to business requirements | Hosts and executes the application architecture |\n| Roles | Business architects and analysts, business data stewards | Data architects and modelers, data stewards | Applications architects | Infrastructure architects |",
+    "structured": {
+      "num_rows": 4,
+      "num_cols": 5,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Domain",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 84.24,
+            "t": 88.08647999999994,
+            "r": 117.97551599999997,
+            "b": 96.7279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Enterprise Business Architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 156.24,
+            "t": 88.08647999999994,
+            "r": 210.59271600000005,
+            "b": 126.7279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Enterprise Data Architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 248.52,
+            "t": 88.08647999999994,
+            "r": 317.1075480000002,
+            "b": 111.7279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Enterprise Applications Architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 353.52,
+            "t": 88.08647999999994,
+            "r": 407.8727160000001,
+            "b": 126.7279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Enterprise Technology Architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 450.0,
+            "t": 88.08647999999994,
+            "r": 504.3527160000001,
+            "b": 126.7279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Elements",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 138.12648000000002,
+            "r": 111.39777600000005,
+            "b": 146.76798727272728,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Business models, processes, capabilities, services, events, strategies, vocabulary",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 141.12,
+            "t": 137.88648,
+            "r": 210.433632,
+            "b": 203.9254363846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data models, data definitions, data mapping specifications, data flows, structured data APIs",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 236.64636000000002,
+            "t": 137.90640000000008,
+            "r": 323.03442000000047,
+            "b": 203.94535638461548,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Business systems, software packages, databases",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 339.84192,
+            "t": 137.92632000000015,
+            "r": 415.78194000000036,
+            "b": 169.39411638461547,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Technical platforms, networks, security, integration tools",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 432.36036,
+            "t": 137.93628000000012,
+            "r": 515.0203920000004,
+            "b": 169.40407638461545,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Dependencies",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 217.68647999999996,
+            "r": 130.22516400000004,
+            "b": 226.32798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Establishes requirements for the other domains",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 141.12,
+            "t": 217.44647999999995,
+            "r": 222.09977999999973,
+            "b": 248.91427638461528,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Manages data created and required by business architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 236.64636000000002,
+            "t": 217.45643999999993,
+            "r": 323.24258400000025,
+            "b": 248.92423638461526,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Acts on specified data according to business requirements",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 339.85188,
+            "t": 217.4663999999999,
+            "r": 409.1605320000004,
+            "b": 260.45791638461526,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Hosts and executes the application architecture",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 432.37032,
+            "t": 217.4763599999999,
+            "r": 508.9647120000003,
+            "b": 248.9441563846152,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Roles",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 274.08648000000005,
+            "r": 95.31337199999999,
+            "b": 282.72798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Business architects and analysts, business data stewards",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 141.12,
+            "t": 273.84648000000004,
+            "r": 217.3438799999999,
+            "b": 316.83799638461545,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data architects and modelers, data stewards",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 236.6364,
+            "t": 273.85644,
+            "r": 313.1481240000002,
+            "b": 305.4437563846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Applications architects",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 339.83196,
+            "t": 273.8664000000001,
+            "r": 390.86102400000044,
+            "b": 293.9299963846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Infrastructure architects",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 432.3504,
+            "t": 273.8664000000001,
+            "r": 486.67921200000046,
+            "b": 293.9299963846155,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 6 Architecture Domains"
+    ],
+    "num_rows": 4,
+    "num_cols": 5,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

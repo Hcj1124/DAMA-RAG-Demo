@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:012:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      19
+    ],
+    "locators": {
+      "docling_ref": "#/tables/12",
+      "table_index": 12,
+      "bounding_boxes": [
+        {
+          "l": 89.21405792236328,
+          "t": 160.5223388671875,
+          "r": 481.69598388671875,
+          "b": 120.58062744140625,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Sue Geuens\tLaura Sebastian-Coleman\nPresident\tPublications Officer\nDAMA International\tDAMA International",
+    "markdown": "| Sue Geuens | Laura Sebastian-Coleman |\n| --- | --- |\n| President | Publications Officer |\n| DAMA International | DAMA International |",
+    "structured": {
+      "num_rows": 3,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Sue Geuens",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 633.48648,
+            "r": 137.4345,
+            "b": 642.0263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Laura Sebastian-Coleman",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 377.97348,
+            "t": 633.48648,
+            "r": 481.46186399999993,
+            "b": 642.0263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "President",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 648.48648,
+            "r": 127.21255200000002,
+            "b": 657.0263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Publications Officer",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 377.97348000000005,
+            "t": 648.48648,
+            "r": 458.68633200000073,
+            "b": 657.0263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "DAMA International",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 663.48648,
+            "r": 174.0076199999998,
+            "b": 672.0263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "DAMA International",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 377.98344000000003,
+            "t": 663.48648,
+            "r": 461.99006400000064,
+            "b": 672.0263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [],
+    "num_rows": 3,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

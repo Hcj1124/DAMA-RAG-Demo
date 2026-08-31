@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:037:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      358
+    ],
+    "locators": {
+      "docling_ref": "#/tables/37",
+      "table_index": 37,
+      "bounding_boxes": [
+        {
+          "l": 65.75276947021484,
+          "t": 129.35015869140625,
+          "r": 528.1229858398438,
+          "b": 75.4459228515625,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "ISO 3166-1 Alpha 2 Country Code\tEnglish Name\tLocal Name\tLocal Name Local Alphabet\tFrench Name\t…\nCN\tChina\tZhong Guo\t中国 / 中國\tChine\t",
+    "markdown": "| ISO 3166-1 Alpha 2 Country Code | English Name | Local Name | Local Name Local Alphabet | French Name | … |\n| --- | --- | --- | --- | --- | --- |\n| CN | China | Zhong Guo | 中国 / 中國 | Chine |  |",
+    "structured": {
+      "num_rows": 2,
+      "num_cols": 6,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "ISO 3166-1 Alpha 2 Country Code",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 81.0,
+            "t": 669.96648,
+            "r": 165.17195999999987,
+            "b": 693.6079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "English Name",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 190.56,
+            "t": 669.96648,
+            "r": 250.17657599999984,
+            "b": 678.6079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Local Name",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 280.32,
+            "t": 669.96648,
+            "r": 331.54427999999996,
+            "b": 678.6079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Local Name Local Alphabet",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 363.0,
+            "t": 669.96648,
+            "r": 428.70910799999996,
+            "b": 693.6079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "French Name",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 455.04,
+            "t": 669.96648,
+            "r": 485.54449200000005,
+            "b": 693.6079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "…",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 508.56,
+            "t": 669.96648,
+            "r": 518.52,
+            "b": 678.6079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CN",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 705.48648,
+            "r": 86.3922,
+            "b": 714.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "China",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 185.76,
+            "t": 705.24648,
+            "r": 209.5026479999999,
+            "b": 713.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Zhong Guo",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 266.76,
+            "t": 705.24648,
+            "r": 312.42162000000025,
+            "b": 713.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "中国 / 中國",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 356.76,
+            "t": 706.1472,
+            "r": 399.59952,
+            "b": 714.8663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Chine",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 446.76,
+            "t": 705.24648,
+            "r": 470.50264800000014,
+            "b": 713.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 20 Multi-Language Reference List"
+    ],
+    "num_rows": 2,
+    "num_cols": 6,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:013:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      58
+    ],
+    "locators": {
+      "docling_ref": "#/tables/13",
+      "table_index": 13,
+      "bounding_boxes": [
+        {
+          "l": 51.091182708740234,
+          "t": 666.2673110961914,
+          "r": 526.3372192382812,
+          "b": 380.2808532714844,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "GDPR Principle\tDescription of Principle\nFairness, Lawfulness, Transparency\tPersonal data shall be processed lawfully, fairly, and in a transparent manner in relation to the data subject.\nPurpose Limitation\tPersonal data must be collected for specified, explicit, and legitimate purposes, and not processed in a manner that is incompatible with those purposes.\nData Minimization\tPersonal data must be adequate, relevant, and limited to what is necessary in relation to the purposes for which they are processed.\nAccuracy\tPersonal data must be accurate, and where necessary, kept up-to-date. Every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purpose for which they are processed, are erased or rectified without delay.\nStorage Limitation\tData must be kept in a form that permits identification of data subjects [individuals] for no longer than is necessary for the purposes for which the personal data are processed.\nIntegrity and Confidentiality\tData must be processed in a manner that ensures appropriate security of the personal data, including protection against unauthorized or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organizational measures.\nAccountability\tData Controllers shall be responsible for, and be able to demonstrate compliance with [these principles].",
+    "markdown": "| GDPR Principle | Description of Principle |\n| --- | --- |\n| Fairness, Lawfulness, Transparency | Personal data shall be processed lawfully, fairly, and in a transparent manner in relation to the data subject. |\n| Purpose Limitation | Personal data must be collected for specified, explicit, and legitimate purposes, and not processed in a manner that is incompatible with those purposes. |\n| Data Minimization | Personal data must be adequate, relevant, and limited to what is necessary in relation to the purposes for which they are processed. |\n| Accuracy | Personal data must be accurate, and where necessary, kept up-to-date. Every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purpose for which they are processed, are erased or rectified without delay. |\n| Storage Limitation | Data must be kept in a form that permits identification of data subjects [individuals] for no longer than is necessary for the purposes for which the personal data are processed. |\n| Integrity and Confidentiality | Data must be processed in a manner that ensures appropriate security of the personal data, including protection against unauthorized or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organizational measures. |\n| Accountability | Data Controllers shall be responsible for, and be able to demonstrate compliance with [these principles]. |",
+    "structured": {
+      "num_rows": 8,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "GDPR Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.48,
+            "t": 133.20647999999994,
+            "r": 139.05757199999994,
+            "b": 141.8479872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description of Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 290.28,
+            "t": 133.20647999999994,
+            "r": 391.77837600000066,
+            "b": 141.8479872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Fairness, Lawfulness, Transparency",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 150.12648000000002,
+            "r": 149.47801200000004,
+            "b": 170.2917072727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Personal data shall be processed lawfully, fairly, and in a transparent manner in relation to the data subject.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.00071999999997,
+            "t": 149.88744000000008,
+            "r": 512.6963040000007,
+            "b": 169.95103638461546,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Purpose Limitation",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 183.72648000000004,
+            "r": 140.65046399999997,
+            "b": 192.3679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Personal data must be collected for specified, explicit, and legitimate purposes, and not processed in a manner that is incompatible with those purposes.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.00072000000003,
+            "t": 183.48744,
+            "r": 510.53000400000167,
+            "b": 203.4315163846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Minimization",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 217.20647999999994,
+            "r": 138.377592,
+            "b": 225.8479872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Personal data must be adequate, relevant, and limited to what is necessary in relation to the purposes for which they are processed.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 161.99076,
+            "t": 216.9674399999999,
+            "r": 511.1734200000015,
+            "b": 236.9115163846152,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Accuracy",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 250.68647999999996,
+            "r": 98.10831600000003,
+            "b": 259.3279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Personal data must be accurate, and where necessary, kept up-to-date. Every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purpose for which they are processed, are erased or rectified without delay.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.00072,
+            "t": 250.44743999999992,
+            "r": 512.8716000000004,
+            "b": 281.9152363846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Storage Limitation",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 295.68647999999996,
+            "r": 138.377592,
+            "b": 304.3279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data must be kept in a form that permits identification of data subjects [individuals] for no longer than is necessary for the purposes for which the personal data are processed.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 161.99076,
+            "t": 295.44744,
+            "r": 511.85070000000195,
+            "b": 315.3915163846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Integrity and Confidentiality",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 329.16648,
+            "r": 121.97745599999995,
+            "b": 349.21218727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data must be processed in a manner that ensures appropriate security of the personal data, including protection against unauthorized or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organizational measures.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.00072,
+            "t": 328.92744,
+            "r": 500.4504840000015,
+            "b": 371.91895638461546,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Accountability",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 57.6,
+            "t": 385.68647999999996,
+            "r": 120.29421600000002,
+            "b": 394.3279872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Controllers shall be responsible for, and be able to demonstrate compliance with [these principles].",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.00072,
+            "t": 385.44744,
+            "r": 505.0549920000014,
+            "b": 405.3915163846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 1 GDPR Principles"
+    ],
+    "num_rows": 8,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

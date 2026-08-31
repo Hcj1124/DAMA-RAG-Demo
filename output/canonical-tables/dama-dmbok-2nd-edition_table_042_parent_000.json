@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:042:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      366
+    ],
+    "locators": {
+      "docling_ref": "#/tables/42",
+      "table_index": 42,
+      "bounding_boxes": [
+        {
+          "l": 93.1344985961914,
+          "t": 232.58770751953125,
+          "r": 500.47442626953125,
+          "b": 174.65203857421875,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Source ID\tName\tAddress (Cleansed)\tTelephone (Cleansed)\n123\tJohn Smith\t123 Main, Dataland, SQ 98765\t\n234\tJ. Smith\t123 Main, Dataland, SQ 98765\t+1 234 567 8900\n345\tJane Smith\t123 Main, Dataland, SQ 98765\t+1 234 567 8900",
+    "markdown": "| Source ID | Name | Address (Cleansed) | Telephone (Cleansed) |\n| --- | --- | --- | --- |\n| 123 | John Smith | 123 Main, Dataland, SQ 98765 |  |\n| 234 | J. Smith | 123 Main, Dataland, SQ 98765 | +1 234 567 8900 |\n| 345 | Jane Smith | 123 Main, Dataland, SQ 98765 | +1 234 567 8900 |",
+    "structured": {
+      "num_rows": 4,
+      "num_cols": 4,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Source ID",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 104.4,
+            "t": 568.20648,
+            "r": 147.35847600000005,
+            "b": 576.8479872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Name",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 180.96,
+            "t": 568.20648,
+            "r": 205.78032,
+            "b": 576.8479872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Address (Cleansed)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 268.56,
+            "t": 568.20648,
+            "r": 351.42819599999973,
+            "b": 576.8479872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Telephone (Cleansed)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 398.76,
+            "t": 568.20648,
+            "r": 491.12704800000034,
+            "b": 576.8479872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "123",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.84,
+            "t": 580.92648,
+            "r": 114.89952000000001,
+            "b": 589.4663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "John Smith",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.84,
+            "t": 580.92648,
+            "r": 208.01955599999985,
+            "b": 589.4663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "123 Main, Dataland, SQ 98765",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 234.84,
+            "t": 580.92648,
+            "r": 359.8180799999999,
+            "b": 589.4663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "234",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.84,
+            "t": 593.88648,
+            "r": 114.89952000000001,
+            "b": 602.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "J. Smith",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.84,
+            "t": 593.88648,
+            "r": 195.5386799999999,
+            "b": 602.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "123 Main, Dataland, SQ 98765",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 234.84,
+            "t": 593.88648,
+            "r": 359.8180799999999,
+            "b": 602.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "+1 234 567 8900",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 398.64,
+            "t": 593.88648,
+            "r": 466.8590279999999,
+            "b": 602.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "345",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.84,
+            "t": 606.8464799999999,
+            "r": 114.89952000000001,
+            "b": 615.3863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Jane Smith",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 162.84,
+            "t": 606.8464799999999,
+            "r": 206.94487200000006,
+            "b": 615.3863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "123 Main, Dataland, SQ 98765",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 234.84,
+            "t": 606.8464799999999,
+            "r": 359.8180799999999,
+            "b": 615.3863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "+1 234 567 8900",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 396.12,
+            "t": 606.8464799999999,
+            "r": 464.33803199999994,
+            "b": 615.3863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 25 Standardized and Enriched Input Data"
+    ],
+    "num_rows": 4,
+    "num_cols": 4,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

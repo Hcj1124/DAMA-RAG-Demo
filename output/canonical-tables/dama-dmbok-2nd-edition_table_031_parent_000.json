@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:031:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      254
+    ],
+    "locators": {
+      "docling_ref": "#/tables/31",
+      "table_index": 31,
+      "bounding_boxes": [
+        {
+          "l": 66.21405029296875,
+          "t": 391.0612487792969,
+          "r": 528.2796630859375,
+          "b": 322.81719970703125,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "\tConfidentiality Level\tConfidentiality Level\tConfidentiality Level\n\tGeneral Audience\tClient Confidential\tRestricted Confidential\nNot Regulated\tPublic User Role\tClient Manager Role\tRestricted Access Role\nPII\tMarketing Role\tClient Marketing Role\tHR Role\nPCI\tFinancial Role\tClient Financial Role\tRestricted Financial Role",
+    "markdown": "|  | Confidentiality Level | Confidentiality Level | Confidentiality Level |\n| --- | --- | --- | --- |\n|  | General Audience | Client Confidential | Restricted Confidential |\n| Not Regulated | Public User Role | Client Manager Role | Restricted Access Role |\n| PII | Marketing Role | Client Marketing Role | HR Role |\n| PCI | Financial Role | Client Financial Role | Restricted Financial Role |",
+    "structured": {
+      "num_rows": 5,
+      "num_cols": 4,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Confidentiality Level",
+          "row_span": 1,
+          "col_span": 3,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 312.72,
+            "t": 408.48648,
+            "r": 402.9665640000008,
+            "b": 417.12798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "General Audience",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 208.56,
+            "t": 423.96648,
+            "r": 285.3525960000002,
+            "b": 432.60798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Client Confidential",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 316.8,
+            "t": 423.96648,
+            "r": 398.63733600000006,
+            "b": 432.60798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Restricted Confidential",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 418.68,
+            "t": 423.96648,
+            "r": 518.2999200000004,
+            "b": 432.60798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Not Regulated",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 435.84648,
+            "r": 133.45718399999998,
+            "b": 444.48798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Public User Role",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 193.8,
+            "t": 435.60648,
+            "r": 262.05886799999985,
+            "b": 444.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Client Manager Role",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 311.76,
+            "t": 435.60648,
+            "r": 395.49969600000054,
+            "b": 444.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Restricted Access Role",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 415.2,
+            "t": 435.60648,
+            "r": 507.8359680000004,
+            "b": 444.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "PII",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 447.84648,
+            "r": 85.82946000000003,
+            "b": 456.48798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Marketing Role",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 193.8,
+            "t": 447.60648,
+            "r": 256.7790719999998,
+            "b": 456.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Client Marketing Role",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 311.76,
+            "t": 447.60648,
+            "r": 401.61712800000066,
+            "b": 456.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "HR Role",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 415.2,
+            "t": 447.60648,
+            "r": 450.34883999999994,
+            "b": 456.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "PCI",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 72.0,
+            "t": 459.84648,
+            "r": 89.19494400000002,
+            "b": 468.48798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Financial Role",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 193.8,
+            "t": 459.60648,
+            "r": 252.34639199999998,
+            "b": 468.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Client Financial Role",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 311.76,
+            "t": 459.60648,
+            "r": 397.1769600000006,
+            "b": 468.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Restricted Financial Role",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 415.2,
+            "t": 459.60648,
+            "r": 516.6973800000006,
+            "b": 468.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 14 Role Assignment Grid Example"
+    ],
+    "num_rows": 5,
+    "num_cols": 4,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

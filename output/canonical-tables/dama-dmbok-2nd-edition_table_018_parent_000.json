@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:018:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      83
+    ],
+    "locators": {
+      "docling_ref": "#/tables/18",
+      "table_index": 18,
+      "bounding_boxes": [
+        {
+          "l": 83.2142562866211,
+          "t": 726.8994674682617,
+          "r": 561.0287475585938,
+          "b": 544.5288391113281,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Principle\tDescription\nLevel of Valuation Principle\tValue the data as an asset at a level that makes the most sense, or is the easiest to measure.\nLiability Principle\tThere is a financial liability connected to data or content based on regulatory and ethical misuse or mismanagement.\nQuality Principle\tThe meaning, accuracy, and lifecycle of data and content can affect the financial status of the organization.\nRisk Principle\tThere is risk associated with data and content. This risk must be formally recognized, either as a liability or through incurring costs to manage and reduce the inherent risk.\nValue Principle\tThere is value in data and content, based on the ways these are used to meet an organization's objectives, their intrinsic marketability, and/or their contribution to the organization's goodwill (balance sheet) valuation. The value of information reflects its contribution to the organization offset by the cost of maintenance and movement.",
+    "markdown": "| Principle | Description |\n| --- | --- |\n| Level of Valuation Principle | Value the data as an asset at a level that makes the most sense, or is the easiest to measure. |\n| Liability Principle | There is a financial liability connected to data or content based on regulatory and ethical misuse or mismanagement. |\n| Quality Principle | The meaning, accuracy, and lifecycle of data and content can affect the financial status of the organization. |\n| Risk Principle | There is risk associated with data and content. This risk must be formally recognized, either as a liability or through incurring costs to manage and reduce the inherent risk. |\n| Value Principle | There is value in data and content, based on the ways these are used to meet an organization's objectives, their intrinsic marketability, and/or their contribution to the organization's goodwill (balance sheet) valuation. The value of information reflects its contribution to the organization offset by the cost of maintenance and movement. |",
+    "structured": {
+      "num_rows": 6,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 112.68,
+            "t": 72.84648000000004,
+            "r": 151.4194199999999,
+            "b": 81.48798727272731,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 345.36,
+            "t": 72.84648000000004,
+            "r": 394.7038320000002,
+            "b": 81.48798727272731,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Level of Valuation Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 89.76648,
+            "r": 168.97582800000004,
+            "b": 109.92798727272725,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Value the data as an asset at a level that makes the most sense, or is the easiest to measure.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 185.76,
+            "t": 84.48648000000003,
+            "r": 548.1675240000006,
+            "b": 93.02635638461538,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Liability Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 118.32647999999995,
+            "r": 167.97584399999982,
+            "b": 126.96798727272721,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "There is a financial liability connected to data or content based on regulatory and ethical misuse or mismanagement.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 185.76,
+            "t": 113.04647999999997,
+            "r": 538.9744680000013,
+            "b": 133.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Quality Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 146.76648,
+            "r": 163.41715199999982,
+            "b": 155.40798727272727,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The meaning, accuracy, and lifecycle of data and content can affect the financial status of the organization.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 185.76,
+            "t": 141.48648000000003,
+            "r": 543.9106560000002,
+            "b": 161.54635638461536,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Risk Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 175.32647999999995,
+            "r": 150.6982319999999,
+            "b": 183.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "There is risk associated with data and content. This risk must be formally recognized, either as a liability or through incurring costs to manage and reduce the inherent risk.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 185.76,
+            "t": 170.04647999999997,
+            "r": 552.8338080000012,
+            "b": 190.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Value Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 203.76648,
+            "r": 156.21806399999983,
+            "b": 212.40798727272727,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "There is value in data and content, based on the ways these are used to meet an organization's objectives, their intrinsic marketability, and/or their contribution to the organization's goodwill (balance sheet) valuation. The value of information reflects its contribution to the organization offset by the cost of maintenance and movement.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 185.76,
+            "t": 198.48648000000003,
+            "r": 532.491504000001,
+            "b": 241.59379638461542,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 5 Principles for Data Asset Accounting"
+    ],
+    "num_rows": 6,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:035:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      358
+    ],
+    "locators": {
+      "docling_ref": "#/tables/35",
+      "table_index": 35,
+      "bounding_boxes": [
+        {
+          "l": 95.61963653564453,
+          "t": 605.9541320800781,
+          "r": 497.9623718261719,
+          "b": 505.4179992675781,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Code\tDescription\tDefinition\n1\tNew\tIndicates a newly created ticket without an assigned resource\n2\tAssigned\tIndicates a ticket that has a named resource assigned\n3\tWork In Progress\tIndicates the assigned resource started working on the ticket\n4\tResolved\tIndicates request is assumed to be fulfilled per the assigned resource\n5\tCancelled\tIndicates request was cancelled based on requester interaction\n6\tPending\tIndicates request cannot proceed without additional information\n7\tFulfilled\tIndicates request was fulfilled and verified by the requester",
+    "markdown": "| Code | Description | Definition |\n| --- | --- | --- |\n| 1 | New | Indicates a newly created ticket without an assigned resource |\n| 2 | Assigned | Indicates a ticket that has a named resource assigned |\n| 3 | Work In Progress | Indicates the assigned resource started working on the ticket |\n| 4 | Resolved | Indicates request is assumed to be fulfilled per the assigned resource |\n| 5 | Cancelled | Indicates request was cancelled based on requester interaction |\n| 6 | Pending | Indicates request cannot proceed without additional information |\n| 7 | Fulfilled | Indicates request was fulfilled and verified by the requester |",
+    "structured": {
+      "num_rows": 8,
+      "num_cols": 3,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Code",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 102.24,
+            "t": 193.44647999999995,
+            "r": 124.41992400000001,
+            "b": 202.08798727272722,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 146.52,
+            "t": 193.44647999999995,
+            "r": 195.86383200000006,
+            "b": 202.08798727272722,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Definition",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 333.48,
+            "t": 193.44647999999995,
+            "r": 376.2143760000004,
+            "b": 202.08798727272722,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "1",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 102.24,
+            "t": 205.32647999999995,
+            "r": 107.22,
+            "b": 213.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "New",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.96,
+            "t": 205.08647999999994,
+            "r": 154.91188800000003,
+            "b": 213.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Indicates a newly created ticket without an assigned resource",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 218.04,
+            "t": 205.08647999999994,
+            "r": 462.34391999999997,
+            "b": 213.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "2",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 102.24,
+            "t": 217.32647999999995,
+            "r": 107.22,
+            "b": 225.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Assigned",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.96,
+            "t": 217.08647999999994,
+            "r": 173.09486399999997,
+            "b": 225.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Indicates a ticket that has a named resource assigned",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 218.04,
+            "t": 217.08647999999994,
+            "r": 428.4771600000005,
+            "b": 225.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "3",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 102.24,
+            "t": 229.32647999999995,
+            "r": 107.22,
+            "b": 237.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Work In Progress",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.96,
+            "t": 229.08647999999994,
+            "r": 206.54153999999988,
+            "b": 237.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Indicates the assigned resource started working on the ticket",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 218.04,
+            "t": 229.08647999999994,
+            "r": 458.91762000000125,
+            "b": 237.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "4",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 102.24,
+            "t": 241.32647999999995,
+            "r": 107.22,
+            "b": 249.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Resolved",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.96,
+            "t": 241.08647999999994,
+            "r": 173.10382799999996,
+            "b": 249.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Indicates request is assumed to be fulfilled per the assigned resource",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 218.04,
+            "t": 241.08647999999994,
+            "r": 491.8707000000004,
+            "b": 249.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "5",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 102.24,
+            "t": 253.32647999999995,
+            "r": 107.22,
+            "b": 261.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Cancelled",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.96,
+            "t": 253.08647999999994,
+            "r": 175.867728,
+            "b": 261.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Indicates request was cancelled based on requester interaction",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 218.04,
+            "t": 253.08647999999994,
+            "r": 466.03669200000064,
+            "b": 261.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "6",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 102.24,
+            "t": 265.32647999999995,
+            "r": 107.22,
+            "b": 273.9679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Pending",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.96,
+            "t": 265.08647999999994,
+            "r": 168.65967599999988,
+            "b": 273.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Indicates request cannot proceed without additional information",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 218.04,
+            "t": 265.08647999999994,
+            "r": 474.05373600000115,
+            "b": 273.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "7",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 102.24,
+            "t": 277.32648000000006,
+            "r": 107.22,
+            "b": 285.96798727272727,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Fulfilled",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.96,
+            "t": 277.08648000000005,
+            "r": 170.21741999999986,
+            "b": 285.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Indicates request was fulfilled and verified by the requester",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 218.04,
+            "t": 277.08648000000005,
+            "r": 455.1319920000007,
+            "b": 285.6263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 18 Simple Reference List Expanded"
+    ],
+    "num_rows": 8,
+    "num_cols": 3,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

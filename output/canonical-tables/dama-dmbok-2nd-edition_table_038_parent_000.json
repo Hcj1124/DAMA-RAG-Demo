@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:038:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      359
+    ],
+    "locators": {
+      "docling_ref": "#/tables/38",
+      "table_index": 38,
+      "bounding_boxes": [
+        {
+          "l": 170.17572021484375,
+          "t": 481.27923583984375,
+          "r": 459.6940612792969,
+          "b": 392.3435363769531,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Code Value\tDescription\tParent Code\nFloral plants\t10160000\t10161600\nRose plants\t10161600\t10161601\nPoinsettias plants\t10161600\t10161602\nOrchid plants\t10161600\t10161603\nCut flowers\t10160000\t10161700\nCut roses\t10161700\t10161705",
+    "markdown": "| Code Value | Description | Parent Code |\n| --- | --- | --- |\n| Floral plants | 10160000 | 10161600 |\n| Rose plants | 10161600 | 10161601 |\n| Poinsettias plants | 10161600 | 10161602 |\n| Orchid plants | 10161600 | 10161603 |\n| Cut flowers | 10160000 | 10161700 |\n| Cut roses | 10161700 | 10161705 |",
+    "structured": {
+      "num_rows": 7,
+      "num_cols": 3,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Code Value",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 186.6,
+            "t": 318.24647999999996,
+            "r": 236.25757199999984,
+            "b": 326.88798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 281.28,
+            "t": 318.24647999999996,
+            "r": 330.62383200000016,
+            "b": 326.88798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Parent Code",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 382.68,
+            "t": 318.24647999999996,
+            "r": 436.2966719999999,
+            "b": 326.88798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161600",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 176.76,
+            "t": 330.12648,
+            "r": 216.77928,
+            "b": 338.7679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Floral plants",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 257.76,
+            "t": 329.88648,
+            "r": 307.9514280000004,
+            "b": 338.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10160000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 365.76,
+            "t": 329.88648,
+            "r": 405.77927999999997,
+            "b": 338.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161601",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 176.76,
+            "t": 342.12648,
+            "r": 216.77928,
+            "b": 350.7679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Rose plants",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 257.76,
+            "t": 341.88648,
+            "r": 304.1128439999998,
+            "b": 350.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161600",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 365.76,
+            "t": 341.88648,
+            "r": 405.77927999999997,
+            "b": 350.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161602",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 176.76,
+            "t": 354.12648,
+            "r": 216.77928,
+            "b": 362.7679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Poinsettias plants",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 257.76,
+            "t": 353.88648,
+            "r": 327.38737200000054,
+            "b": 362.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161600",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 365.76,
+            "t": 353.88648,
+            "r": 405.77927999999997,
+            "b": 362.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161603",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 176.76,
+            "t": 366.12648,
+            "r": 216.77928,
+            "b": 374.7679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Orchid plants",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 257.76,
+            "t": 365.88648,
+            "r": 311.79001200000044,
+            "b": 374.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161600",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 365.76,
+            "t": 365.88648,
+            "r": 405.77927999999997,
+            "b": 374.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161700",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 176.76,
+            "t": 378.12648,
+            "r": 216.77928,
+            "b": 386.7679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Cut flowers",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 257.76,
+            "t": 377.88648,
+            "r": 304.59092400000037,
+            "b": 386.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10160000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 365.76,
+            "t": 377.88648,
+            "r": 405.77927999999997,
+            "b": 386.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161705",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 176.76,
+            "t": 390.12648,
+            "r": 216.77928,
+            "b": 398.7679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Cut roses",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 257.76,
+            "t": 389.88648,
+            "r": 295.23350399999987,
+            "b": 398.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "10161700",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 365.76,
+            "t": 389.88648,
+            "r": 405.77927999999997,
+            "b": 398.4263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 21 UNSPSC (Universal Standard Products and Services Classification) 57"
+    ],
+    "num_rows": 7,
+    "num_cols": 3,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

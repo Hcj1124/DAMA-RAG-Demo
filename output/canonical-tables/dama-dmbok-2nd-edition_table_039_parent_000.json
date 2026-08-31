@@ -1,0 +1,521 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:039:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      359
+    ],
+    "locators": {
+      "docling_ref": "#/tables/39",
+      "table_index": 39,
+      "bounding_boxes": [
+        {
+          "l": 185.86940002441406,
+          "t": 337.98870849609375,
+          "r": 444.055908203125,
+          "b": 225.18975830078125,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Code Value\tDescription\tParent Code\n440000\tRetail Trade\t440000\n445000\tFood and Beverage Stores 440000\t\n445200\tSpecialty Food Stores 445000\t\n445210\tMeat Markets\t445200\n445220\tFish and Seafood Markets\t445200\n445290\tOther Specialty Food Stores\t445200\n445291\tBaked Goods Stores\t445290\n445292\tConfectionary and Nut Stores\t445290",
+    "markdown": "| Code Value | Description | Parent Code |\n| --- | --- | --- |\n| 440000 | Retail Trade | 440000 |\n| 445000 | Food and Beverage Stores 440000 |  |\n| 445200 | Specialty Food Stores 445000 |  |\n| 445210 | Meat Markets | 445200 |\n| 445220 | Fish and Seafood Markets | 445200 |\n| 445290 | Other Specialty Food Stores | 445200 |\n| 445291 | Baked Goods Stores | 445290 |\n| 445292 | Confectionary and Nut Stores | 445290 |",
+    "structured": {
+      "num_rows": 9,
+      "num_cols": 3,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Code Value",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 192.24,
+            "t": 461.64648,
+            "r": 241.89757199999985,
+            "b": 470.28798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 288.36,
+            "t": 461.64648,
+            "r": 337.7038320000002,
+            "b": 470.28798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Parent Code",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 384.12,
+            "t": 461.64648,
+            "r": 437.7366719999999,
+            "b": 470.28798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "440000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 192.24,
+            "t": 473.52648,
+            "r": 222.29928,
+            "b": 482.16798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Retail Trade",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.56,
+            "t": 473.28648,
+            "r": 303.3390840000003,
+            "b": 481.8263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "440000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 384.12,
+            "t": 473.28648,
+            "r": 414.17928,
+            "b": 481.8263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 192.24,
+            "t": 485.52648,
+            "r": 222.29928,
+            "b": 494.16798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Food and Beverage Stores 440000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.56,
+            "t": 485.28648,
+            "r": 414.17928,
+            "b": 493.8263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445200",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 192.24,
+            "t": 497.52648,
+            "r": 222.29928,
+            "b": 506.16798727272726,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Specialty Food Stores 445000",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.56,
+            "t": 497.28648,
+            "r": 414.17928,
+            "b": 505.8263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445210",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 192.24,
+            "t": 509.52648,
+            "r": 222.29928,
+            "b": 518.1679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Meat Markets",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.56,
+            "t": 509.28648,
+            "r": 309.28321200000016,
+            "b": 517.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445200",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 384.12,
+            "t": 509.28648,
+            "r": 414.17928,
+            "b": 517.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445220",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 192.24,
+            "t": 521.52648,
+            "r": 222.29928,
+            "b": 530.1679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Fish and Seafood Markets",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.56,
+            "t": 521.28648,
+            "r": 358.24258800000047,
+            "b": 529.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445200",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 384.12,
+            "t": 521.28648,
+            "r": 414.17928,
+            "b": 529.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445290",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 192.24,
+            "t": 533.52648,
+            "r": 222.29928,
+            "b": 542.1679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Other Specialty Food Stores",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.56,
+            "t": 533.28648,
+            "r": 366.6458400000006,
+            "b": 541.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445200",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 384.12,
+            "t": 533.28648,
+            "r": 414.17928,
+            "b": 541.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445291",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 192.24,
+            "t": 545.52648,
+            "r": 222.29928,
+            "b": 554.1679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Baked Goods Stores",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.56,
+            "t": 545.28648,
+            "r": 335.3136719999999,
+            "b": 553.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445290",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 384.12,
+            "t": 545.28648,
+            "r": 414.17928,
+            "b": 553.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445292",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 192.24,
+            "t": 557.52648,
+            "r": 222.29928,
+            "b": 566.1679872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Confectionary and Nut Stores",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.56,
+            "t": 557.28648,
+            "r": 372.6457440000007,
+            "b": 565.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "445290",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 384.12,
+            "t": 557.28648,
+            "r": 414.17928,
+            "b": 565.8263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 22 NAICS (North America Industry Classification System) 58"
+    ],
+    "num_rows": 9,
+    "num_cols": 3,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

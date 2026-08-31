@@ -1,0 +1,35 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Source documents: keep copyrighted or private inputs out of Git
+*.pdf
+input/*
+
+# Large Docling intermediates (reproducible from the source document)
+output/sample.json
+output/sample.md
+
+# Vector databases and model caches
+chroma/
+chroma_db/
+.chroma/
+.cache/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+

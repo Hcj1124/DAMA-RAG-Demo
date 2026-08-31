@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:036:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      358
+    ],
+    "locators": {
+      "docling_ref": "#/tables/36",
+      "table_index": 36,
+      "bounding_boxes": [
+        {
+          "l": 85.57925415039062,
+          "t": 342.0442810058594,
+          "r": 508.165771484375,
+          "b": 259.10162353515625,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "USPS State Code\tISO State Code\tFIPS Numeric State Code\tState Abbreviation\tState Name\tFormal State Name\nCA\tUS-CA\t06\tCalif.\tCalifornia\tState of California\nKY\tUS-KY\t21\tKy.\tKentucky\tCommonwealth of Kentucky\nWI\tUS-WI\t55\tWis.\tWisconsin\tState of Wisconsin",
+    "markdown": "| USPS State Code | ISO State Code | FIPS Numeric State Code | State Abbreviation | State Name | Formal State Name |\n| --- | --- | --- | --- | --- | --- |\n| CA | US-CA | 06 | Calif. | California | State of California |\n| KY | US-KY | 21 | Ky. | Kentucky | Commonwealth of Kentucky |\n| WI | US-WI | 55 | Wis. | Wisconsin | State of Wisconsin |",
+    "structured": {
+      "num_rows": 4,
+      "num_cols": 6,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "USPS State Code",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 101.16,
+            "t": 457.56648,
+            "r": 125.53610400000001,
+            "b": 496.2079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "ISO State Code",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 146.64,
+            "t": 457.56648,
+            "r": 188.01682799999986,
+            "b": 481.2079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "FIPS Numeric State Code",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 202.68,
+            "t": 457.56648,
+            "r": 249.09758399999984,
+            "b": 496.2079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "State Abbreviation",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 263.16,
+            "t": 457.56648,
+            "r": 319.81646399999994,
+            "b": 481.2079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "State Name",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 340.2,
+            "t": 457.56648,
+            "r": 365.02031999999997,
+            "b": 481.2079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Formal State Name",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 402.0,
+            "t": 457.56648,
+            "r": 485.13412800000043,
+            "b": 466.2079872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "CA",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 92.16,
+            "t": 499.44648,
+            "r": 106.5522,
+            "b": 508.0879872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "US-CA",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 146.16,
+            "t": 499.20648,
+            "r": 176.15412,
+            "b": 507.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "06",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 200.16,
+            "t": 499.20648,
+            "r": 210.17976,
+            "b": 507.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Calif.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 263.16,
+            "t": 499.20648,
+            "r": 285.56701200000015,
+            "b": 507.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "California",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 331.44,
+            "t": 499.20648,
+            "r": 371.85967200000033,
+            "b": 507.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "State of California",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 385.44,
+            "t": 499.20648,
+            "r": 459.21770400000065,
+            "b": 507.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "KY",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 92.16,
+            "t": 511.44648,
+            "r": 107.1498,
+            "b": 520.0879872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "US-KY",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 146.16,
+            "t": 511.20648,
+            "r": 176.63172000000003,
+            "b": 519.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "21",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 200.16,
+            "t": 511.20648,
+            "r": 210.17976,
+            "b": 519.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Ky.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 263.16,
+            "t": 511.20648,
+            "r": 277.77132000000006,
+            "b": 519.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Kentucky",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 331.44,
+            "t": 511.20648,
+            "r": 370.26109200000025,
+            "b": 519.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Commonwealth of Kentucky",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 385.44,
+            "t": 511.20648,
+            "r": 501.5397360000006,
+            "b": 519.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "WI",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 92.16,
+            "t": 523.4464800000001,
+            "r": 105.99444000000001,
+            "b": 532.0879872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "US-WI",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 146.16,
+            "t": 523.20648,
+            "r": 174.9186,
+            "b": 531.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "55",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 200.16,
+            "t": 523.20648,
+            "r": 210.17976,
+            "b": 531.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Wis.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 263.16,
+            "t": 523.20648,
+            "r": 281.7304199999999,
+            "b": 531.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Wisconsin",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 331.44,
+            "t": 523.20648,
+            "r": 373.6196039999998,
+            "b": 531.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "State of Wisconsin",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 385.44,
+            "t": 523.20648,
+            "r": 460.97664000000054,
+            "b": 531.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 19 Cross-Reference List"
+    ],
+    "num_rows": 4,
+    "num_cols": 6,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

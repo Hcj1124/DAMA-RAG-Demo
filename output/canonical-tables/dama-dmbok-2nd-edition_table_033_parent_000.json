@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:033:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      333
+    ],
+    "locators": {
+      "docling_ref": "#/tables/33",
+      "table_index": 33,
+      "bounding_boxes": [
+        {
+          "l": 84.04167175292969,
+          "t": 691.1810684204102,
+          "r": 546.081787109375,
+          "b": 493.7908020019531,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Document / Records Management Component\tSample Audit Measure\nInventory\tEach location in the inventory is uniquely identified.\nStorage\tStorage areas for physical documents / records have adequate space to accommodate growth.\nReliability and Accuracy\tSpot checks are executed to confirm that the documents / records are an adequate reflection of what has been created or received.\nClassification and Indexing Schemes\tMetadata and document file plans are well described.\nAccess and Retrieval\tEnd users find and retrieve critical information easily.\nRetention Processes\tThe retention schedule is structured in a logical way either by department, functional or major organizational functions.\nDisposition Methods\tDocuments / records are disposed of as recommended.\nSecurity and Confidentiality\tBreaches of document / record confidentiality and loss of documents / records are recorded as security incidents and managed appropriately.\nOrganizational understanding of documents / records management\tAppropriate training is provided to stakeholders and staff as to the roles and responsibilities related to document / records management.",
+    "markdown": "| Document / Records Management Component | Sample Audit Measure |\n| --- | --- |\n| Inventory | Each location in the inventory is uniquely identified. |\n| Storage | Storage areas for physical documents / records have adequate space to accommodate growth. |\n| Reliability and Accuracy | Spot checks are executed to confirm that the documents / records are an adequate reflection of what has been created or received. |\n| Classification and Indexing Schemes | Metadata and document file plans are well described. |\n| Access and Retrieval | End users find and retrieve critical information easily. |\n| Retention Processes | The retention schedule is structured in a logical way either by department, functional or major organizational functions. |\n| Disposition Methods | Documents / records are disposed of as recommended. |\n| Security and Confidentiality | Breaches of document / record confidentiality and loss of documents / records are recorded as security incidents and managed appropriately. |\n| Organizational understanding of documents / records management | Appropriate training is provided to stakeholders and staff as to the roles and responsibilities related to document / records management. |",
+    "structured": {
+      "num_rows": 10,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Document / Records Management Component",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 93.84,
+            "t": 108.48648000000003,
+            "r": 239.0070000000001,
+            "b": 132.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Sample Audit Measure",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 347.76,
+            "t": 108.48648000000003,
+            "r": 446.13392399999975,
+            "b": 117.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Inventory",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 135.12648000000002,
+            "r": 128.93961600000006,
+            "b": 143.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Each location in the inventory is uniquely identified.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.8,
+            "t": 135.12648000000002,
+            "r": 464.13229200000154,
+            "b": 143.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Storage",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 147.12648000000002,
+            "r": 120.46266000000003,
+            "b": 155.66635638461537,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Storage areas for physical documents / records have adequate space to accommodate growth.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.8,
+            "t": 147.12648000000002,
+            "r": 534.8159520000011,
+            "b": 167.18635638461535,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Reliability and Accuracy",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 170.64648,
+            "r": 190.01533199999974,
+            "b": 179.18635638461535,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Spot checks are executed to confirm that the documents / records are an adequate reflection of what has been created or received.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.8,
+            "t": 170.64648,
+            "r": 529.0894200000013,
+            "b": 190.58635638461533,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Classification and Indexing Schemes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 194.04647999999997,
+            "r": 237.99607199999969,
+            "b": 202.58635638461533,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Metadata and document file plans are well described.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.8,
+            "t": 194.04647999999997,
+            "r": 467.0416080000011,
+            "b": 202.58635638461533,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Access and Retrieval",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 206.04647999999997,
+            "r": 174.25960800000001,
+            "b": 214.58635638461533,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "End users find and retrieve critical information easily.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.8,
+            "t": 206.04647999999997,
+            "r": 469.7915640000013,
+            "b": 214.58635638461533,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Retention Processes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 218.04647999999997,
+            "r": 170.20489200000003,
+            "b": 226.58635638461533,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The retention schedule is structured in a logical way either by department, functional or major organizational functions.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.8,
+            "t": 218.04647999999997,
+            "r": 500.33988000000153,
+            "b": 238.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Disposition Methods",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 241.56647999999996,
+            "r": 173.55444,
+            "b": 250.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Documents / records are disposed of as recommended.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 7,
+          "end_row_offset_idx": 8,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.8,
+            "t": 241.56647999999996,
+            "r": 472.07041200000094,
+            "b": 250.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Security and Confidentiality",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 253.56647999999996,
+            "r": 203.34081599999965,
+            "b": 262.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Breaches of document / record confidentiality and loss of documents / records are recorded as security incidents and managed appropriately.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 8,
+          "end_row_offset_idx": 9,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.8,
+            "t": 253.56647999999996,
+            "r": 534.2457119999996,
+            "b": 273.6263563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Organizational understanding of documents / records management",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 277.08648000000005,
+            "r": 224.0606040000001,
+            "b": 297.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Appropriate training is provided to stakeholders and staff as to the roles and responsibilities related to document / records management.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 9,
+          "end_row_offset_idx": 10,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 253.8,
+            "t": 277.08648000000005,
+            "r": 528.3185160000021,
+            "b": 297.1463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 16 Sample Audit Measures"
+    ],
+    "num_rows": 10,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

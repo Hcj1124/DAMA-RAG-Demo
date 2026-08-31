@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:000:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      3
+    ],
+    "locators": {
+      "docling_ref": "#/tables/0",
+      "table_index": 0,
+      "bounding_boxes": [
+        {
+          "l": 89.10047149658203,
+          "t": 146.87591552734375,
+          "r": 335.0754089355469,
+          "b": 78.7869873046875,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "ISBN, Print ed.\t9781634622349\nISBN, PDF ed.\t9781634622363\nISBN, Server ed.\t9781634622486\nISBN, Enterprise ed.\t9781634622479\nLibrary of Congress Control Number:\t2017941854",
+    "markdown": "| ISBN, Print ed. | 9781634622349 |\n| --- | --- |\n| ISBN, PDF ed. | 9781634622363 |\n| ISBN, Server ed. | 9781634622486 |\n| ISBN, Enterprise ed. | 9781634622479 |\n| Library of Congress Control Number: | 2017941854 |",
+    "structured": {
+      "num_rows": 5,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "ISBN, Print ed.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 89.9402,
+            "t": 646.9263599999999,
+            "r": 151.70419199999992,
+            "b": 655.4662563846155,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "9781634622349",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 269.91744,
+            "t": 646.9263599999999,
+            "r": 335.01599999999996,
+            "b": 655.4662363846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "ISBN, PDF ed.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 89.92031999999995,
+            "t": 658.45008,
+            "r": 150.60659999999996,
+            "b": 666.9899563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "9781634622363",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 269.90747999999996,
+            "t": 658.45008,
+            "r": 335.0060399999999,
+            "b": 666.9899563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "ISBN, Server ed.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 89.91035999999997,
+            "t": 669.9738,
+            "r": 158.27579999999998,
+            "b": 678.5136763846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "9781634622486",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 269.88756,
+            "t": 669.9738,
+            "r": 334.98611999999997,
+            "b": 678.5136763846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "ISBN, Enterprise ed.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 89.89044000000001,
+            "t": 681.49752,
+            "r": 173.24966399999997,
+            "b": 690.0373963846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "9781634622479",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 269.87760000000003,
+            "t": 681.49752,
+            "r": 334.97616,
+            "b": 690.0373963846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Library of Congress Control Number:",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 89.8805,
+            "t": 704.54496,
+            "r": 241.44478800000016,
+            "b": 713.0848563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "2017941854",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 269.87760000000003,
+            "t": 704.54496,
+            "r": 319.9764,
+            "b": 713.0848363846153,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [],
+    "num_rows": 5,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

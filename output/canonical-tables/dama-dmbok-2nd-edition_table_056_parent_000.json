@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:056:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      604
+    ],
+    "locators": {
+      "docling_ref": "#/tables/56",
+      "table_index": 56,
+      "bounding_boxes": [
+        {
+          "l": 69.25874328613281,
+          "t": 421.4593200683594,
+          "r": 562.0079345703125,
+          "b": 111.04388427734375,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Adopter Category\tDefinition (Information Management Perspective)\nInnovators\tInnovators are the first individuals to spot a better way to tackle problems with the quality of information. They take risks trying to develop profiling of data, build tentative scorecards, and begin to put the symptoms experienced by the business into the language of Information Management. Often these innovators will use their own resources to get information and develop skills about best practices.\nEarly Adopters\tEarly Adopters are the second fastest category of individuals to adopt an innovation. These individuals have the highest degree of opinion leadership among the other adopter categories. They are perceived as 'visionary' managers (or experienced managers, or managers responsible for emergent business strategy areas) who have realized information quality issues are a barrier to their success. Often they piggy back on the initial work of the Innovators to develop their business case and begin to formalize information practices.\nEarly Majority\tIt takes the Early Majority significantly longer than the Early Adopters to adopt an innovation. Early Majority tend to be slower in the adoption process, have above average social status, contact with early adopters, and seldom hold positions of opinion leadership in a system. They could be in the 'traditional core' areas of the organization where the impact of poor quality data is masked as the 'cost of business'.\nLate Majority\tIndividuals in the Late Majority approach an innovation with a high degree of skepticism and after most society has adopted the innovation. Late Majority typically have below average social status, very little financial lucidity, in contact with others in late majority and early majority, very little opinion leadership. In Information Management terms, these can be areas of the organization where tight budgets might combine with skepticism about the proposed changes to generate resistance.\nLaggards\tLaggards are the last to adopt an innovation. Individuals in this category show little to no opinion leadership. They are typically averse to change-agents and tend to be advanced in age. Laggards tend to focus on 'traditions'. In Information Management, terms these are often the people or areas of the business who resist because the 'new thing' means having to do the 'old thing' differently or not at all.",
+    "markdown": "| Adopter Category | Definition (Information Management Perspective) |\n| --- | --- |\n| Innovators | Innovators are the first individuals to spot a better way to tackle problems with the quality of information. They take risks trying to develop profiling of data, build tentative scorecards, and begin to put the symptoms experienced by the business into the language of Information Management. Often these innovators will use their own resources to get information and develop skills about best practices. |\n| Early Adopters | Early Adopters are the second fastest category of individuals to adopt an innovation. These individuals have the highest degree of opinion leadership among the other adopter categories. They are perceived as 'visionary' managers (or experienced managers, or managers responsible for emergent business strategy areas) who have realized information quality issues are a barrier to their success. Often they piggy back on the initial work of the Innovators to develop their business case and begin to formalize information practices. |\n| Early Majority | It takes the Early Majority significantly longer than the Early Adopters to adopt an innovation. Early Majority tend to be slower in the adoption process, have above average social status, contact with early adopters, and seldom hold positions of opinion leadership in a system. They could be in the 'traditional core' areas of the organization where the impact of poor quality data is masked as the 'cost of business'. |\n| Late Majority | Individuals in the Late Majority approach an innovation with a high degree of skepticism and after most society has adopted the innovation. Late Majority typically have below average social status, very little financial lucidity, in contact with others in late majority and early majority, very little opinion leadership. In Information Management terms, these can be areas of the organization where tight budgets might combine with skepticism about the proposed changes to generate resistance. |\n| Laggards | Laggards are the last to adopt an innovation. Individuals in this category show little to no opinion leadership. They are typically averse to change-agents and tend to be advanced in age. Laggards tend to focus on 'traditions'. In Information Management, terms these are often the people or areas of the business who resist because the 'new thing' means having to do the 'old thing' differently or not at all. |",
+    "structured": {
+      "num_rows": 6,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Adopter Category",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 81.45787864178419,
+            "t": 377.1733369156718,
+            "r": 121.88005969673395,
+            "b": 403.8486706316471,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Definition (Information Management Perspective)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 241.63737362623215,
+            "t": 384.16173680126667,
+            "r": 450.7653575539589,
+            "b": 396.44208355247974,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Innovators",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.11036305129528,
+            "t": 404.84206399321556,
+            "r": 114.15697120130062,
+            "b": 416.48623248934746,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Innovators are the first individuals to spot a better way to tackle problems with the quality of information. They take risks trying to develop profiling of data, build tentative scorecards, and begin to put the symptoms experienced by the business into the language of Information Management. Often these innovators will use their own resources to get information and develop skills about best practices.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.62900164723396,
+            "t": 405.9206683784723,
+            "r": 548.478862285614,
+            "b": 451.64971059560776,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Early Adopters",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.1545068025589,
+            "t": 453.76378840208054,
+            "r": 130.37675108760595,
+            "b": 465.45764273405075,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Early Adopters are the second fastest category of individuals to adopt an innovation. These individuals have the highest degree of opinion leadership among the other adopter categories. They are perceived as 'visionary' managers (or experienced managers, or managers responsible for emergent business strategy areas) who have realized information quality issues are a barrier to their success. Often they piggy back on the initial work of the Innovators to develop their business case and begin to formalize information practices.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.11677545309067,
+            "t": 454.3380487561226,
+            "r": 553.7372359633446,
+            "b": 520.0074983239174,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Early Majority",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 69.06420642137527,
+            "t": 524.9514237642288,
+            "r": 129.14607046544552,
+            "b": 536.6712573766708,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "It takes the Early Majority significantly longer than the Early Adopters to adopt an innovation. Early Majority tend to be slower in the adoption process, have above average social status, contact with early adopters, and seldom hold positions of opinion leadership in a system. They could be in the 'traditional core' areas of the organization where the impact of poor quality data is masked as the 'cost of business'.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 136.65523183345795,
+            "t": 524.6047130823135,
+            "r": 553.4219633340836,
+            "b": 570.8606556653976,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Late Majority",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 68.99073635041714,
+            "t": 573.7675449848175,
+            "r": 126.17391922324896,
+            "b": 585.2673122882843,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Individuals in the Late Majority approach an innovation with a high degree of skepticism and after most society has adopted the innovation. Late Majority typically have below average social status, very little financial lucidity, in contact with others in late majority and early majority, very little opinion leadership. In Information Management terms, these can be areas of the organization where tight budgets might combine with skepticism about the proposed changes to generate resistance.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 134.82540759444237,
+            "t": 573.2538721561432,
+            "r": 556.284835100174,
+            "b": 631.7048511505127,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Laggards",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 68.85525272041559,
+            "t": 633.5596904754639,
+            "r": 107.64394601434469,
+            "b": 645.3126726150513,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Laggards are the last to adopt an innovation. Individuals in this category show little to no opinion leadership. They are typically averse to change-agents and tend to be advanced in age. Laggards tend to focus on 'traditions'. In Information Management, terms these are often the people or areas of the business who resist because the 'new thing' means having to do the 'old thing' differently or not at all.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 135.22386941313744,
+            "t": 633.9153627157211,
+            "r": 551.6352323293686,
+            "b": 681.5476713180542,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 37 Diffusion of Innovations Categories Adapted to Information Management 105"
+    ],
+    "num_rows": 6,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

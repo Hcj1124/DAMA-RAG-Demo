@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:015:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      59
+    ],
+    "locators": {
+      "docling_ref": "#/tables/15",
+      "table_index": 15,
+      "bounding_boxes": [
+        {
+          "l": 83.42342376708984,
+          "t": 267.8857421875,
+          "r": 560.92041015625,
+          "b": 108.6055908203125,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Principle\tDescription of Principle\nNotice / Awareness\tData collectors must disclose their information practices before collecting personal information from consumers.\nChoice / Consent\tConsumers must be given options with respect to whether and how personal information collected from them may be used for purposes beyond those for which the information was provided.\nAccess / Participation\tConsumers should be able to view and contest the accuracy and completeness of data collected about them.\nIntegrity / Security\tData collectors must take reasonable steps to assure that information collected from consumers is accurate and secure from unauthorized use.\nEnforcement / Redress\tThe use of a reliable mechanism to impose sanctions for noncompliance with these fair information practices.",
+    "markdown": "| Principle | Description of Principle |\n| --- | --- |\n| Notice / Awareness | Data collectors must disclose their information practices before collecting personal information from consumers. |\n| Choice / Consent | Consumers must be given options with respect to whether and how personal information collected from them may be used for purposes beyond those for which the information was provided. |\n| Access / Participation | Consumers should be able to view and contest the accuracy and completeness of data collected about them. |\n| Integrity / Security | Data collectors must take reasonable steps to assure that information collected from consumers is accurate and secure from unauthorized use. |\n| Enforcement / Redress | The use of a reliable mechanism to impose sanctions for noncompliance with these fair information practices. |",
+    "structured": {
+      "num_rows": 6,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 99.12,
+            "t": 531.6064799999999,
+            "r": 137.85941999999994,
+            "b": 540.2479872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description of Principle",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 305.76,
+            "t": 531.6064799999999,
+            "r": 407.2583760000007,
+            "b": 540.2479872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Notice / Awareness",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 548.52648,
+            "r": 136.12177200000002,
+            "b": 568.5679872727274,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data collectors must disclose their information practices before collecting personal information from consumers.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 158.76,
+            "t": 543.24648,
+            "r": 540.2968560000003,
+            "b": 563.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Choice / Consent",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 576.96648,
+            "r": 124.87195200000004,
+            "b": 597.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Consumers must be given options with respect to whether and how personal information collected from them may be used for purposes beyond those for which the information was provided.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 158.76,
+            "t": 571.68648,
+            "r": 551.7145440000003,
+            "b": 591.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Access / Participation",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 605.52648,
+            "r": 146.1743999999999,
+            "b": 625.5679872727274,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Consumers should be able to view and contest the accuracy and completeness of data collected about them.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 158.76,
+            "t": 600.24648,
+            "r": 538.630632,
+            "b": 620.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Integrity / Security",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 633.96648,
+            "r": 133.08695999999998,
+            "b": 654.1279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data collectors must take reasonable steps to assure that information collected from consumers is accurate and secure from unauthorized use.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 158.76,
+            "t": 628.68648,
+            "r": 547.8772800000015,
+            "b": 648.7463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Enforcement / Redress",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 90.0,
+            "t": 662.52648,
+            "r": 145.40250000000003,
+            "b": 682.5679872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "The use of a reliable mechanism to impose sanctions for noncompliance with these fair information practices.",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 158.76,
+            "t": 657.24648,
+            "r": 507.2027160000002,
+            "b": 677.3063563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 3 United States Privacy Program Criteria"
+    ],
+    "num_rows": 6,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:026:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      140
+    ],
+    "locators": {
+      "docling_ref": "#/tables/26",
+      "table_index": 26,
+      "bounding_boxes": [
+        {
+          "l": 113.44910430908203,
+          "t": 490.07269287109375,
+          "r": 480.2327880859375,
+          "b": 285.2767028808594,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Scheme\tSample Notations\nRelational\tInformation Engineering (IE) Integration Definition for Information Modeling (IDEF1X) Barker Notation Chen\nDimensional\tDimensional\nObject-Oriented\tUnified Modeling Language (UML)\nFact-Based\tObject Role Modeling (ORM or ORM2) Fully Communication Oriented Modeling (FCO-IM)\nTime-Based\tData Vault Anchor Modeling\nNoSQL\tDocument Column Graph Key-Value",
+    "markdown": "| Scheme | Sample Notations |\n| --- | --- |\n| Relational | Information Engineering (IE) Integration Definition for Information Modeling (IDEF1X) Barker Notation Chen |\n| Dimensional | Dimensional |\n| Object-Oriented | Unified Modeling Language (UML) |\n| Fact-Based | Object Role Modeling (ORM or ORM2) Fully Communication Oriented Modeling (FCO-IM) |\n| Time-Based | Data Vault Anchor Modeling |\n| NoSQL | Document Column Graph Key-Value |",
+    "structured": {
+      "num_rows": 7,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Scheme",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 150.84,
+            "t": 321.60648,
+            "r": 183.45800399999987,
+            "b": 330.24798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Sample Notations",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 312.12,
+            "t": 321.60648,
+            "r": 387.38771999999994,
+            "b": 330.24798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Relational",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 119.88,
+            "t": 345.24647999999996,
+            "r": 160.92515999999986,
+            "b": 353.7863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Information Engineering (IE) Integration Definition for Information Modeling (IDEF1X) Barker Notation Chen",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.48,
+            "t": 345.24647999999996,
+            "r": 462.3068880000017,
+            "b": 388.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Dimensional",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 119.88,
+            "t": 391.80647999999997,
+            "r": 170.88814799999986,
+            "b": 400.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Dimensional",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.48,
+            "t": 391.80647999999997,
+            "r": 276.4881480000001,
+            "b": 400.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Object-Oriented",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 119.88,
+            "t": 403.80647999999997,
+            "r": 184.7360159999999,
+            "b": 412.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Unified Modeling Language (UML)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.48,
+            "t": 403.80647999999997,
+            "r": 370.51652400000046,
+            "b": 412.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Fact-Based",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 119.88,
+            "t": 415.80647999999997,
+            "r": 164.703912,
+            "b": 424.3463563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Object Role Modeling (ORM or ORM2) Fully Communication Oriented Modeling (FCO-IM)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.48,
+            "t": 415.80647999999997,
+            "r": 436.516524,
+            "b": 435.8663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Time-Based",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 119.88,
+            "t": 439.32648,
+            "r": 168.663912,
+            "b": 447.8663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Data Vault Anchor Modeling",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.48,
+            "t": 439.32648,
+            "r": 296.81949600000013,
+            "b": 459.3863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "NoSQL",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 119.88,
+            "t": 462.84648,
+            "r": 150.92731200000003,
+            "b": 471.3863563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Document Column Graph Key-Value",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 6,
+          "end_row_offset_idx": 7,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 225.48,
+            "t": 462.84648,
+            "r": 269.26216800000014,
+            "b": 505.8263563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 9 Modeling Schemes and Notations"
+    ],
+    "num_rows": 7,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

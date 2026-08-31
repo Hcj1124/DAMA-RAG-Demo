@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:034:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      357
+    ],
+    "locators": {
+      "docling_ref": "#/tables/34",
+      "table_index": 34,
+      "bounding_boxes": [
+        {
+          "l": 213.2737579345703,
+          "t": 257.15045166015625,
+          "r": 416.4720153808594,
+          "b": 215.89569091796875,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "Code Value\tDescription\nUS\tUnited States of America\nGB\tUnited Kingdom (Great Britain)",
+    "markdown": "| Code Value | Description |\n| --- | --- |\n| US | United States of America |\n| GB | United Kingdom (Great Britain) |",
+    "structured": {
+      "num_rows": 3,
+      "num_cols": 2,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Code Value",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 219.84,
+            "t": 542.28648,
+            "r": 269.49757199999993,
+            "b": 550.9279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Description",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 320.88,
+            "t": 542.28648,
+            "r": 370.2238320000002,
+            "b": 550.9279872727273,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "US",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 219.84,
+            "t": 554.16648,
+            "r": 232.57884,
+            "b": 562.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "United States of America",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 281.04,
+            "t": 553.92648,
+            "r": 382.29834000000074,
+            "b": 562.4663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "GB",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 219.84,
+            "t": 566.16648,
+            "r": 234.16248000000002,
+            "b": 574.8079872727272,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "United Kingdom (Great Britain)",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 281.04,
+            "t": 565.92648,
+            "r": 410.10964800000113,
+            "b": 574.4663563846154,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 17 Simple Reference List"
+    ],
+    "num_rows": 3,
+    "num_cols": 2,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}

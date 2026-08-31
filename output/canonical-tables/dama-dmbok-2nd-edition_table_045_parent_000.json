@@ -1,0 +1,559 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dama-dmbok-2nd-edition:table:045:parent:000",
+  "parent_id": null,
+  "content_type": "table_parent",
+  "source": {
+    "document_id": "dama-dmbok-2nd-edition",
+    "source_filename": "dama-dmbok-2nd-edition.pdf",
+    "pages": [
+      393
+    ],
+    "locators": {
+      "docling_ref": "#/tables/45",
+      "table_index": 45,
+      "bounding_boxes": [
+        {
+          "l": 131.22494506835938,
+          "t": 635.5612030029297,
+          "r": 498.6143493652344,
+          "b": 555.8216552734375,
+          "coord_origin": "BOTTOMLEFT"
+        }
+      ]
+    }
+  },
+  "content": {
+    "text": "\tSubject Areas\tSubject Areas\tSubject Areas\tSubject Areas\tSubject Areas\nBusiness Processes\tDate\tProduct\tStore\tVendor\tWarehouse\nSales\tX\tX\tX\t\t\nInventory\tX\tX\tX\tX\tX\nOrders\tX\tX\t\tX\t\nConformed Dimension Candidate\tYes\tYes\tYes\tYes\tNo",
+    "markdown": "|  | Subject Areas | Subject Areas | Subject Areas | Subject Areas | Subject Areas |\n| --- | --- | --- | --- | --- | --- |\n| Business Processes | Date | Product | Store | Vendor | Warehouse |\n| Sales | X | X | X |  |  |\n| Inventory | X | X | X | X | X |\n| Orders | X | X |  | X |  |\n| Conformed Dimension Candidate | Yes | Yes | Yes | Yes | No |",
+    "structured": {
+      "num_rows": 6,
+      "num_cols": 6,
+      "orientation": "rot_0",
+      "cells": [
+        {
+          "text": "Subject Areas",
+          "row_span": 1,
+          "col_span": 5,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 6,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 360.36,
+            "t": 163.44647999999995,
+            "r": 420.04231200000015,
+            "b": 172.08798727272722,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Business Processes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 167.52,
+            "t": 178.92647999999997,
+            "r": 247.12530000000004,
+            "b": 187.56798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Date",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 288.36,
+            "t": 178.92647999999997,
+            "r": 308.382588,
+            "b": 187.56798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Product",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 319.8,
+            "t": 178.92647999999997,
+            "r": 354.1928759999999,
+            "b": 187.56798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Store",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 365.76,
+            "t": 178.92647999999997,
+            "r": 388.5405119999999,
+            "b": 187.56798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Vendor",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 400.08,
+            "t": 178.92647999999997,
+            "r": 432.2179319999999,
+            "b": 187.56798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Warehouse",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 443.76,
+            "t": 178.92647999999997,
+            "r": 491.97835199999986,
+            "b": 187.56798727272724,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Sales",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 137.88,
+            "t": 190.80647999999997,
+            "r": 159.5121239999999,
+            "b": 199.44798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 294.72,
+            "t": 190.56647999999996,
+            "r": 301.91112000000004,
+            "b": 199.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 333.36,
+            "t": 190.56647999999996,
+            "r": 340.55112,
+            "b": 199.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 373.56,
+            "t": 190.56647999999996,
+            "r": 380.75112,
+            "b": 199.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Inventory",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 137.88,
+            "t": 202.80647999999997,
+            "r": 180.0546239999998,
+            "b": 211.44798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 294.72,
+            "t": 202.56647999999996,
+            "r": 301.91112000000004,
+            "b": 211.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 333.36,
+            "t": 202.56647999999996,
+            "r": 340.55112,
+            "b": 211.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 373.56,
+            "t": 202.56647999999996,
+            "r": 380.75112,
+            "b": 211.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 412.56,
+            "t": 202.56647999999996,
+            "r": 419.75112,
+            "b": 211.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 3,
+          "end_row_offset_idx": 4,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 464.28,
+            "t": 202.56647999999996,
+            "r": 471.47112,
+            "b": 211.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Orders",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 137.88,
+            "t": 214.80647999999997,
+            "r": 168.40042800000003,
+            "b": 223.44798727272723,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 294.72,
+            "t": 214.56647999999996,
+            "r": 301.91112000000004,
+            "b": 223.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 333.36,
+            "t": 214.56647999999996,
+            "r": 340.55112,
+            "b": 223.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "X",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 4,
+          "end_row_offset_idx": 5,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 412.56,
+            "t": 214.56647999999996,
+            "r": 419.75112,
+            "b": 223.1063563846153,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Conformed Dimension Candidate",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": true,
+          "row_section": false,
+          "bbox": {
+            "l": 137.88,
+            "t": 226.80647999999997,
+            "r": 276.82000800000014,
+            "b": 235.3614444186046,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 291.36,
+            "t": 226.56647999999996,
+            "r": 305.19244799999996,
+            "b": 235.1387005278592,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 330.0,
+            "t": 226.56647999999996,
+            "r": 343.83244799999994,
+            "b": 235.1387005278592,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 3,
+          "end_col_offset_idx": 4,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 370.2,
+            "t": 226.56647999999996,
+            "r": 384.03244799999993,
+            "b": 235.1387005278592,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "Yes",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 4,
+          "end_col_offset_idx": 5,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 409.2,
+            "t": 226.56647999999996,
+            "r": 423.03244799999993,
+            "b": 235.1387005278592,
+            "coord_origin": "TOPLEFT"
+          }
+        },
+        {
+          "text": "No",
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 5,
+          "end_row_offset_idx": 6,
+          "start_col_offset_idx": 5,
+          "end_col_offset_idx": 6,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false,
+          "bbox": {
+            "l": 462.12,
+            "t": 226.56647999999996,
+            "r": 473.70348,
+            "b": 235.1387005278592,
+            "coord_origin": "TOPLEFT"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "caption": [
+      "Table 27 DW-Bus Matrix Example"
+    ],
+    "num_rows": 6,
+    "num_cols": 6,
+    "review_status": "accepted",
+    "review_source": "accepted_after_user_review"
+  }
+}
