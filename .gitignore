@@ -33,3 +33,5 @@ chroma_db/
 Thumbs.db
 desktop.ini
 
+# tests and temporary files
+inspect_text_chunks.py
