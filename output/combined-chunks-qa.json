@@ -1,0 +1,11 @@
+{
+  "records": 1243,
+  "text_records": 1191,
+  "table_child_records": 52,
+  "duplicate_ids": 0,
+  "invalid_content_types": 0,
+  "empty_embedding_text": 0,
+  "schema_errors": 0,
+  "text_input": "output\\text-chunks.jsonl",
+  "table_input": "output\\table-chunks.jsonl"
+}
