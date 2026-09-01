@@ -1,0 +1,18 @@
+{
+  "chunks": 1191,
+  "min_observed_tokens": 9,
+  "max_observed_tokens": 480,
+  "over_limit": 0,
+  "empty_chunks": 0,
+  "duplicate_ids": 0,
+  "missing_pages": 0,
+  "missing_docling_refs": 0,
+  "forbidden_table_picture_refs": 0,
+  "schema_errors": 0,
+  "tokenizer_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "target_tokens": 480,
+  "max_tokens": 512,
+  "text_overlap": 0,
+  "chunker": "docling_hybrid",
+  "merge_peers": true
+}
