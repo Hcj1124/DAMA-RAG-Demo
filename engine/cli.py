@@ -1,9 +1,9 @@
-"""Command line interface.
+"""DAMA RAG 命令列介面。
 
-    dama-rag doctor            # is everything in place?
-    dama-rag index             # stage 9: embed chunks into Chroma
-    dama-rag ask "question"    # stages 10-12: the full pipeline
-    dama-rag search "query"    # retrieval only, no generation
+    dama-rag doctor            # 檢查執行條件是否完整
+    dama-rag index             # 第 9 階段：將 chunks 寫入 Chroma
+    dama-rag ask "question"    # 第 10 至 12 階段：完整問答管線
+    dama-rag search "query"    # 只做檢索，不生成回答
 """
 
 from __future__ import annotations
@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 
 
 def _configure_logging(verbose: bool) -> None:
+    """依 verbose 選項設定命令列日誌層級。"""
     logging.basicConfig(
         level=logging.INFO if verbose else logging.WARNING,
         format="%(levelname)s %(name)s: %(message)s",
@@ -31,6 +32,7 @@ def _configure_logging(verbose: bool) -> None:
 
 
 def _print_citations(citations: Sequence) -> None:
+    """以人類可讀格式列出回答所引用的來源。"""
     if not citations:
         print("  (none)")
         return
@@ -43,6 +45,7 @@ def _print_citations(citations: Sequence) -> None:
 
 
 def _cmd_info(args: argparse.Namespace) -> int:
+    """顯示目前實際生效的設定。"""
     settings = Settings.from_env()
     for key, value in settings.describe().items():
         print(f"{key:>18}: {value}")
@@ -50,7 +53,7 @@ def _cmd_info(args: argparse.Namespace) -> int:
 
 
 def _cmd_doctor(args: argparse.Namespace) -> int:
-    """Check every prerequisite for answering a question, and say which fails."""
+    """逐項檢查問答所需條件，並指出失敗項目。"""
 
     settings = Settings.from_env()
     problems = 0
@@ -74,7 +77,7 @@ def _cmd_doctor(args: argparse.Namespace) -> int:
         from engine.device import resolve_device
 
         print(f"  ok    {resolve_device(settings.device)}")
-    except Exception as error:  # pragma: no cover - torch import failure
+    except Exception as error:  # pragma: no cover - 僅在 torch 匯入失敗時發生
         problems += 1
         print(f"  FAIL  {error}")
 
@@ -130,6 +133,7 @@ def _cmd_doctor(args: argparse.Namespace) -> int:
 
 
 def _cmd_index(args: argparse.Namespace) -> int:
+    """建立或重建本機向量索引。"""
     settings = Settings.from_env()
     pipeline = build_pipeline(settings, with_llm=False)
     report = pipeline.indexer.build(pipeline.corpus, rebuild=args.rebuild)
@@ -138,6 +142,7 @@ def _cmd_index(args: argparse.Namespace) -> int:
 
 
 def _cmd_search(args: argparse.Namespace) -> int:
+    """執行檢索與重排序，並以文字或 JSON 顯示結果。"""
     pipeline = build_pipeline(Settings.from_env(), with_llm=False)
     candidates = pipeline.retriever.rerank(
         args.query, pipeline.retriever.retrieve(args.query), top_k=args.k
@@ -164,7 +169,7 @@ def _cmd_search(args: argparse.Namespace) -> int:
 
 
 def _cmd_context(args: argparse.Namespace) -> int:
-    """Show what the model would read, without spending a generation on it."""
+    """顯示模型將讀取的來源或完整 Prompt，但不執行生成。"""
 
     pipeline = build_pipeline(Settings.from_env(), with_llm=False)
     bundle = pipeline.build_prompt(args.query)
@@ -177,6 +182,7 @@ def _cmd_context(args: argparse.Namespace) -> int:
 
 
 def _cmd_ask(args: argparse.Namespace) -> int:
+    """回答單次或多次問題；未提供問題時進入互動模式。"""
     settings = Settings.from_env()
     if args.language:
         settings = settings.with_overrides(
@@ -208,6 +214,7 @@ def _cmd_ask(args: argparse.Namespace) -> int:
 
 
 def _interactive(pipeline) -> int:
+    """持續接受彼此獨立的問題，直到使用者退出。"""
     print("DAMA-DMBOK RAG. Ask a question, or press Ctrl-D to quit.\n")
     while True:
         try:
@@ -231,6 +238,7 @@ def _interactive(pipeline) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
+    """建立所有子命令與選項的 argparse parser。"""
     parser = argparse.ArgumentParser(
         prog="dama-rag",
         description="Local bilingual RAG over the DAMA-DMBOK.",
@@ -290,6 +298,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: Sequence[str] | None = None) -> int:
+    """解析參數、執行子命令，並將已知錯誤轉成結束碼。"""
     args = build_parser().parse_args(argv)
     _configure_logging(args.verbose)
     try:
@@ -297,10 +306,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     except EngineError as error:
         print(f"\n{error}\n", file=sys.stderr)
         return 1
-    except KeyboardInterrupt:  # pragma: no cover
+    except KeyboardInterrupt:  # pragma: no cover - 使用者主動中斷
         print(file=sys.stderr)
         return 130
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":  # pragma: no cover - 模組直接執行入口
     raise SystemExit(main())

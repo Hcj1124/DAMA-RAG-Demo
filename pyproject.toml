@@ -31,13 +31,11 @@ dama-rag = "engine.cli:main"
 dev = ["pytest>=8.0"]
 
 [tool.setuptools.packages.find]
-include = ["engine*"]
+include = ["engine*", "ingest*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 # Not -q: the conftest header says which tests were skipped for want of the
 # `ingest` extra, and -q hides it.
-# The chunk-pipeline tests import build_*.py and combine_chunks.py from the
-# repository root, which is not an installed package. Those modules also need
-# the `ingest` extra: run the full suite with `uv run --extra ingest pytest`.
+# Run the full ingestion and engine suite with `uv run --extra ingest pytest`.
 pythonpath = ["."]

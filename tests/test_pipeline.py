@@ -3,8 +3,8 @@ from __future__ import annotations
 import unittest
 from types import SimpleNamespace
 
-from build_text_only import is_before_start_page, is_index_or_later
-from combine_chunks import validate_combined
+from ingest.text.build_view import is_before_start_page, is_index_or_later
+from ingest.combine_chunks import validate_combined
 
 
 def item_on_page(page: int) -> SimpleNamespace:

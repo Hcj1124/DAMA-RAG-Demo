@@ -1,8 +1,7 @@
-"""Phase 5: split canonical table parents into row-aware embedding children.
+"""將 canonical table parent 依資料列切成可供 embedding 的 table child。
 
-The final serialized ``content.text`` is counted with the configured embedding
-tokenizer. Header rows and captions are repeated, while data rows are assigned to
-exactly one child. The resulting JSONL records conform to ``chunk-schema.json``.
+每個 child 會重複表頭與 caption，但每一資料列只歸屬一個 child；最終
+content.text 使用指定 embedding tokenizer 計數，並符合 chunk-schema.json。
 """
 
 from __future__ import annotations
@@ -14,6 +13,8 @@ import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
+
+from ingest.paths import project_path
 from typing import Any, Iterable
 
 from docling_core.transforms.chunker.tokenizer.huggingface import HuggingFaceTokenizer
@@ -21,10 +22,12 @@ from jsonschema import Draft202012Validator
 from transformers.utils import logging as transformers_logging
 
 
+# 表格切塊與最終 token QA 共用的預設 embedding tokenizer。
 DEFAULT_TOKENIZER_MODEL = "BAAI/bge-m3"
 
 
 def file_sha256(path: Path) -> str:
+    """計算輸入檔雜湊，供 QA 報告追溯資料版本。"""
     digest = hashlib.sha256()
 
     with path.open("rb") as stream:
@@ -36,29 +39,36 @@ def file_sha256(path: Path) -> str:
 
 @dataclass(frozen=True)
 class TableRow:
+    """表格切塊期間使用的不可變資料列，保留原始列索引與欄位值。"""
+
     index: int
     values: list[str]
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
+    """讀取 JSONL 並忽略空白行。"""
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
 def write_jsonl(path: Path, records: Iterable[dict[str, Any]]) -> None:
+    """將 table child 紀錄逐行寫成 JSONL。"""
     with path.open("w", encoding="utf-8", newline="\n") as stream:
         for record in records:
             stream.write(json.dumps(record, ensure_ascii=False, separators=(",", ":")) + "\n")
 
 
 def escape_markdown(value: str) -> str:
+    """跳脫會破壞 Markdown 表格欄位的分隔符號。"""
     return value.replace("|", "\\|")
 
 
 def normalize_value(value: str) -> str:
+    """統一儲存格中的空白字元，穩定後續序列化結果。"""
     return re.sub(r"\s+", " ", value).strip()
 
 
 def build_rows(structured: dict[str, Any]) -> list[TableRow]:
+    """由 parent 的結構化 cells 重建可依列切分的矩陣。"""
     num_rows = int(structured["num_rows"])
     num_cols = int(structured["num_cols"])
     matrix = [["" for _ in range(num_cols)] for _ in range(num_rows)]
@@ -66,8 +76,7 @@ def build_rows(structured: dict[str, Any]) -> list[TableRow]:
         row = int(cell["start_row_offset_idx"])
         col = int(cell["start_col_offset_idx"])
         if 0 <= row < num_rows and 0 <= col < num_cols:
-            # A spanned cell is written once at its top-left location. Span metadata
-            # remains authoritative in the parent record.
+            # 跨列／欄儲存格只放在左上起點；完整 span 資訊仍以 parent 為準。
             value = normalize_value(str(cell.get("text", "")))
             if value:
                 matrix[row][col] = value
@@ -75,6 +84,7 @@ def build_rows(structured: dict[str, Any]) -> list[TableRow]:
 
 
 def explicit_header_indices(structured: dict[str, Any]) -> list[int]:
+    """取得 Docling 明確標示為欄位標題的列索引。"""
     return sorted(
         {
             int(cell["start_row_offset_idx"])
@@ -85,6 +95,7 @@ def explicit_header_indices(structured: dict[str, Any]) -> list[int]:
 
 
 def display_header(rows: list[TableRow], header_indices: list[int], num_cols: int) -> tuple[list[str], bool]:
+    """組合多層表頭；缺少表頭時建立可辨識的替代欄名。"""
     if not header_indices:
         return [f"Column {index + 1}" for index in range(num_cols)], True
     values = []
@@ -100,6 +111,7 @@ def display_header(rows: list[TableRow], header_indices: list[int], num_cols: in
 
 
 def markdown_table(header: list[str], body: list[TableRow]) -> str:
+    """建立供顯示使用的 Markdown 表格。"""
     lines = ["| " + " | ".join(escape_markdown(value) for value in header) + " |"]
     lines.append("| " + " | ".join(["---"] * len(header)) + " |")
     lines.extend("| " + " | ".join(escape_markdown(value) for value in row.values) + " |" for row in body)
@@ -107,6 +119,7 @@ def markdown_table(header: list[str], body: list[TableRow]) -> str:
 
 
 def serialize_markdown(captions: list[str], header: list[str], body: list[TableRow]) -> str:
+    """組合 caption 與表格，產生 child 的顯示內容。"""
     sections = []
     if captions:
         sections.append("\n".join(f"Caption: {caption}" for caption in captions))
@@ -115,6 +128,7 @@ def serialize_markdown(captions: list[str], header: list[str], body: list[TableR
 
 
 def is_key_value_table(rows: list[TableRow], header_indices: list[int], num_cols: int) -> bool:
+    """辨識無表頭的兩欄鍵值表，以選擇合適的 embedding 序列化方式。"""
     if header_indices or num_cols != 2 or not rows:
         return False
     complete_pairs = [row for row in rows if row.values[0] and row.values[1]]
@@ -129,6 +143,7 @@ def is_key_value_table(rows: list[TableRow], header_indices: list[int], num_cols
 
 
 def serialize_row_attribute_value(row: TableRow, header: list[str], key_value_mode: bool) -> str:
+    """將單列轉成帶欄位名稱的屬性值文字，避免 embedding 遺失欄位語意。"""
     if key_value_mode:
         attribute = row.values[0].rstrip(":").strip()
         return f"Row {row.index}:\n{attribute}: {row.values[1]}"
@@ -148,6 +163,7 @@ def serialize_embedding_text(
     body: list[TableRow],
     key_value_mode: bool,
 ) -> str:
+    """組合 caption、表頭與資料列，形成實際送入 embedding 的文字。"""
     sections = []
     if captions:
         sections.append("\n".join(f"Table: {caption}" for caption in captions))
@@ -158,6 +174,7 @@ def serialize_embedding_text(
 
 
 def token_count(tokenizer: HuggingFaceTokenizer, text: str) -> int:
+    """使用 embedding tokenizer 計算序列化文字的實際 token 數。"""
     return int(tokenizer.count_tokens(text=text))
 
 
@@ -169,7 +186,7 @@ def split_oversize_row(
     hard_max_tokens: int,
     key_value_mode: bool,
 ) -> list[str]:
-    """Split an exceptional oversized row without overlapping its text."""
+    """切分無法單獨容納的超長資料列，且各片段不重疊。"""
     row_text = serialize_row_attribute_value(row, header, key_value_mode)
     units = re.findall(r"\S+\s*", row_text)
     prefix_parts = ["\n".join(f"Table: {caption}" for caption in captions)] if captions else []
@@ -191,7 +208,7 @@ def split_oversize_row(
         if token_count(tokenizer, prefix + unit) <= hard_max_tokens:
             current = unit
             continue
-        # Extremely long unbroken strings are split at character boundaries.
+        # 無空白的超長字串改以字元邊界二分搜尋可容納的最大片段。
         remainder = unit
         while remainder:
             low, high = 1, len(remainder)
@@ -229,6 +246,7 @@ def make_child(
     key_value_mode: bool,
     row_fragment: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+    """建立 table child，維持 parent 關聯、來源定位與列級結構。"""
     table_index = int(parent["source"]["locators"]["table_index"])
     document_id = parent["source"]["document_id"]
     record_id = f"{document_id}:table:{table_index:03d}:child:{child_ordinal:03d}"
@@ -283,6 +301,7 @@ def chunk_parent(
     target_tokens: int,
     hard_max_tokens: int,
 ) -> list[dict[str, Any]]:
+    """依 token 目標將單一 parent 的資料列分組為多個 table child。"""
     structured = parent["content"]["structured"]
     all_rows = build_rows(structured)
     header_indices = explicit_header_indices(structured)
@@ -299,6 +318,7 @@ def chunk_parent(
     current: list[TableRow] = []
 
     def emit(rows: list[TableRow]) -> None:
+        """將目前累積的資料列輸出為一筆完整 child。"""
         embedding_text = serialize_embedding_text(captions, header, rows, key_value_mode)
         markdown_text = serialize_markdown(captions, header, rows)
         children.append(
@@ -320,6 +340,7 @@ def chunk_parent(
             )
         )
 
+    # 先嘗試累積至 target；單列超過 hard max 時才啟用例外片段切分。
     for row in data_rows:
         candidate = current + [row]
         candidate_text = serialize_embedding_text(captions, header, candidate, key_value_mode)
@@ -378,7 +399,7 @@ def chunk_parent(
         emit(current)
 
     if not children:
-        # Header-only tables are retained rather than silently dropped.
+        # 僅含表頭的表格仍保留一筆 child，避免資料在管線中無聲消失。
         emit([])
     return children
 
@@ -389,6 +410,7 @@ def validate_children(
     hard_max_tokens: int,
     schema: dict[str, Any],
 ) -> dict[str, Any]:
+    """驗證 parent 關聯、列覆蓋、序列化內容、token 上限與 schema。"""
     parent_by_id = {parent["record_id"]: parent for parent in parents}
     child_ids = [child["record_id"] for child in children]
     if len(child_ids) != len(set(child_ids)):
@@ -474,11 +496,12 @@ def validate_children(
 
 
 def main() -> None:
+    """串接 parent 載入、row-aware 切塊、QA 驗證與輸出流程。"""
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default="output/table-parents.jsonl")
-    parser.add_argument("--output", default="output/table-chunks.jsonl")
-    parser.add_argument("--qa-output", default="output/table-chunks-qa.json")
-    parser.add_argument("--schema", default="output/chunk-schema.json")
+    parser.add_argument("--input", default=project_path("output/tables/table-parents.jsonl"))
+    parser.add_argument("--output", default=project_path("output/chunks/table-chunks.jsonl"))
+    parser.add_argument("--qa-output", default=project_path("output/qa/table-chunks-qa.json"))
+    parser.add_argument("--schema", default=project_path("schemas/chunk-schema.json"))
     parser.add_argument("--tokenizer-model", default=DEFAULT_TOKENIZER_MODEL)
     parser.add_argument("--target-tokens", type=int, default=480)
     parser.add_argument("--max-tokens", type=int, default=512)
@@ -492,13 +515,13 @@ def main() -> None:
     schema_path = Path(args.schema)
     parents = read_jsonl(input_path)
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
-    # Candidate groups may temporarily exceed the model limit while the packer
-    # decides where to split; final children are checked strictly below.
+    # 分組候選可暫時超出上限，以便決定切點；最終 child 仍須通過嚴格 QA。
     transformers_logging.set_verbosity_error()
     tokenizer = HuggingFaceTokenizer.from_pretrained(
         model_name=args.tokenizer_model,
         max_tokens=args.max_tokens,
     )
+    # 每個 parent 獨立切分，再彙整成 table-chunks.jsonl。
     children = [
         child
         for parent in parents
@@ -516,6 +539,7 @@ def main() -> None:
         hard_max_tokens=args.max_tokens,
         schema=schema,
     )
+    # 加入參數、依賴版本與來源雜湊，讓切塊結果可重現。
     qa.update(
         {
             "tokenizer_name": args.tokenizer_model,

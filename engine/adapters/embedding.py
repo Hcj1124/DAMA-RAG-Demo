@@ -1,8 +1,6 @@
-"""Sentence Transformers bi-encoder -- stage 9's embedding half.
+"""第 9 階段的 Sentence Transformers bi-encoder 實作。
 
-Weights load on first use, not on import, so the CLI, the tests and any
-tooling can import the package without paying a multi-second model load they
-may never need.
+權重延後到第一次使用時才載入，讓 CLI、測試與工具單純匯入套件時不必等待模型初始化。
 """
 
 from __future__ import annotations
@@ -19,12 +17,9 @@ logger = logging.getLogger(__name__)
 
 
 class SentenceTransformerEmbedder:
-    """Implements :class:`engine.ports.Embedder` on ``SentenceTransformer``.
+    """以 ``SentenceTransformer`` 實作 :class:`engine.ports.Embedder`。
 
-    ``bge-m3`` needs no instruction prefix, so both prompts default to
-    ``None`` and the document and query paths are identical. They stay
-    separate methods anyway: the moment the model changes to an
-    instruction-aware one, only the settings have to move.
+    文件與查詢仍保留不同入口，讓未來改用需要指令前綴的模型時只需調整設定。
     """
 
     def __init__(
@@ -41,6 +36,7 @@ class SentenceTransformerEmbedder:
 
     @property
     def index_fingerprint(self) -> str:
+        """雜湊所有會改變已儲存文件向量的設定。"""
         payload = {
             "model": self._settings.model,
             "normalize": self._settings.normalize,
@@ -58,8 +54,9 @@ class SentenceTransformerEmbedder:
 
     @property
     def dimension(self) -> int:
+        """取得模型輸出的向量維度。"""
         model = self._ensure_model()
-        # sentence-transformers 6 renamed this; support both spellings.
+        # sentence-transformers 6 更改了方法名稱，因此同時相容新舊版本。
         getter = (
             getattr(model, "get_embedding_dimension", None)
             or model.get_sentence_embedding_dimension
@@ -67,6 +64,7 @@ class SentenceTransformerEmbedder:
         return int(getter())
 
     def _ensure_model(self):
+        """首次使用時才載入模型並選擇可用裝置。"""
         if self._model is None:
             from sentence_transformers import SentenceTransformer
 
@@ -89,6 +87,7 @@ class SentenceTransformerEmbedder:
     def embed_documents(
         self, texts: Sequence[str], *, show_progress: bool = False
     ) -> list[list[float]]:
+        """批次產生文件向量，可選擇顯示進度。"""
         return self._encode(
             [
                 self._decorate(text, self._settings.document_prompt)
@@ -98,6 +97,7 @@ class SentenceTransformerEmbedder:
         )
 
     def embed_query(self, text: str) -> list[float]:
+        """產生單一查詢向量。"""
         return self._encode(
             [self._decorate(text, self._settings.query_prompt)],
             show_progress=False,
@@ -106,6 +106,7 @@ class SentenceTransformerEmbedder:
     def _encode(
         self, texts: Sequence[str], *, show_progress: bool
     ) -> list[list[float]]:
+        """呼叫底層模型，以統一設定完成實際編碼。"""
         if not texts:
             return []
         model = self._ensure_model()
@@ -120,4 +121,5 @@ class SentenceTransformerEmbedder:
 
     @staticmethod
     def _decorate(text: str, prompt: str | None) -> str:
+        """需要時在文字前加入模型指令前綴。"""
         return f"{prompt}{text}" if prompt else text

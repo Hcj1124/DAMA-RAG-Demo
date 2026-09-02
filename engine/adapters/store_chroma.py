@@ -1,15 +1,10 @@
-"""Chroma persistent vector store -- stage 9's storage half.
+"""第 9 階段的 Chroma 持久化向量資料庫實作。
 
-Distance metric: the collection uses Chroma's default squared-L2 space.
-Every vector is L2-normalised before insertion, and squared L2 is a strictly
-increasing function of cosine distance on normalised vectors, so the ranking
-is identical to cosine and only the numeric scale differs. The value is
-surfaced as ``vector_distance`` for debugging; nothing thresholds on it.
+Collection 使用 Chroma 預設的平方 L2 距離。因向量寫入前已正規化，其排序與
+cosine distance 相同，僅數值尺度不同；``vector_distance`` 只供除錯，不作門檻。
 
-Lifecycle: the collection is reused via upsert rather than dropped and
-recreated on every rebuild, which would orphan HNSW index directories on
-disk. A full ``reset`` happens only when the embedding model or its
-dimension changes -- the one case where the old vectors are meaningless.
+一般更新使用 upsert 重複利用 collection，避免留下孤立的 HNSW 目錄；只有
+embedding 模型或其向量設定改變、舊向量失去意義時，才執行完整 ``reset``。
 """
 
 from __future__ import annotations
@@ -22,20 +17,20 @@ logger = logging.getLogger(__name__)
 
 
 def _not_found_errors() -> tuple[type[BaseException], ...]:
-    """Chroma renamed its "missing collection" error across versions."""
+    """整理不同 Chroma 版本中代表 collection 不存在的例外類型。"""
 
     errors: list[type[BaseException]] = [ValueError]
     try:
         from chromadb.errors import NotFoundError
 
         errors.append(NotFoundError)
-    except ImportError:  # pragma: no cover - very old chromadb
+    except ImportError:  # pragma: no cover - 僅適用非常舊的 chromadb
         pass
     return tuple(errors)
 
 
 class ChromaVectorStore:
-    """Implements :class:`engine.ports.VectorStore` on a persistent Chroma DB."""
+    """以持久化 Chroma DB 實作 :class:`engine.ports.VectorStore`。"""
 
     def __init__(self, path: Path, collection_name: str) -> None:
         self._path = path
@@ -52,6 +47,7 @@ class ChromaVectorStore:
         return self._collection_name
 
     def _ensure_client(self):
+        """首次存取時建立 Chroma client 與資料目錄。"""
         if self._client is None:
             import chromadb
 
@@ -60,6 +56,7 @@ class ChromaVectorStore:
         return self._client
 
     def _get_collection(self, *, create: bool = False):
+        """取得 collection，並在指定時建立不存在的 collection。"""
         if self._collection is not None:
             return self._collection
 
@@ -93,7 +90,7 @@ class ChromaVectorStore:
         collection.modify(metadata=dict(metadata))
 
     def existing(self) -> dict[str, Mapping[str, Any]]:
-        """Indexed ids with their metadata, so a rebuild can diff by hash."""
+        """取得已索引 ID 與 metadata，供重建時比較內容雜湊。"""
 
         collection = self._get_collection()
         if collection is None:
@@ -132,6 +129,7 @@ class ChromaVectorStore:
             collection.delete(ids=list(ids))
 
     def reset(self) -> None:
+        """刪除目前 collection，並清除快取的 collection 物件。"""
         client = self._ensure_client()
         try:
             client.delete_collection(name=self._collection_name)
@@ -143,6 +141,7 @@ class ChromaVectorStore:
     def query(
         self, embedding: Sequence[float], top_k: int
     ) -> list[tuple[str, str, Mapping[str, Any], float]]:
+        """查詢最接近的向量，回傳文件、metadata 與距離。"""
         collection = self._get_collection()
         if collection is None:
             return []

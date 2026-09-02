@@ -1,16 +1,16 @@
-"""Build a text-only DoclingDocument for later HybridChunker processing.
+"""建立僅保留正文的 DoclingDocument，供後續 HybridChunker 切塊。
 
-Removes all TableItem and PictureItem nodes, including their child items,
-while leaving the original output/sample.json unchanged.
+此程式會排除表格、圖片及其附屬內容，也會移除指定頁面範圍外與
+不適合檢索的文字；原始的 output/docling/document.json 不會被修改。
 
-Run:
-    python build_text_only.py
+執行方式：
+    python -m ingest.text.build_view
 
-Or:
-    python build_text_only.py \
-        --input output/sample.json \
-        --output output/sample-text-only.json \
-        --qa-output output/sample-text-only-qa.json
+或指定輸入、輸出與 QA 報告：
+    python -m ingest.text.build_view \
+        --input output/docling/document.json \
+        --output output/docling/text-only.json \
+        --qa-output output/qa/text-only-qa.json
 """
 
 from __future__ import annotations
@@ -20,8 +20,11 @@ import hashlib
 import json
 from pathlib import Path
 
+from ingest.paths import project_path
+
 from docling_core.types.doc import DoclingDocument
 
+# 正文起始頁，以及不納入文字檢索語料的 Docling 類型與父節點。
 START_PAGE = 21
 
 EXCLUDED_LABELS = {
@@ -37,6 +40,7 @@ EXCLUDED_PARENT_PREFIXES = (
 
 
 def item_pages(item) -> list[int]:
+    """取得 Docling 項目在來源 PDF 中出現的所有頁碼。"""
     return [
         int(prov.page_no)
         for prov in getattr(item, "prov", [])
@@ -45,6 +49,7 @@ def item_pages(item) -> list[int]:
 
 
 def file_sha256(path: Path) -> str:
+    """計算輸入檔案雜湊，讓 QA 報告可追溯到確切的來源版本。"""
     digest = hashlib.sha256()
 
     with path.open("rb") as stream:
@@ -55,14 +60,17 @@ def file_sha256(path: Path) -> str:
 
 
 def item_ref(item) -> str:
+    """取得項目本身的 Docling 參照路徑。"""
     return str(getattr(item, "self_ref", ""))
 
 
 def referenced_item_ref(ref) -> str:
+    """將 Docling 參照物件統一轉成可比較的字串。"""
     return str(getattr(ref, "cref", ref))
 
 
 def linked_caption_and_footnote_refs(doc: DoclingDocument) -> set[str]:
+    """收集表格與圖片所連結的標題、註腳，避免殘留於純文字語料。"""
     refs: set[str] = set()
 
     for owner in [*doc.tables, *doc.pictures]:
@@ -74,6 +82,7 @@ def linked_caption_and_footnote_refs(doc: DoclingDocument) -> set[str]:
 
 
 def find_index_start_page(doc: DoclingDocument) -> int | None:
+    """找出書末 Index 的起始頁；找不到時回傳 None。"""
     candidates = []
 
     for item in doc.texts:
@@ -94,7 +103,7 @@ def validate_output(
     start_page: int,
     index_start_page: int | None,
 ) -> dict[str, int]:
-    """Check the serialized JSON for tables, pictures, or dangling child refs."""
+    """驗證輸出只保留目標頁面內的正文，並回傳各項 QA 統計。"""
 
     data = json.loads(path.read_text(encoding="utf-8"))
 
@@ -182,11 +191,13 @@ def validate_output(
     }
 
 def is_before_start_page(item, start_page: int) -> bool:
+    """判斷項目是否完全位於正文起始頁之前。"""
     pages = item_pages(item)
     return bool(pages) and max(pages) < start_page
 
 
 def is_index_or_later(item, index_start_page: int | None) -> bool:
+    """判斷項目是否位於書末 Index 起始頁或其後。"""
     if index_start_page is None:
         return False
 
@@ -194,21 +205,22 @@ def is_index_or_later(item, index_start_page: int | None) -> bool:
     return bool(pages) and max(pages) >= index_start_page
 
 def main() -> None:
+    """串接載入、內容過濾、輸出驗證及 QA 報告產生流程。"""
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
         "--input",
-        default="output/sample.json",
+        default=project_path("output/docling/document.json"),
     )
 
     parser.add_argument(
         "--output",
-        default="output/sample-text-only.json",
+        default=project_path("output/docling/text-only.json"),
     )
 
     parser.add_argument(
         "--qa-output",
-        default="output/sample-text-only-qa.json",
+        default=project_path("output/qa/text-only-qa.json"),
     )
 
     parser.add_argument(
@@ -229,17 +241,17 @@ def main() -> None:
             f"Input DoclingDocument not found: {input_path}"
         )
 
-    # Load the original serialized DoclingDocument.
-    # The original file itself is not modified.
+    # 載入原始 DoclingDocument；後續結果另存新檔，不覆寫來源。
     doc = DoclingDocument.load_from_json(input_path)
 
+    # 保留過濾前統計，並先找出頁面邊界與表格／圖片附屬文字。
     original_texts = len(doc.texts)
     original_tables = len(doc.tables)
     original_pictures = len(doc.pictures)
     index_start_page = find_index_start_page(doc)
     linked_refs = linked_caption_and_footnote_refs(doc)
 
-    # delete_items() also removes child items belonging to these nodes.
+    # 第一階段：刪除表格與圖片節點；delete_items() 會連同其子項目刪除。
     items_to_remove = [
         *doc.tables,
         *doc.pictures,
@@ -248,6 +260,7 @@ def main() -> None:
     if items_to_remove:
         doc.delete_items(node_items=items_to_remove)
 
+    # 第二階段：排除封面／目錄、書末索引、頁首頁尾及媒體附屬文字。
     filtered_text_items = [
         item
         for item in doc.texts
@@ -267,7 +280,7 @@ def main() -> None:
         exist_ok=True,
     )
 
-    # Save to a NEW file.
+    # 將純文字文件另存新檔，再以序列化後的實際內容進行 QA。
     doc.save_as_json(output_path)
 
     qa = validate_output(
@@ -276,6 +289,7 @@ def main() -> None:
         index_start_page=index_start_page,
     )
 
+    # QA 摘要同時記錄來源雜湊、過濾邊界及前後數量，便於重現與稽核。
     summary = {
         "input": str(input_path),
         "output": str(output_path),

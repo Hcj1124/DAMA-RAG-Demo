@@ -18,9 +18,9 @@ __pycache__/
 input/*
 
 # Large Docling intermediates (reproducible from the source document)
-output/sample.json
-output/sample.md
-output/sample-text-only.json
+output/docling/document.json
+output/docling/document.md
+output/docling/text-only.json
 
 # Vector databases and model caches
 chroma/

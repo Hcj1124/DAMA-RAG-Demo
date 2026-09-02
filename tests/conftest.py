@@ -1,13 +1,11 @@
-"""Let the engine tests run without the chunking dependencies.
+"""讓引擎測試在未安裝切塊依賴時仍可執行。
 
-``tests/test_pipeline.py`` imports ``build_text_only`` and ``combine_chunks``
-from the repository root, which need ``docling-core`` and ``jsonschema`` --
-the ``ingest`` extra. Those are deliberately not part of the default install,
-because answering a question never parses a PDF.
+``tests/test_pipeline.py`` 會匯入 ingestion 套件，因此需要 ``ingest`` extra
+提供的 ``docling-core`` 與 ``jsonschema``。它們刻意不放入預設安裝，因為一般
+問答流程不會解析 PDF。
 
-Without this hook a bare ``uv run pytest`` dies during collection and the
-engine tests never run. With it they run, and the header says plainly what
-was skipped and how to include it.
+若沒有此 hook，直接執行 ``uv run pytest`` 會在收集測試時失敗。現在會略過需要
+額外依賴的檔案，並在標頭說明略過原因與完整測試指令。
 """
 
 from __future__ import annotations
@@ -22,6 +20,7 @@ if importlib.util.find_spec("docling_core") is None:
 
 
 def pytest_report_header(config) -> str | None:
+    """在 pytest 標頭顯示因缺少 ingestion extra 而略過的測試。"""
     if not collect_ignore:
         return None
     return (

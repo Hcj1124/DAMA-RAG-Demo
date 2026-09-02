@@ -1,5 +1,5 @@
-"""Concrete implementations of the protocols in :mod:`engine.ports`.
+"""提供 :mod:`engine.ports` 所定義介面的具體 adapter 實作。
 
-Everything that touches a model, a network socket or a database file lives
-here, so the rest of the package stays importable and testable without them.
+模型、網路連線與資料庫檔案相關操作都集中在此，讓其餘套件即使沒有這些外部依賴，
+仍可正常匯入與測試。
 """

@@ -1,4 +1,4 @@
-"""Local generation through Ollama -- stage 12."""
+"""第 12 階段：透過 Ollama 執行本機回答生成。"""
 
 from __future__ import annotations
 
@@ -11,13 +11,10 @@ logger = logging.getLogger(__name__)
 
 
 class OllamaLanguageModel:
-    """Implements :class:`engine.ports.LanguageModel` against a local Ollama.
+    """以本機 Ollama 實作 :class:`engine.ports.LanguageModel`。
 
-    ``num_ctx`` is set explicitly rather than left to the server default: a
-    grounded DMBOK prompt carries several full sections, and silently
-    truncating the context yields a confident answer built on half the
-    evidence. ``think`` is off by default because the reasoning trace costs
-    latency and is discarded anyway.
+    明確設定 ``num_ctx``，避免包含多個完整來源的 DMBOK Prompt 被伺服器無聲截斷。
+    ``think`` 預設關閉，因為目前不保存推理軌跡，只會增加回應延遲。
     """
 
     def __init__(self, settings: GenerationSettings) -> None:
@@ -29,6 +26,7 @@ class OllamaLanguageModel:
         return f"ollama:{self._settings.model}"
 
     def _ensure_client(self):
+        """首次生成時才建立 Ollama client。"""
         if self._client is None:
             import ollama
 
@@ -40,6 +38,7 @@ class OllamaLanguageModel:
         return self._client
 
     def complete(self, prompt: str) -> str:
+        """送出完整 Prompt，並將連線失敗或空回答轉為引擎錯誤。"""
         client = self._ensure_client()
         try:
             response = client.chat(

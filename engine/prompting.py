@@ -1,12 +1,7 @@
-"""Assembling the grounded prompt.
+"""組裝只依據檢索證據回答的 grounded Prompt。
 
-There is exactly one prompt in this project. Every entry point -- the CLI,
-any future evaluation harness, any UI -- goes through it, so what is measured
-and what is shipped stay the same system.
-
-The ``[Source N]`` citation contract is load-bearing: it is what maps a
-sentence in the answer back to a page range in the DMBOK. Changing the marker
-format silently breaks citation checking downstream.
+CLI、未來的評估程式與 UI 都共用這一套 Prompt，確保測試與實際交付行為一致。
+``[Source N]`` 是回答句子對應回 DMBOK 頁碼的引用契約，不可任意變更格式。
 """
 
 from __future__ import annotations
@@ -20,6 +15,7 @@ from engine.context import ContextBlock
 
 logger = logging.getLogger(__name__)
 
+# 語言規則先由 Python 明確選定，再插入系統指示，避免模型自行猜測。
 _LANGUAGE_RULE = {
     "en": (
         "Write the entire answer in English. The context is in English; do "
@@ -31,27 +27,20 @@ _LANGUAGE_RULE = {
     ),
 }
 
-# CJK ideographs, plus the two kana blocks so a Japanese question is not
-# mistaken for an English one.
+# 涵蓋 CJK 漢字與兩個假名區段，避免把日文問題誤判成英文。
 _CJK_RANGES = (
-    (0x3040, 0x30FF),  # hiragana + katakana
-    (0x3400, 0x4DBF),  # CJK extension A
-    (0x4E00, 0x9FFF),  # CJK unified ideographs
-    (0xF900, 0xFAFF),  # compatibility ideographs
+    (0x3040, 0x30FF),  # 平假名與片假名
+    (0x3400, 0x4DBF),  # CJK 擴充 A 區
+    (0x4E00, 0x9FFF),  # CJK 統一漢字
+    (0xF900, 0xFAFF),  # CJK 相容漢字
 )
 
 
 def detect_language(query: str) -> str:
-    """Pick the answer language from the question's script.
+    """依問題使用的字元判定回答語言。
 
-    ``auto`` used to be a sentence in the prompt asking the model to match
-    the question's language, and qwen3.6 answered English questions in
-    Chinese anyway -- the corpus is English, the model is Chinese-strong, and
-    one instruction among eleven lost. This is a decision Python can make
-    reliably, so it is made here and the prompt receives a definite rule.
-
-    Any CJK character means Chinese; the DMBOK terms an English question
-    contains are all Latin script, so the reverse misfire cannot happen.
+    語言選擇由 Python 完成，再將明確規則送入 Prompt，避免模型因英文語料或自身
+    語言偏好而判斷錯誤。目前只要出現 CJK 字元便使用繁體中文，純拉丁字元則使用英文。
     """
 
     for character in query:
@@ -118,7 +107,7 @@ _TRUNCATION_NOTE = "\n\n[... section truncated to fit the context budget ...]"
 
 @dataclass(frozen=True, slots=True)
 class Citation:
-    """The provenance of one context block offered to the model."""
+    """一個上下文區塊提供給模型時所附的來源追溯資訊。"""
 
     source_id: str
     title: str
@@ -130,11 +119,13 @@ class Citation:
 
     @property
     def pages(self) -> str:
+        """將單頁或頁碼範圍格式化為引用文字。"""
         if self.start_page == self.end_page:
             return f"p. {self.start_page}"
         return f"pp. {self.start_page}-{self.end_page}"
 
     def to_dict(self) -> dict[str, Any]:
+        """將引用資訊轉為可序列化字典。"""
         return {
             "source_id": self.source_id,
             "title": self.title,
@@ -148,7 +139,7 @@ class Citation:
 
 @dataclass(frozen=True, slots=True)
 class PromptBundle:
-    """A prompt plus the citation map needed to interpret its answer."""
+    """完整 Prompt，以及解讀回答引用所需的來源對照。"""
 
     prompt: str
     citations: tuple[Citation, ...]
@@ -156,16 +147,18 @@ class PromptBundle:
 
     @property
     def prompt_chars(self) -> int:
+        """回傳完整 Prompt 的字元數。"""
         return len(self.prompt)
 
 
 class PromptBuilder:
-    """Turns resolved context blocks into a prompt and its citation map."""
+    """將解析後的上下文區塊組成 Prompt 與引用對照。"""
 
     def __init__(self, settings: PromptSettings) -> None:
         self._settings = settings
 
     def build(self, query: str, blocks: Sequence[ContextBlock]) -> PromptBundle:
+        """依字元預算加入來源、編號引用，並套用回答語言規則。"""
         rendered: list[str] = []
         citations: list[Citation] = []
         truncated: list[str] = []
@@ -253,11 +246,9 @@ class PromptBuilder:
 
     @staticmethod
     def _fit(text: str, budget: int) -> tuple[str, bool]:
-        """Clip ``text`` to ``budget`` characters, marking it when clipped.
+        """將文字限制在字元預算內，並在截斷時加入可見標記。
 
-        Truncation is visible to the model so it does not read a cut section
-        as a complete one. An exhausted budget still yields a short head
-        rather than an empty block.
+        讓模型知道來源並不完整；即使剩餘預算很少，也盡量保留開頭而非空區塊。
         """
 
         if len(text) <= budget:

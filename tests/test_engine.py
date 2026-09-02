@@ -1,9 +1,7 @@
-"""Tests for stages 9-12.
+"""第 9 至 12 階段的測試。
 
-The retrieval funnel is exercised with fake adapters, so the whole suite runs
-in under a second and without downloading a model. The corpus tests do read
-the real ``output/`` files -- those are committed, and a change to the chunk
-pipeline that breaks the loader should fail here rather than at answer time.
+檢索漏斗使用假 adapters，因此不需下載模型即可快速完成。語料測試會讀取實際提交的
+``output/`` 檔案，確保切塊管線若破壞 loader，能在測試階段而非回答時才被發現。
 """
 
 from __future__ import annotations
@@ -60,7 +58,7 @@ def table_parent(record_id: str) -> TableParent:
 
 
 class FakeEmbedder:
-    """Embeds by counting characters -- deterministic and dependency-free."""
+    """以字元數產生固定向量，結果可重現且不需外部依賴。"""
 
     name = "fake-embedder"
     index_fingerprint = "fake-embedder-default"
@@ -78,7 +76,7 @@ class FakeEmbedder:
 
 
 class FakeReranker:
-    """Scores by term overlap, so the expected ordering is obvious."""
+    """依詞彙重疊率評分，讓預期排序容易驗證。"""
 
     name = "fake-reranker"
 
@@ -91,7 +89,7 @@ class FakeReranker:
 
 
 class FakeStore:
-    """An in-memory stand-in for Chroma with the same protocol."""
+    """遵循相同介面的記憶體版 Chroma 替身。"""
 
     collection_name = "fake"
     path = "(memory)"
@@ -132,7 +130,7 @@ class FakeStore:
         self._created = False
 
     def query(self, embedding, top_k):
-        # Distance is irrelevant to these tests; insertion order is stable.
+        # 這些測試不依賴距離值；以穩定的插入順序模擬查詢結果即可。
         return [
             (record_id, document, metadata, 0.1 * position)
             for position, (record_id, (document, metadata)) in enumerate(
@@ -142,7 +140,7 @@ class FakeStore:
 
 
 class RealCorpusTest(unittest.TestCase):
-    """The committed chunk files must load and stay internally consistent."""
+    """確認已提交的 chunk 檔可載入且內部關聯一致。"""
 
     @classmethod
     def setUpClass(cls):
@@ -155,8 +153,7 @@ class RealCorpusTest(unittest.TestCase):
         self.assertGreater(counts["table_parent"], 0)
 
     def test_every_table_child_resolves_to_a_parent(self):
-        # Corpus.load raises on orphans; assert it explicitly so the reason
-        # this matters stays documented next to the check.
+        # Corpus.load 本身會拒絕孤兒 child；此處仍明確斷言，讓重要原因與測試相鄰。
         orphans = [
             record.record_id
             for record in self.corpus.records
@@ -170,6 +167,17 @@ class RealCorpusTest(unittest.TestCase):
             self.assertTrue(record.text.strip(), record.record_id)
             self.assertTrue(record.pages, record.record_id)
             self.assertLessEqual(record.start_page, record.end_page)
+
+    def test_text_source_title_keeps_chapter_and_local_section(self):
+        record = next(
+            record
+            for record in self.corpus.records
+            if record.record_id == f"{DOCUMENT}:text:000092"
+        )
+        self.assertEqual(
+            record.title,
+            "Data Governance > 1.3.2 Data Governance Organization",
+        )
 
 
 class IndexingTest(unittest.TestCase):
@@ -251,7 +259,7 @@ class RetrievalGuardTest(unittest.TestCase):
 
 
 class ContextResolutionTest(unittest.TestCase):
-    """Stage 11: text stays as-is, table children expand to their parent."""
+    """第 11 階段：文字維持原 chunk，表格 child 展開為母表格。"""
 
     def setUp(self):
         parent_id = f"{DOCUMENT}:table:013:parent:000"
@@ -387,7 +395,7 @@ class PromptingTest(unittest.TestCase):
 
 
 class LanguageSelectionTest(unittest.TestCase):
-    """The answer language is decided in Python, not asked of the model."""
+    """回答語言由 Python 決定，不交由模型自行判斷。"""
 
     def test_detects_chinese_and_english(self):
         from engine.prompting import detect_language

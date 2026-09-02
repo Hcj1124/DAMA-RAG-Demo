@@ -1,21 +1,22 @@
-"""Errors that carry a fix, not just a stack trace."""
+"""定義附帶修正方向的引擎錯誤，而不只提供堆疊資訊。"""
 
 from __future__ import annotations
 
 
 class EngineError(Exception):
-    """Base class for every error this package raises deliberately."""
+    """本套件主動拋出的所有可預期錯誤之基底類別。"""
 
 
 class ConfigurationError(EngineError):
-    """A setting is missing or malformed."""
+    """設定缺漏或格式不正確。"""
 
 
 class CorpusError(EngineError):
-    """The chunk files are missing, unreadable, or internally inconsistent."""
+    """Chunk 檔案不存在、無法讀取或內部關聯不一致。"""
 
 
 class IndexNotBuiltError(EngineError):
+    """尚未建立可供查詢的向量索引。"""
     def __init__(self, collection: str, path: object) -> None:
         super().__init__(
             f"Collection '{collection}' does not exist under {path}.\n"
@@ -24,7 +25,7 @@ class IndexNotBuiltError(EngineError):
 
 
 class IndexStaleError(EngineError):
-    """The index was written by a different embedding configuration."""
+    """索引由不同的 embedding 設定建立，已不適合目前查詢。"""
 
     def __init__(self, *, indexed_with: str, querying_with: str) -> None:
         super().__init__(
@@ -37,4 +38,4 @@ class IndexStaleError(EngineError):
 
 
 class LanguageModelError(EngineError):
-    """Generation failed or returned nothing usable."""
+    """語言模型生成失敗或未回傳可用內容。"""

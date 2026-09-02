@@ -1,9 +1,8 @@
-"""Stage 10 -- vector recall, then cross-encoder precision.
+"""第 10 階段：先用向量提高召回率，再以 cross-encoder 提升精確度。
 
-Stage one asks the bi-encoder for ``retrieve_k`` candidates: cheap, and tuned
-for recall. Stage two rescores that shortlist with the cross-encoder and
-keeps ``rerank_k``: expensive per pair, affordable on twenty pairs, and much
-better at telling "mentions the words" from "answers the question".
+第一階段由 bi-encoder 低成本取回 ``retrieve_k`` 筆候選；第二階段使用
+cross-encoder 逐對重新評分並保留 ``rerank_k`` 筆，以區分「提到關鍵字」與
+「真正回答問題」的內容。
 """
 
 from __future__ import annotations
@@ -22,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 @dataclass(slots=True)
 class Candidate:
-    """A child chunk returned by search, optionally scored by the reranker."""
+    """檢索回傳的子 chunk，可選擇再附上 reranker 分數。"""
 
     record_id: str
     parent_id: str | None
@@ -35,6 +34,7 @@ class Candidate:
     rerank_score: float | None = None
 
     def to_dict(self) -> dict[str, Any]:
+        """轉成可序列化並供 CLI 顯示的字典。"""
         payload: dict[str, Any] = {
             "record_id": self.record_id,
             "parent_id": self.parent_id,
@@ -51,7 +51,7 @@ class Candidate:
 
 
 def _rerank_key(candidate: Candidate) -> float:
-    """Unscored candidates sort last rather than raising on ``None``."""
+    """讓尚未評分的候選排在最後，避免對 ``None`` 排序時出錯。"""
 
     return (
         float("-inf")
@@ -61,7 +61,7 @@ def _rerank_key(candidate: Candidate) -> float:
 
 
 class Retriever:
-    """Turns a question into ranked child chunks."""
+    """將問題轉成依相關性排序的子 chunks。"""
 
     def __init__(
         self,
@@ -78,7 +78,7 @@ class Retriever:
         self._checked = False
 
     def _check_index(self) -> None:
-        """Refuse to query an index built by a different embedding model."""
+        """拒絕查詢由不同 embedding 設定建立或尚未建立的索引。"""
 
         if self._checked:
             return
@@ -105,7 +105,7 @@ class Retriever:
         self._checked = True
 
     def retrieve(self, query: str, top_k: int | None = None) -> list[Candidate]:
-        """Stage 1 -- approximate nearest neighbours over child chunks."""
+        """第一階段：以子 chunks 的近似最近鄰搜尋取得候選。"""
 
         self._check_index()
         k = top_k or self._settings.retrieve_k
@@ -133,7 +133,7 @@ class Retriever:
         candidates: Sequence[Candidate],
         top_k: int | None = None,
     ) -> list[Candidate]:
-        """Stage 2 -- cross-encoder rescoring, highest score first."""
+        """第二階段：以 cross-encoder 重評候選，分數最高者優先。"""
 
         if not candidates:
             return []
@@ -144,6 +144,6 @@ class Retriever:
         return sorted(candidates, key=_rerank_key, reverse=True)[:k]
 
     def search(self, query: str) -> list[Candidate]:
-        """The full funnel, using the configured stage sizes."""
+        """依設定的候選數量依序執行召回與重排序。"""
 
         return self.rerank(query, self.retrieve(query))

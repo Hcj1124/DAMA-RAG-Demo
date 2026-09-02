@@ -1,7 +1,7 @@
-"""Build the phase-1 schema contract and phase-2 table inventory from Docling JSON.
+"""由 Docling JSON 建立表格盤點與 canonical table parent。
 
-The script is intentionally dependency-free so that the inventory is reproducible from
-the saved DoclingDocument, without rerunning PDF conversion.
+此程式直接使用已儲存的 DoclingDocument，不必重新轉換 PDF；處理結果會依
+自動規則及人工覆核決策，分成納入與排除清單，再產生後續切塊所需的表格母紀錄。
 """
 
 from __future__ import annotations
@@ -11,13 +11,15 @@ import csv
 import json
 import re
 from pathlib import Path
+
+from ingest.paths import project_path
 from typing import Any
 
 
+# 表格母紀錄與後續文字／表格子 chunk 共用的 schema 版本。
 SCHEMA_VERSION = "1.0.0"
 
-# Phase-3 decisions supplied by the user. Keeping these here makes every later
-# output reproducible when this script is rerun.
+# 人工覆核後確認的非資料表格；固定保存於程式中以維持重跑結果一致。
 USER_REVIEW_OVERRIDES = {
     21: ("figure", "Figure 22 Simplified Zachman Framework，不是表格"),
     25: ("er_diagram", "ER 圖中的實體，不是表格"),
@@ -31,15 +33,17 @@ USER_REVIEW_OVERRIDES = {
 
 
 def norm_text(value: str) -> str:
+    """統一空白字元，讓分類、比較與輸出文字保持穩定。"""
     return re.sub(r"\s+", " ", value).strip()
 
 
 def cell_text(cell: Any) -> str:
+    """安全取得並正規化 Docling 儲存格文字。"""
     return norm_text(str((cell or {}).get("text", "")))
 
 
 def table_markdown(table: dict[str, Any]) -> str:
-    """Render Docling's resolved grid to a compact Markdown preview."""
+    """將 Docling 已解析的表格網格轉為供閱讀的 Markdown 預覽。"""
     grid = table["data"].get("grid", [])
     rows = []
     for row in grid:
@@ -55,7 +59,7 @@ def table_markdown(table: dict[str, Any]) -> str:
 
 
 def captions(table: dict[str, Any], texts_by_ref: dict[str, dict[str, Any]]) -> list[str]:
-    """Resolve both inline captions and Docling ``$ref`` caption links."""
+    """解析表格內嵌 caption 及透過 Docling $ref 連結的 caption。"""
     output = []
     for item in table.get("captions", []):
         caption_item = texts_by_ref.get(item.get("$ref"), item)
@@ -66,7 +70,7 @@ def captions(table: dict[str, Any], texts_by_ref: dict[str, dict[str, Any]]) -> 
 
 
 def is_toc_layout(table: dict[str, Any]) -> tuple[bool, str | None]:
-    """Identify navigational tables, including Contents and lists of figures."""
+    """依頁碼、列數及文字特徵辨識目錄、圖表清單等導覽型表格。"""
     data = table["data"]
     text = " ".join(cell_text(cell) for cell in data.get("table_cells", []))
     normalized = norm_text(text).lower()
@@ -95,12 +99,14 @@ def inventory_record(
     texts_by_ref: dict[str, dict[str, Any]],
     caption_overrides: dict[int, list[str]],
 ) -> dict[str, Any]:
+    """建立單一表格的盤點紀錄，整合自動分類與人工覆核結果。"""
     data = table["data"]
     provenance = table.get("prov", [])
     pages = sorted({item["page_no"] for item in provenance if "page_no" in item})
     bbox = [item["bbox"] for item in provenance if "bbox" in item]
     toc, toc_reason = is_toc_layout(table)
     user_override = USER_REVIEW_OVERRIDES.get(index)
+    # 分類優先序：自動目錄規則、人工排除清單，其餘視為已接受表格。
     if toc:
         review_status = "excluded"
         is_true_table = False
@@ -112,8 +118,6 @@ def inventory_record(
         exclusion_reason = user_override[0]
         review_source = "user_review"
     else:
-        # The user identified the false positives and requested phase 4, so the
-        # remaining candidates are the accepted canonical-table set.
         review_status = "accepted"
         is_true_table = True
         exclusion_reason = None
@@ -153,6 +157,7 @@ def inventory_record(
 
 
 def plain_table_text(table: dict[str, Any]) -> str:
+    """建立表格的純文字表示，保留列與欄的基本界線。"""
     rows = []
     for row in table["data"].get("grid", []):
         values = [cell_text(cell) for cell in row]
@@ -162,6 +167,7 @@ def plain_table_text(table: dict[str, Any]) -> str:
 
 
 def structured_table(table: dict[str, Any]) -> dict[str, Any]:
+    """保留儲存格位置、跨列欄及標題屬性，形成結構化表格內容。"""
     data = table["data"]
     cell_keys = (
         "text",
@@ -191,6 +197,7 @@ def structured_table(table: dict[str, Any]) -> dict[str, Any]:
 
 
 def canonical_parent(record: dict[str, Any], table: dict[str, Any]) -> dict[str, Any]:
+    """將已接受的盤點項目轉成後續 table child 共用的母紀錄。"""
     source = record["source"]
     table_index = source["table_index"]
     parent_id = f"{source['document_id']}:table:{table_index:03d}:parent:000"
@@ -225,70 +232,15 @@ def canonical_parent(record: dict[str, Any], table: dict[str, Any]) -> dict[str,
     }
 
 
-def schema() -> dict[str, Any]:
-    return {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$id": "https://example.invalid/schemas/chunk-schema-1.0.0.json",
-        "title": "Unified text and table RAG record",
-        "description": "Common envelope for text chunks, table parents, and table embedding children.",
-        "type": "object",
-        "additionalProperties": False,
-        "required": ["schema_version", "record_id", "parent_id", "content_type", "source", "content", "metadata"],
-        "properties": {
-            "schema_version": {"const": SCHEMA_VERSION},
-            "record_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*:(text|table):[0-9]{3,}(?::(parent|child):[0-9]{3,})?$"},
-            "parent_id": {"type": ["string", "null"]},
-            "content_type": {"enum": ["text", "table_parent", "table_child"]},
-            "source": {
-                "type": "object",
-                "additionalProperties": False,
-                "required": ["document_id", "source_filename", "pages", "locators"],
-                "properties": {
-                    "document_id": {"type": "string"},
-                    "source_filename": {"type": "string"},
-                    "pages": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 1, "uniqueItems": True},
-                    "locators": {"type": "object", "additionalProperties": True},
-                },
-            },
-            "content": {
-                "type": "object",
-                "additionalProperties": False,
-                "required": ["text", "markdown", "structured"],
-                "properties": {
-                    "text": {"type": "string", "minLength": 1},
-                    "markdown": {"type": ["string", "null"]},
-                    "structured": {"type": ["object", "array", "null"]},
-                },
-            },
-            "metadata": {"type": "object", "additionalProperties": True},
-        },
-        "allOf": [
-            {
-                "if": {"properties": {"content_type": {"const": "table_child"}}},
-                "then": {"properties": {"parent_id": {"type": "string", "minLength": 1}}},
-            },
-            {
-                "if": {"properties": {"content_type": {"enum": ["text", "table_parent"]}}},
-                "then": {"properties": {"parent_id": {"const": None}}},
-            },
-        ],
-        "x_id_rules": {
-            "document_id": "lowercase source stem; e.g. dama-dmbok-2nd-edition",
-            "text": "{document_id}:text:{zero-padded ordinal}",
-            "table_parent": "{document_id}:table:{Docling tables[] index zero-padded to 3 digits}:parent:000",
-            "table_child": "{document_id}:table:{Docling tables[] index zero-padded to 3 digits}:child:{zero-padded ordinal}",
-            "parent_id": "null for text/table_parent; exact table_parent record_id for table_child",
-        },
-    }
-
-
 def write_jsonl(path: Path, records: list[dict[str, Any]]) -> None:
+    """將盤點或 canonical 紀錄逐行寫成 JSONL。"""
     with path.open("w", encoding="utf-8", newline="\n") as stream:
         for record in records:
             stream.write(json.dumps(record, ensure_ascii=False, separators=(",", ":")) + "\n")
 
 
 def write_review_csv(path: Path, records: list[dict[str, Any]]) -> None:
+    """輸出方便人工檢查的表格納入／排除決策清單。"""
     fields = [
         "docling_ref",
         "table_index",
@@ -317,10 +269,11 @@ def write_review_csv(path: Path, records: list[dict[str, Any]]) -> None:
 
 
 def main() -> None:
+    """串接表格盤點、分類輸出與 canonical parent 產製流程。"""
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default="output/sample.json")
-    parser.add_argument("--output-dir", default="output")
-    parser.add_argument("--caption-overrides", default="table-caption-overrides.json")
+    parser.add_argument("--input", default=project_path("output/docling/document.json"))
+    parser.add_argument("--output-dir", default=project_path("output/tables"))
+    parser.add_argument("--caption-overrides", default=project_path("config/table-caption-overrides.json"))
     args = parser.parse_args()
     input_path, output_dir = Path(args.input), Path(args.output_dir)
     doc = json.loads(input_path.read_text(encoding="utf-8"))
@@ -331,6 +284,7 @@ def main() -> None:
     )
     caption_overrides = {int(index): values for index, values in raw_caption_overrides.items()}
     texts_by_ref = {item["self_ref"]: item for item in doc.get("texts", []) if item.get("self_ref")}
+    # 每個 Docling table 先建立完整盤點紀錄，再依分類結果分流輸出。
     records = [
         inventory_record(doc_id, i, table, texts_by_ref, caption_overrides)
         for i, table in enumerate(doc.get("tables", []))
@@ -339,8 +293,7 @@ def main() -> None:
         record["source"]["source_filename"] = doc.get("origin", {}).get("filename")
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    (output_dir / "chunk-schema.json").write_text(json.dumps(schema(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    write_jsonl(output_dir / "table-inventory.all.jsonl", records)
+    write_jsonl(output_dir / "table-inventory-all.jsonl", records)
     included = [record for record in records if record["classification"]["is_true_table"]]
     excluded_toc = [record for record in records if record["classification"]["is_toc"]]
     excluded_review = [
@@ -348,11 +301,12 @@ def main() -> None:
         for record in records
         if not record["classification"]["is_toc"] and not record["classification"]["is_true_table"]
     ]
-    write_jsonl(output_dir / "table-inventory.jsonl", included)
+    write_jsonl(output_dir / "table-inventory-accepted.jsonl", included)
     write_jsonl(output_dir / "table-inventory-excluded-toc.jsonl", excluded_toc)
     write_jsonl(output_dir / "table-inventory-excluded-review.jsonl", excluded_review)
     write_review_csv(output_dir / "table-review.csv", records)
 
+    # 僅將通過覆核的真實資料表格轉成後續 row-aware 切塊所需的母紀錄。
     accepted_indices = {record["source"]["table_index"] for record in included}
     parents = [
         canonical_parent(records[index], table)
@@ -360,7 +314,7 @@ def main() -> None:
         if index in accepted_indices
     ]
     write_jsonl(output_dir / "table-parents.jsonl", parents)
-    canonical_dir = output_dir / "canonical-tables"
+    canonical_dir = output_dir / "canonical-parents"
     canonical_dir.mkdir(parents=True, exist_ok=True)
     for parent in parents:
         file_stem = parent["record_id"].replace(":", "_")

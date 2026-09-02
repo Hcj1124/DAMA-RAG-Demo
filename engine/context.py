@@ -1,21 +1,8 @@
-"""Stage 11 -- runtime parent fetch.
+"""第 11 階段：在執行時將檢索結果解析成可理解的上下文。
 
-A ranked candidate is a *retrieval* unit. What the model should read is the
-smallest unit that is still self-explanatory, and in this corpus those are
-not the same thing for both content types:
-
-* ``text`` -- HybridChunker already cut at section boundaries and kept the
-  heading, so the chunk is self-explanatory on its own. There is no text
-  parent file to fetch, and inventing one would be a different retrieval
-  design, not a lookup.
-* ``table_child`` -- a row group without its header is close to unreadable,
-  and the answer often lives in a neighbouring row. So a matched child is
-  expanded to its whole canonical parent from ``table-parents.jsonl``, and
-  several children of the same table collapse into one block instead of
-  spending three source slots on three slices of one table.
-
-Blocks come back in rerank order and are capped at ``max_sources``, so the
-best evidence survives the cap.
+文字 chunk 已保留節標題，可直接作為上下文；表格子 chunk 缺少完整表頭與相鄰列，
+因此必須展開成標準化母表格。同一母表格的多個命中只占一個來源名額，最後依 rerank
+順序保留至 ``max_sources``。
 """
 
 from __future__ import annotations
@@ -32,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 @dataclass(frozen=True, slots=True)
 class ContextBlock:
-    """One piece of evidence, ready to be numbered and put in the prompt."""
+    """一段可編號並放入 Prompt 的證據內容。"""
 
     title: str
     start_page: int
@@ -41,20 +28,20 @@ class ContextBlock:
     matched_record_id: str
     parent_id: str | None
     passage: str
-    """The chunk that actually matched the query."""
+    """實際命中查詢的 chunk。"""
     section: str
-    """The self-explanatory unit the model reads. Equals ``passage`` for text."""
+    """模型實際閱讀的完整單位；文字類型與 ``passage`` 相同。"""
     rerank_score: float | None
 
     @property
     def expanded(self) -> bool:
-        """True when the section is larger than the chunk that matched."""
+        """表示模型讀取的內容是否已從命中 chunk 展開。"""
 
         return self.section != self.passage
 
 
 class ContextResolver:
-    """Expands ranked candidates into deduplicated context blocks."""
+    """將排序後的候選項展開並去重，形成上下文區塊。"""
 
     def __init__(self, corpus: Corpus) -> None:
         self._corpus = corpus
@@ -62,6 +49,7 @@ class ContextResolver:
     def resolve(
         self, candidates: Sequence[Candidate], *, max_sources: int
     ) -> list[ContextBlock]:
+        """依 rerank 順序解析候選項，並限制最終來源數量。"""
         blocks: list[ContextBlock] = []
         seen: set[str] = set()
 
@@ -86,9 +74,13 @@ class ContextResolver:
         return blocks
 
     def _expand(self, candidate: Candidate) -> ContextBlock | None:
+        """文字保留原 chunk；表格 child 則盡可能替換成完整母表格。"""
         if candidate.content_type != TABLE_CHILD or not candidate.parent_id:
+            record = self._corpus.record_index.get(candidate.record_id)
             return ContextBlock(
-                title=candidate.title,
+                # Chroma 標題只是索引 metadata；此處改讀目前語料標題，更新來源名稱時
+                # 就不必為未變動的 embedding 重建索引。
+                title=record.title if record is not None else candidate.title,
                 start_page=candidate.start_page,
                 end_page=candidate.end_page,
                 content_type=candidate.content_type,
@@ -101,8 +93,8 @@ class ContextResolver:
 
         parent = self._corpus.parents.get(candidate.parent_id)
         if parent is None:
-            # Corpus.load rejects orphans, so this means the index is older
-            # than the chunk files. Degrade to the child rather than drop it.
+            # Corpus.load 已拒絕孤兒 child，因此這代表索引比 chunk 檔舊；保留 child
+            # 作為降級內容，避免直接遺失這筆證據。
             logger.warning(
                 "Record %s references unknown parent %s; the index is out of "
                 "step with table-parents.jsonl. Using the child alone.",

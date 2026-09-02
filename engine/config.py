@@ -1,8 +1,7 @@
-"""Configuration -- the single source of truth for every tunable value.
+"""集中管理所有可調整設定，是整個引擎唯一的設定來源。
 
-No other module may hard-code a model name, a path or a top-k. Every field
-can be overridden by a ``DAMA_*`` environment variable so that parameter
-sweeps and evaluation runs never require editing source.
+其他模組不應寫死模型名稱、路徑或 top-k；各欄位都可由 ``DAMA_*``
+環境變數覆寫，方便在不修改原始碼的情況下進行參數測試與評估。
 """
 
 from __future__ import annotations
@@ -14,15 +13,18 @@ from typing import Any
 
 from engine.errors import ConfigurationError
 
+# 專案根目錄由此檔位置推導，避免執行時工作目錄影響預設路徑。
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
 def _env(name: str) -> str | None:
+    """讀取 DAMA 前綴的環境變數，空字串視為未設定。"""
     value = os.getenv(f"DAMA_{name}")
     return value if value else None
 
 
 def _env_int(name: str, default: int) -> int:
+    """讀取整數環境變數，格式錯誤時回報可理解的設定錯誤。"""
     raw = _env(name)
     if raw is None:
         return default
@@ -35,6 +37,7 @@ def _env_int(name: str, default: int) -> int:
 
 
 def _env_float(name: str, default: float) -> float:
+    """讀取浮點數環境變數，未設定時使用預設值。"""
     raw = _env(name)
     if raw is None:
         return default
@@ -47,6 +50,7 @@ def _env_float(name: str, default: float) -> float:
 
 
 def _env_bool(name: str, default: bool) -> bool:
+    """將常見真值字串轉成布林設定。"""
     raw = _env(name)
     if raw is None:
         return default
@@ -55,27 +59,29 @@ def _env_bool(name: str, default: bool) -> bool:
 
 @dataclass(frozen=True, slots=True)
 class Paths:
-    """Where the chunk pipeline's outputs live. All paths absolute."""
+    """記錄 chunk 管線的輸出位置；建立後皆使用絕對路徑。"""
 
     root: Path = PROJECT_ROOT
     output_dir: Path = PROJECT_ROOT / "output"
 
     @property
     def combined_chunks(self) -> Path:
-        """Children: text records + table children. The retrieval unit."""
-        return self.output_dir / "combined-chunks.jsonl"
+        """回傳文字與表格子 chunk 的合併檔，也就是實際檢索單位。"""
+        return self.output_dir / "chunks" / "combined-chunks.jsonl"
 
     @property
     def table_parents(self) -> Path:
-        """Canonical whole tables. The context unit behind a table child."""
-        return self.output_dir / "table-parents.jsonl"
+        """回傳完整表格母紀錄檔，供命中的表格子 chunk 展開上下文。"""
+        return self.output_dir / "tables" / "table-parents.jsonl"
 
     @property
     def chroma_dir(self) -> Path:
+        """回傳本機 Chroma 向量資料庫目錄。"""
         return self.output_dir / "chroma_db"
 
     @classmethod
     def from_env(cls) -> "Paths":
+        """依環境變數建立路徑設定，保留相對輸出目錄的既有語意。"""
         root = Path(_env("ROOT") or PROJECT_ROOT).resolve()
         output = _env("OUTPUT_DIR")
         return cls(
@@ -86,14 +92,11 @@ class Paths:
 
 @dataclass(frozen=True, slots=True)
 class EmbeddingSettings:
-    """Bi-encoder used for both indexing and querying.
+    """索引與查詢共用的 bi-encoder 設定。
 
-    ``BAAI/bge-m3`` is the model the chunker already tokenised against
-    (``metadata.tokenizer_name``), so chunk sizes and the embedding window
-    agree by construction. It is multilingual with a 8192-token window and
-    needs no instruction prefix, which is why both prompts default to
-    ``None``; an instruction-aware model such as ``Qwen3-Embedding-0.6B`` is
-    a configuration change, not a code change.
+    ``BAAI/bge-m3`` 與 chunk 階段記錄的 tokenizer 相同，因此 chunk 大小與
+    embedding 視窗一致。它支援多語言且不需指令前綴，所以兩種 prompt
+    預設為 ``None``；若改用需指令的模型，只需調整設定而不用改流程。
     """
 
     model: str = "BAAI/bge-m3"
@@ -105,6 +108,7 @@ class EmbeddingSettings:
 
     @classmethod
     def from_env(cls) -> "EmbeddingSettings":
+        """從環境變數載入 embedding 模型與編碼參數。"""
         max_seq = _env_int("EMBEDDING_MAX_SEQ_LENGTH", 1024)
         return cls(
             model=_env("EMBEDDING_MODEL") or "BAAI/bge-m3",
@@ -118,12 +122,10 @@ class EmbeddingSettings:
 
 @dataclass(frozen=True, slots=True)
 class RerankSettings:
-    """Cross-encoder applied to the shortlist from vector search.
+    """套用於向量檢索候選清單的 cross-encoder 設定。
 
-    ``BAAI/bge-reranker-v2-m3`` shares the XLM-RoBERTa backbone with the
-    embedder, so both stages agree on what "relevant" means across languages.
-    Scores are raw logits: higher is better, but never threshold them without
-    recalibrating on this corpus.
+    分數是未校準的原始 logits，數值越高代表越相關；若要設定門檻，必須先以
+    此語料重新校準，不能直接沿用其他模型或資料集的數值。
     """
 
     model: str = "BAAI/bge-reranker-v2-m3"
@@ -132,6 +134,7 @@ class RerankSettings:
 
     @classmethod
     def from_env(cls) -> "RerankSettings":
+        """從環境變數載入 reranker 模型與批次參數。"""
         return cls(
             model=_env("RERANK_MODEL") or "BAAI/bge-reranker-v2-m3",
             batch_size=_env_int("RERANK_BATCH_SIZE", 8),
@@ -141,7 +144,7 @@ class RerankSettings:
 
 @dataclass(frozen=True, slots=True)
 class RetrievalSettings:
-    """How many candidates survive each stage of the funnel."""
+    """控制向量召回、重排序及最終來源數量的漏斗設定。"""
 
     retrieve_k: int = 20
     rerank_k: int = 8
@@ -149,6 +152,7 @@ class RetrievalSettings:
     collection_name: str = "dama_chunks"
 
     def __post_init__(self) -> None:
+        """驗證各階段候選數量彼此相容。"""
         if self.rerank_k > self.retrieve_k:
             raise ConfigurationError(
                 f"rerank_k ({self.rerank_k}) cannot exceed "
@@ -159,6 +163,7 @@ class RetrievalSettings:
 
     @classmethod
     def from_env(cls) -> "RetrievalSettings":
+        """從環境變數載入檢索漏斗與 collection 設定。"""
         return cls(
             retrieve_k=_env_int("RETRIEVE_K", 20),
             rerank_k=_env_int("RERANK_K", 8),
@@ -169,13 +174,14 @@ class RetrievalSettings:
 
 @dataclass(frozen=True, slots=True)
 class PromptSettings:
-    """Prompt assembly limits."""
+    """控制 Prompt 組裝長度與回答語言。"""
 
     max_context_chars: int = 60_000
     answer_language: str = "auto"
 
     @classmethod
     def from_env(cls) -> "PromptSettings":
+        """從環境變數載入 Prompt 設定。"""
         return cls(
             max_context_chars=_env_int("MAX_CONTEXT_CHARS", 60_000),
             answer_language=_env("ANSWER_LANGUAGE") or "auto",
@@ -184,11 +190,10 @@ class PromptSettings:
 
 @dataclass(frozen=True, slots=True)
 class GenerationSettings:
-    """Local generation through Ollama.
+    """透過 Ollama 執行本機生成的設定。
 
-    ``qwen3.6:35b-a3b`` is a 35B MoE with ~3B active parameters: 35B-class
-    quality at small-model speed, with strong Traditional Chinese. Thinking
-    is off by default -- the trace costs latency and is discarded anyway.
+    預設關閉 thinking，因為推理軌跡會增加延遲，且目前流程不會保留它。
+    ``num_ctx`` 則明確控制模型可讀取的 Prompt 上下文大小。
     """
 
     model: str = "qwen3.6:35b-a3b"
@@ -199,6 +204,7 @@ class GenerationSettings:
 
     @classmethod
     def from_env(cls) -> "GenerationSettings":
+        """從 DAMA 與 Ollama 環境變數載入生成設定。"""
         return cls(
             model=_env("OLLAMA_MODEL") or "qwen3.6:35b-a3b",
             host=_env("OLLAMA_HOST") or os.getenv("OLLAMA_HOST") or None,
@@ -210,7 +216,7 @@ class GenerationSettings:
 
 @dataclass(frozen=True, slots=True)
 class Settings:
-    """Everything the engine needs to know, in one object."""
+    """彙整引擎執行所需的全部設定。"""
 
     paths: Paths = field(default_factory=Paths)
     embedding: EmbeddingSettings = field(default_factory=EmbeddingSettings)
@@ -222,6 +228,7 @@ class Settings:
 
     @classmethod
     def from_env(cls) -> "Settings":
+        """從環境變數一次建立完整設定物件。"""
         return cls(
             paths=Paths.from_env(),
             embedding=EmbeddingSettings.from_env(),
@@ -233,10 +240,11 @@ class Settings:
         )
 
     def with_overrides(self, **kwargs: Any) -> "Settings":
+        """以不可變資料類別的方式建立指定欄位覆寫版本。"""
         return replace(self, **kwargs)
 
     def describe(self) -> dict[str, Any]:
-        """A flat, printable summary -- used by ``dama-rag info``."""
+        """產生可直接列印的扁平設定摘要，供 ``dama-rag info`` 使用。"""
 
         return {
             "output_dir": str(self.paths.output_dir),

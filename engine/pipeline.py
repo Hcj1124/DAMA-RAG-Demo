@@ -1,9 +1,7 @@
-"""The composition root.
+"""組裝整個 RAG 系統的 composition root。
 
-The only module that decides which concrete adapter implements which port.
-Everything above it depends on protocols; everything below it is replaceable;
-a test builds the whole funnel out of fakes by calling the constructor
-directly instead of the factory.
+只有此模組決定各介面採用哪個具體 adapter；上層依賴協定，下層實作可替換。
+測試也能直接以假物件建立整條管線，而不必呼叫預設工廠。
 """
 
 from __future__ import annotations
@@ -30,7 +28,7 @@ logger = logging.getLogger(__name__)
 
 @dataclass(frozen=True, slots=True)
 class Answer:
-    """The end-to-end result of one question."""
+    """單次問題通過端到端管線後的結果。"""
 
     question: str
     answer: str
@@ -40,6 +38,7 @@ class Answer:
     latency_s: float
 
     def to_dict(self) -> dict[str, Any]:
+        """將回答、引用與效能資訊轉成可序列化字典。"""
         return {
             "question": self.question,
             "answer": self.answer,
@@ -52,7 +51,7 @@ class Answer:
 
 @dataclass(slots=True)
 class RagPipeline:
-    """Question in, grounded answer out."""
+    """接收問題並輸出有來源依據回答的主要 RAG 管線。"""
 
     corpus: Corpus
     retriever: Retriever
@@ -63,12 +62,12 @@ class RagPipeline:
     llm: LanguageModel | None = None
 
     def search(self, question: str) -> list[Candidate]:
-        """Retrieval only -- no generation."""
+        """只執行檢索與重排序，不呼叫語言模型。"""
 
         return self.retriever.search(question)
 
     def context(self, question: str) -> list[ContextBlock]:
-        """Retrieval plus parent fetch -- what the model would have read."""
+        """執行檢索及母紀錄展開，回傳模型實際會讀取的內容。"""
 
         return self.resolver.resolve(
             self.search(question),
@@ -76,10 +75,11 @@ class RagPipeline:
         )
 
     def build_prompt(self, question: str) -> PromptBundle:
+        """將問題與解析後的來源組成最終 Prompt。"""
         return self.prompt_builder.build(question, self.context(question))
 
     def answer(self, question: str) -> Answer:
-        """The full pipeline, timed end to end."""
+        """執行完整問答管線，並記錄端到端耗時。"""
 
         question = question.strip()
         if not question:
@@ -104,14 +104,17 @@ class RagPipeline:
 
 
 def build_embedder(settings: Settings) -> Embedder:
+    """依集中設定建立預設 embedding adapter。"""
     return SentenceTransformerEmbedder(settings.embedding, device=settings.device)
 
 
 def build_reranker(settings: Settings) -> Reranker:
+    """依集中設定建立預設 reranker adapter。"""
     return CrossEncoderReranker(settings.rerank, device=settings.device)
 
 
 def build_store(settings: Settings) -> VectorStore:
+    """依集中設定建立 Chroma 向量資料庫 adapter。"""
     return ChromaVectorStore(
         settings.paths.chroma_dir, settings.retrieval.collection_name
     )
@@ -120,7 +123,7 @@ def build_store(settings: Settings) -> VectorStore:
 def build_pipeline(
     settings: Settings | None = None, *, with_llm: bool = True
 ) -> RagPipeline:
-    """Build the default pipeline. Model weights load on first use."""
+    """組裝預設管線；模型權重會延後到第一次使用時才載入。"""
 
     settings = settings or Settings.from_env()
     logger.debug("Building pipeline with %s", settings.describe())

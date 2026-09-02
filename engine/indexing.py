@@ -1,11 +1,7 @@
-"""Stage 9 -- embed the combined chunks and write them to Chroma.
+"""第 9 階段：將合併後的 chunks 做 embedding 並寫入 Chroma。
 
-Re-running this is cheap. Each vector carries the hash of the text it was
-built from, so a second run embeds only what actually changed and deletes
-records that have disappeared from ``combined-chunks.jsonl``. The expensive
-full pass happens on the first run, and whenever the embedding model changes
--- at which point the old vectors are meaningless and the collection is
-dropped rather than mixed.
+每個向量都帶有原文雜湊，因此重跑時只重新處理內容已變更的紀錄，並移除來源檔中
+已刪除的項目。首次建立或 embedding 設定改變時才執行完整重建，避免混用不相容向量。
 """
 
 from __future__ import annotations
@@ -26,7 +22,7 @@ METADATA_FINGERPRINT = "embedding_index_fingerprint"
 
 @dataclass(frozen=True, slots=True)
 class IndexReport:
-    """What one indexing run actually did."""
+    """記錄單次索引作業實際新增、略過、刪除與重建的結果。"""
 
     embedded: int
     unchanged: int
@@ -37,6 +33,7 @@ class IndexReport:
     rebuilt: bool
 
     def describe(self) -> str:
+        """產生適合 CLI 顯示的索引結果摘要。"""
         head = "rebuilt" if self.rebuilt else "updated"
         return (
             f"Index {head}: {self.total} records in the collection "
@@ -47,7 +44,7 @@ class IndexReport:
 
 
 class Indexer:
-    """Keeps the vector store in step with the corpus on disk."""
+    """讓向量資料庫與磁碟上的最新語料保持同步。"""
 
     def __init__(
         self,
@@ -61,14 +58,15 @@ class Indexer:
         self._batch_size = batch_size
 
     def build(self, corpus: Corpus, *, rebuild: bool = False) -> IndexReport:
+        """依內容雜湊增量更新索引，必要時清除並完整重建。"""
         model = self._embedder.name
         fingerprint = self._embedder.index_fingerprint
         metadata = self._store.metadata()
         indexed_with = metadata.get(METADATA_MODEL)
         indexed_fingerprint = metadata.get(METADATA_FINGERPRINT)
 
-        # Mixing vectors from two models produces plausible-looking nonsense
-        # rather than an error, so a model change forces a clean rebuild.
+        # 混用不同模型產生的向量不一定報錯，卻會得到看似合理的錯誤結果；因此
+        # embedding 模型或影響文件向量的設定一變，就強制乾淨重建。
         if indexed_with and (
             indexed_with != model or indexed_fingerprint != fingerprint
         ):
@@ -121,6 +119,7 @@ class Indexer:
         )
 
     def _embed_batch(self, records: Sequence[Record]) -> None:
+        """批次產生向量，並連同文件與 metadata 寫入向量資料庫。"""
         if not records:
             return
         vectors = self._embedder.embed_documents(

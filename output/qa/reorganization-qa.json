@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-02",
+  "baseline_tests": 27,
+  "final_tests": 31,
+  "execution": "offline; separate temporary output; existing tokenizer cache",
+  "stages": {
+    "inventory": {
+      "returncode": 0,
+      "seconds": 0.24,
+      "files_match": false,
+      "parents": 44,
+      "line_ending_only_differences": 4,
+      "content_matches": true,
+      "substantive_differences": []
+    },
+    "text_view": {
+      "returncode": 0,
+      "seconds": 16.54,
+      "document_matches": true
+    },
+    "table_chunks": {
+      "returncode": 0,
+      "seconds": 9.34,
+      "records_match": true,
+      "count": 51
+    },
+    "text_chunks": {
+      "returncode": 0,
+      "seconds": 15.86,
+      "records_match": true,
+      "count": 1199
+    },
+    "combine": {
+      "returncode": 0,
+      "seconds": 0.35,
+      "records_match": true,
+      "count": 1250
+    },
+    "pdf_help": {
+      "returncode": 0,
+      "seconds": 0.07
+    },
+    "engine_help": {
+      "returncode": 0,
+      "seconds": 0.13
+    },
+    "engine_info": {
+      "returncode": 0,
+      "seconds": 0.13
+    }
+  },
+  "migration": {
+    "unchanged_input_output_files": 109,
+    "changed_input_output_files": [
+      "output/qa/combined-chunks-qa.json",
+      "output/qa/text-only-qa.json",
+      "output/qa/docling-validation.md"
+    ],
+    "schema_matches_original_definition": true,
+    "historical_qa_hashes": {
+      "table-chunks-qa.json:input_sha256": "LF normalized",
+      "table-chunks-qa.json:schema_sha256": "exact",
+      "text-chunks-qa.json:input_sha256": "exact",
+      "text-chunks-qa.json:schema_sha256": "exact",
+      "combined-chunks-qa.json:text_input_sha256": "exact",
+      "combined-chunks-qa.json:table_input_sha256": "exact",
+      "combined-chunks-qa.json:table_parents_input_sha256": "exact",
+      "combined-chunks-qa.json:schema_sha256": "exact"
+    }
+  },
+  "not_run": [
+    "full PDF conversion",
+    "live embedding and reranking inference",
+    "Ollama generation",
+    "uv sync (uv unavailable)"
+  ],
+  "static_checks": {
+    "local_documentation_links": "passed",
+    "obsolete_path_references": "passed (historical mapping excluded)",
+    "python_syntax": "passed",
+    "git_diff_check": "passed",
+    "new_source_whitespace": "passed"
+  }
+}

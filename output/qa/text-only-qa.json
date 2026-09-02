@@ -1,6 +1,6 @@
 {
-  "input": "output\\sample.json",
-  "output": "output\\sample-text-only.json",
+  "input": "output/docling/document.json",
+  "output": "output/docling/text-only.json",
   "input_sha256": "ad8bac4917bc407af303730919c394cd65fefcc3d25f7f3003c91850d0245ad1",
   "start_page": 21,
   "index_start_page": 619,

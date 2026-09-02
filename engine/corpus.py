@@ -1,19 +1,10 @@
-"""Loading the chunk pipeline's output into retrieval types.
+"""將 chunk 管線輸出轉成檢索引擎使用的資料型別。
 
-This is the seam between stages 1-8 (Docling chunking, already done and
-committed under ``output/``) and stages 9-12 (embedding, retrieval,
-generation). Everything downstream sees :class:`Record` and
-:class:`TableParent`, never the on-disk JSON envelope.
+這裡銜接 Docling 切塊與 embedding／檢索／生成流程。下游只操作
+:class:`Record` 與 :class:`TableParent`，不直接依賴磁碟上的 JSON 結構。
 
-The corpus has two shapes, and the difference matters:
-
-* ``text`` records have ``parent_id: null``. HybridChunker already cut them
-  at section boundaries, so the record *is* both the retrieval unit and the
-  context unit -- there is no larger text parent to fetch.
-* ``table_child`` records are row slices of a canonical table. Retrieving one
-  row group and showing the model only that row group loses the header
-  semantics and the neighbouring rows, so a matched child is expanded to its
-  whole parent from ``table-parents.jsonl``.
+``text`` 本身同時是檢索與上下文單位；``table_child`` 則是表格列片段，命中後
+必須透過 ``parent_id`` 取回完整表格，才能保留表頭語意與相鄰資料列。
 """
 
 from __future__ import annotations
@@ -33,6 +24,7 @@ TABLE_PARENT = "table_parent"
 
 
 def _read_jsonl(path: Path) -> Iterator[dict[str, Any]]:
+    """逐行讀取 JSONL，並將缺檔或格式錯誤轉成語料錯誤。"""
     if not path.exists():
         raise CorpusError(
             f"Missing {path.name} at {path}.\n"
@@ -53,18 +45,23 @@ def _read_jsonl(path: Path) -> Iterator[dict[str, Any]]:
 
 
 def _pages(raw: Mapping[str, Any]) -> tuple[int, ...]:
+    """從共用 schema 擷取並排序 PDF 頁碼。"""
     return tuple(sorted(int(page) for page in raw["source"]["pages"]))
 
 
 def _text_title(record: Mapping[str, Any]) -> str:
-    """Section heading for a text record; the chunker guarantees exactly one."""
+    """組合文字紀錄的章名與局部節標題。"""
 
     headings = record["metadata"].get("headings") or []
-    return " > ".join(str(h) for h in headings) or "Untitled section"
+    section = " > ".join(str(h) for h in headings) or "Untitled section"
+    chapter = str(record["metadata"].get("chapter") or "").strip()
+    if chapter and chapter != section:
+        return f"{chapter} > {section}"
+    return section
 
 
 def _table_title(record: Mapping[str, Any]) -> str:
-    """Caption for a table; two of the 44 tables have none, so fall back."""
+    """取得表格標題；缺少 caption 時以 Docling 表格索引產生替代名稱。"""
 
     caption = record["metadata"].get("caption") or []
     if caption:
@@ -75,7 +72,7 @@ def _table_title(record: Mapping[str, Any]) -> str:
 
 @dataclass(frozen=True, slots=True)
 class Record:
-    """One embedding-ready child: a text chunk or a table row group."""
+    """一筆可直接 embedding 的文字 chunk 或表格列群組。"""
 
     record_id: str
     parent_id: str | None
@@ -96,16 +93,15 @@ class Record:
 
     @property
     def content_hash(self) -> str:
-        """Identifies the exact bytes that were embedded.
+        """識別實際送入 embedding 的文字內容。
 
-        Stored beside the vector so a rebuild can skip records whose text has
-        not changed, which turns a re-index from minutes into seconds.
+        此雜湊會與向量一同儲存，重建索引時可跳過內容未變的紀錄。
         """
 
         return hashlib.sha256(self.text.encode("utf-8")).hexdigest()[:16]
 
     def chroma_metadata(self) -> dict[str, Any]:
-        """Chroma accepts scalars only, so ``pages`` is flattened to a string."""
+        """建立 Chroma metadata；因其只接受純量，頁碼需展平成字串。"""
 
         return {
             "content_type": self.content_type,
@@ -121,6 +117,7 @@ class Record:
 
     @classmethod
     def from_raw(cls, raw: Mapping[str, Any]) -> "Record":
+        """將共用 JSON schema 紀錄轉成引擎內部的檢索紀錄。"""
         content_type = str(raw["content_type"])
         title = (
             _text_title(raw) if content_type == TEXT else _table_title(raw)
@@ -139,11 +136,10 @@ class Record:
 
 @dataclass(frozen=True, slots=True)
 class TableParent:
-    """A whole canonical table -- header, every row, caption.
+    """包含 caption、表頭與所有資料列的完整標準化表格。
 
-    ``text`` is the Markdown rendering rather than the tab-separated one:
-    the header row survives, and every model in this stack reads Markdown
-    tables far better than tab alignment.
+    ``text`` 優先使用 Markdown，因為它能保留表頭結構，模型也比讀取 tab 對齊
+    文字更容易理解欄位關係。
     """
 
     record_id: str
@@ -164,6 +160,7 @@ class TableParent:
 
     @classmethod
     def from_raw(cls, raw: Mapping[str, Any]) -> "TableParent":
+        """將共用 JSON schema 紀錄轉成完整表格母紀錄。"""
         content = raw["content"]
         return cls(
             record_id=str(raw["record_id"]),
@@ -178,16 +175,18 @@ class TableParent:
 
 @dataclass(frozen=True, slots=True)
 class Corpus:
-    """Children to search over, plus the table parents to expand into."""
+    """保存可檢索子紀錄，以及命中表格時可展開的母紀錄。"""
 
     records: tuple[Record, ...]
     parents: Mapping[str, TableParent]
 
     @property
     def record_index(self) -> Mapping[str, Record]:
+        """建立 record_id 到檢索紀錄的快速查找表。"""
         return {record.record_id: record for record in self.records}
 
     def counts(self) -> dict[str, int]:
+        """統計各內容類型及完整表格的數量。"""
         counts: dict[str, int] = {"total": len(self.records)}
         for record in self.records:
             counts[record.content_type] = counts.get(record.content_type, 0) + 1
@@ -196,6 +195,7 @@ class Corpus:
 
     @classmethod
     def load(cls, paths: Paths) -> "Corpus":
+        """從磁碟載入語料，並確認每個表格子紀錄都有有效母紀錄。"""
         records = tuple(
             Record.from_raw(raw) for raw in _read_jsonl(paths.combined_chunks)
         )
@@ -210,8 +210,7 @@ class Corpus:
             )
         }
 
-        # A table child whose parent is missing would silently lose its
-        # header and neighbouring rows at answer time. Fail at load instead.
+        # 缺少母紀錄的表格 child 會在回答時遺失表頭與相鄰列，因此載入階段即拒絕。
         orphans = sorted(
             record.record_id
             for record in records
@@ -223,7 +222,7 @@ class Corpus:
                 f"{len(orphans)} table child record(s) reference a parent that "
                 f"is not in {paths.table_parents.name}, starting with "
                 f"{orphans[0]}. combined-chunks.jsonl and table-parents.jsonl "
-                f"are out of sync; re-run combine_chunks.py."
+                f"are out of sync; re-run python -m ingest.combine_chunks."
             )
 
         return cls(records=records, parents=parents)
