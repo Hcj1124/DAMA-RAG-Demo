@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dama-rag-demo"
+version = "0.1.0"
+description = "Local bilingual RAG over the DAMA-DMBOK: Docling chunks, bge-m3 retrieval, bge-reranker-v2-m3 precision, Qwen generation via Ollama."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+
+# The retrieval engine only. Docling is deliberately NOT here: the chunk
+# outputs in output/ are committed, so answering questions never needs the
+# PDF parser. Install the `ingest` extra when the chunks must be rebuilt.
+dependencies = [
+    "chromadb>=1.0",
+    "numpy>=1.26",
+    "ollama>=0.4",
+    "sentence-transformers>=3.0",
+    "torch>=2.2",
+    "transformers>=4.40",
+]
+
+[project.optional-dependencies]
+ingest = ["docling==2.123.1", "jsonschema==4.26.0"]
+
+[project.scripts]
+dama-rag = "engine.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["engine*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Not -q: the conftest header says which tests were skipped for want of the
+# `ingest` extra, and -q hides it.
+# The chunk-pipeline tests import build_*.py and combine_chunks.py from the
+# repository root, which is not an installed package. Those modules also need
+# the `ingest` extra: run the full suite with `uv run --extra ingest pytest`.
+pythonpath = ["."]

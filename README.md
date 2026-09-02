@@ -2,7 +2,67 @@
 
 本專案以 Docling 解析 DAMA-DMBOK PDF，分別處理一般文字與表格，再將兩者轉成共同 record schema，供後續 embedding、Chroma hybrid retrieval 與 parent-child table retrieval 使用。
 
-目前已完成表格 pipeline、text-only 過濾、Hybrid text chunking、共同 schema 驗證，以及文字與表格 children 合併。Embedding、Chroma、reranking、generation 與 runtime parent retrieval 尚未實作。
+目前已完成表格 pipeline、text-only 過濾、Hybrid text chunking、共同 schema 驗證、文字與表格 children 合併，以及 `engine/` 底下的檢索與生成引擎：bge-m3 embedding、Chroma、bge-reranker-v2-m3 重排、runtime table parent fetch 與 Qwen 生成。
+
+## 這個 fork 做了什麼
+
+上游（[Hcj1124/DAMA-RAG-Demo](https://github.com/Hcj1124/DAMA-RAG-Demo)）完成到階段 8：
+Docling 解析、表格與文字各自 chunking、共同 schema 驗證、合併成 `combined-chunks.jsonl`。
+階段 9–12 是空的 —— 有 embedding-ready 的 chunk，但沒有東西讀它們。
+
+這個 fork 補上那條路徑，接上地端三件套：
+
+| 階段 | 新增檔案 | 內容 |
+|---:|---|---|
+| 9 | [`engine/indexing.py`](engine/indexing.py) | `BAAI/bge-m3` embedding → Chroma，1250 筆 / 1024 維 |
+| 10 | [`engine/retrieval.py`](engine/retrieval.py) | 向量召回 top-20 → `BAAI/bge-reranker-v2-m3` 重排 → top-8 |
+| 11 | [`engine/context.py`](engine/context.py) | runtime table parent fetch |
+| 12 | [`engine/pipeline.py`](engine/pipeline.py) | `qwen3.6:35b-a3b` via Ollama，帶 `[Source N]` 引用 |
+
+另外新增 `pyproject.toml` / `uv.lock`（uv 環境，docling 移到 `ingest` extra）、
+`engine/cli.py`（`doctor` / `index` / `search` / `context` / `ask` 五個指令）、
+以及 `tests/test_engine.py`（21 個測試，用假 adapter 跑完整條漏斗，不需下載模型）。
+
+從乾淨的 clone 到問出第一個問題：
+
+```bash
+uv sync
+ollama pull qwen3.6:35b-a3b
+uv run dama-rag index                            # 約 68 秒
+uv run dama-rag ask "資料治理的核心目標是什麼？"
+```
+
+### 實測
+
+跨語言檢索成立 —— 語料是純英文，中文問句仍能命中正確段落：
+
+```text
+$ uv run dama-rag search "資料治理的核心目標是什麼？" -k 1
+ 1. [+0.988] 1.2 Goals and Principles  (p. 75, text)
+     The goal of Data Governance is to enable an organization to manage data as an asset...
+```
+
+表格路徑成立 —— 問 GDPR 原則時，命中的是一組 row，送進 prompt 的是整張表，
+所以七條原則答得完整，且 `[Source 1]` 指回 p.58 的 `Table 1 GDPR Principles`。
+
+單題端到端約 26 秒（M5 Pro / 48GB / MPS）。
+
+### 兩個設計判斷
+
+**階段 11 只對表格做 parent fetch。** text records 的 `parent_id` 全是 `null`，
+HybridChunker 已經在章節邊界切好並保留標題，chunk 本身就看得懂，也沒有 text parent 檔案可取；
+硬造一個是另一種檢索設計，不是查表。所以 text 用自己，table child 展開成完整 parent，
+同一張表的多個 child 收斂成一個 source，不會用掉三個引用槽。
+
+**回答語言由程式判定，不交給模型。** 原本是 prompt 裡一句「用問句的語言回答」，
+實測 qwen3.6 會把英文問句用中文回答 —— 語料英文、模型中文強，那條規則在十一條裡輸掉。
+現在 `detect_language()` 在 Python 看問句字集（CJK → 繁中，否則英文），
+prompt 收到的是確定的規則而不是選擇題。
+
+### 尚未完成
+
+Retrieval evaluation 還沒做：沒有 golden set，所以「換成 bge-m3 到底買到多少分」目前是沒有數字的。
+上游的 chunking 階段（1–8）未做任何修改。
 
 ## 整體架構
 
@@ -27,9 +87,34 @@ DoclingDocument（output/sample.json）
 text-chunks.jsonl + table-chunks.jsonl
   └─ chunk-schema validation
        └─ combined-chunks.jsonl                      [已完成]
-            └─ BAAI/bge-m3 embedding model
-                 └─ Chroma dama_chunks collection   [尚未實作]
+            └─ BAAI/bge-m3 embedding
+                 └─ Chroma dama_chunks collection    [已完成]
 ```
+
+查詢時（`engine/`）：
+
+```text
+問句（中文或英文）
+  │
+  ▼
+BAAI/bge-m3 query embedding
+  └─ Chroma top-20 recall
+       └─ BAAI/bge-reranker-v2-m3 重排 → top-8
+            └─ context resolution（階段 11）
+                 ├─ text child      → 直接使用該 chunk
+                 └─ table child     → 取回 table-parents.jsonl 的完整表格
+                      └─ [Source N] 帶頁碼的 prompt
+                           └─ qwen3.6:35b-a3b via Ollama
+                                └─ 帶引用的答案
+```
+
+三個模型的選擇理由：
+
+| 階段 | 模型 | 為什麼 |
+|---|---|---|
+| Embedding | `BAAI/bge-m3` | 1024 維、8192 token 視窗、100+ 語言，不需要 instruction prefix。也是 chunker 已經用來算 token 的同一個 tokenizer，切塊大小與 embedding 視窗天生一致 |
+| Reranking | `BAAI/bge-reranker-v2-m3` | 與 embedding 同一個 XLM-RoBERTa 底座，兩階段對「什麼叫相關」跨語言的判斷一致 |
+| Generation | `qwen3.6:35b-a3b` via Ollama | MoE 只活化 3B 參數：35B 級品質、小模型速度，繁體中文輸出穩定 |
 
 文字與表格不使用相同的 chunking 演算法：
 
@@ -68,6 +153,18 @@ text-chunks.jsonl + table-chunks.jsonl
 ├─ build_text_only.py                # 排除 table/picture/navigation 內容
 ├─ build_text_chunks.py              # HybridChunker 與 text schema adapter
 ├─ combine_chunks.py                 # 合併與交叉驗證
+├─ engine/                           # 階段 9–12：檢索與生成
+│  ├─ config.py                      # 所有可調參數的唯一來源（DAMA_* 環境變數）
+│  ├─ corpus.py                      # 讀 combined-chunks.jsonl / table-parents.jsonl
+│  ├─ ports.py                       # Embedder / Reranker / VectorStore / LLM 協定
+│  ├─ adapters/                      # bge-m3、bge-reranker-v2-m3、Chroma、Ollama
+│  ├─ indexing.py                    # 階段 9：embedding 與寫入 Chroma
+│  ├─ retrieval.py                   # 階段 10：向量召回 + cross-encoder 重排
+│  ├─ context.py                     # 階段 11：runtime table parent fetch
+│  ├─ prompting.py                   # [Source N] 引用契約與 context 預算
+│  ├─ pipeline.py                    # composition root
+│  └─ cli.py                         # dama-rag doctor / index / search / context / ask
+├─ pyproject.toml                    # uv 環境；docling 在 `ingest` extra
 ├─ tests/                             # pipeline regression tests
 └─ test_docling.py                   # PDF → Docling JSON/Markdown
 ```
@@ -84,10 +181,11 @@ text-chunks.jsonl + table-chunks.jsonl
 | 6 | 表格 chunk QA | 完成 | `table-chunks-qa.json` |
 | 7 | 建立及驗證 text chunks | 完成 | `text-chunks.jsonl` |
 | 8 | 合併文字與表格 chunks | 完成 | `combined-chunks.jsonl` |
-| 9 | BGE-M3 embedding 與 Chroma 寫入 | 未開始 | `dama_chunks` |
-| 10 | BGE reranking 與 retrieval evaluation | 未開始 | Retrieval evaluation |
-| 11 | Runtime parent store 與 parent fetch | 未開始 | Parent retrieval |
-| 12 | Qwen generation via Ollama | 未開始 | RAG answer generation |
+| 9 | BGE-M3 embedding 與 Chroma 寫入 | 完成 | `output/chroma_db/`（`dama_chunks`，1250 筆、1024 維） |
+| 10 | BGE reranking | 完成 | `engine/retrieval.py` |
+| 11 | Runtime parent store 與 parent fetch | 完成 | `engine/context.py` |
+| 12 | Qwen generation via Ollama | 完成 | `engine/pipeline.py` |
+| – | Retrieval evaluation | 未開始 | 尚無 golden set |
 
 ### 表格審查結果
 
@@ -102,15 +200,55 @@ Docling 原始 table items：63
 
 ## 環境設定
 
-目前驗證環境：
+`output/` 底下的 chunk 檔案已經進版控，所以**問問題不需要 Docling，也不需要原始 PDF**。
+安裝因此分成兩層：預設只裝檢索引擎，重跑 chunking 才裝 `ingest` extra。
 
-```text
-Python 3.13.3
-docling 2.123.1
-docling-core 2.92.0
+### 檢索引擎（uv，預設）
+
+```bash
+uv sync
+uv run dama-rag doctor
 ```
 
-Windows PowerShell：
+`uv sync` 依 `pyproject.toml` 與 `uv.lock` 建立 `.venv`。`doctor` 會逐項檢查 chunk 檔案、
+torch device、Chroma 索引與 Ollama，任何一項不過都會直接告訴你補救指令。
+
+已驗證環境：
+
+```text
+Python 3.12.11          macOS 26.6 / Apple Silicon / MPS
+torch 2.13.0            sentence-transformers 6.0.1
+chromadb 1.5.9          ollama 0.6.2 (client) / 0.33.2 (server)
+```
+
+生成需要本機 Ollama 已經拉好模型：
+
+```bash
+ollama pull qwen3.6:35b-a3b
+```
+
+Embedding 與 reranker 會在第一次使用時從 Hugging Face 下載（合計約 6.4 GB）並快取在
+`~/.cache/huggingface`。之後要完全離線跑，設 `HF_HUB_OFFLINE=1` 即可。
+
+### 重跑 chunking（`ingest` extra）
+
+只有在要從 PDF 重新產生 `output/` 時才需要：
+
+```bash
+uv sync --extra ingest
+```
+
+原始 chunk pipeline 的驗證環境是 Python 3.13.3 / docling 2.123.1 / docling-core 2.92.0；
+`requirements.txt` 保留那組已驗證的版本，`docling-core` 由相容版本的 `docling` 帶入，
+不另外釘選以避免和 Docling 的相依約束衝突。
+
+來源 PDF 必須放在：
+
+```text
+input/dama-dmbok-2nd-edition.pdf
+```
+
+Windows PowerShell 的原始安裝方式：
 
 ```powershell
 cd D:\docling_testing
@@ -121,15 +259,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-`requirements.txt` 列出本專案程式直接使用、且已在目前環境驗證過的版本。`docling-core` 由相容版本的 `docling` 安裝；不另外釘選它，避免和 Docling 發布的相依約束衝突。
-
-來源 PDF 必須放在：
-
-```text
-input/dama-dmbok-2nd-edition.pdf
-```
-
-原始 PDF、`.venv`、`sample.json` 與 `sample.md` 已由 `.gitignore` 排除。
+原始 PDF、`.venv`、`sample.json`、`sample.md` 與 `output/chroma_db/` 已由 `.gitignore` 排除。
 
 ## 建立 DoclingDocument
 
@@ -540,7 +670,7 @@ Schema errors：0
 Index/navigation chunks：0
 ```
 
-`table-parents.jsonl` 不直接放入 `combined-chunks.jsonl`。目前每個 table child 已有 `parent_id`，離線 JSONL 已具備 parent-child 關係；但 parent store、Chroma 寫入及命中 child 後自動取得 parent 的 runtime 程式尚未實作。Text records 目前 `parent_id=null`，沒有 text parent-child。
+`table-parents.jsonl` 不直接放入 `combined-chunks.jsonl`：parent 不參與檢索，只在命中 child 之後被取回。這條 runtime 路徑實作在 `engine/context.py`（見下一節）。Text records `parent_id=null`，沒有 text parent-child。
 
 Embedding model 實際輸入：
 
@@ -558,3 +688,124 @@ document  = content.text
 metadata  = content_type, parent_id, document_id, page,
             table_index, token_count, schema_version
 ```
+
+
+## 檢索與生成引擎（階段 9–12）
+
+引擎住在 `engine/`，完全不碰 PDF：它只讀 `combined-chunks.jsonl` 與 `table-parents.jsonl`。
+根目錄的 `build_*.py` 負責產生那些檔案，兩邊透過 `chunk-schema.json` 這個契約溝通。
+
+### 四個指令
+
+```bash
+uv run dama-rag doctor                    # chunk 檔、device、索引、Ollama 是否就緒
+uv run dama-rag index                     # 階段 9：把 1250 筆 chunk 寫進 Chroma
+uv run dama-rag ask "資料治理的核心目標是什麼？"   # 階段 10–12：完整流程
+uv run dama-rag ask                       # 不帶問題則進入互動模式
+```
+
+診斷用，不花生成成本：
+
+```bash
+uv run dama-rag search "GDPR 的資料保護原則"     # 只看重排後的候選與分數
+uv run dama-rag context "GDPR 的資料保護原則"    # 看模型實際會讀到哪些 source
+uv run dama-rag context "..." --prompt          # 印出完整 prompt
+```
+
+### 建索引
+
+```text
+$ uv run dama-rag index
+Index updated: 1250 records in the collection
+(1250 embedded, 0 unchanged, 0 deleted) using BAAI/bge-m3 [1024-dim]
+```
+
+M5 Pro 上約 68 秒。每個向量會存下原文的 hash，所以重跑只會 embed 真正改過的 record、
+刪掉已經從 `combined-chunks.jsonl` 消失的 record。換 embedding model 時會偵測到並自動
+整個重建 —— 混用兩個模型的向量不會報錯，只會安靜地回傳看起來很合理的垃圾。
+
+### 階段 11：為什麼只有表格需要 parent fetch
+
+檢索單位與閱讀單位在這個語料裡不是同一件事，而且兩種 content type 的答案不同：
+
+- **text**：HybridChunker 已經在章節邊界切開並保留標題，chunk 本身就看得懂。
+  沒有 text parent 檔案可以取，硬造一個是另一種檢索設計，不是查表。
+- **table_child**：一組 row 沒有表頭幾乎無法閱讀，答案又常在隔壁列。
+  所以命中的 child 會被展開成 `table-parents.jsonl` 裡的完整表格，
+  而且同一張表的多個 child 會收斂成一個 source，不會用掉三個引用槽。
+
+實測（`uv run dama-rag context "GDPR 的資料保護原則有哪些？"`）：
+
+```text
+[Source 1] Table 1 GDPR Principles  (p. 58, table)
+[Source 2] 3.2 Principles Behind Data Privacy Law  (pp. 58-60, text)
+```
+
+Source 1 命中的是一組 row，送進 prompt 的是整張表，因此模型答得出全部七條原則。
+
+### 跨語言檢索
+
+語料是純英文，問句常是中文。這正是選 bge-m3 的理由：
+
+```text
+$ uv run dama-rag search "資料治理的核心目標是什麼？" -k 3
+ 1. [+0.988] 1.2 Goals and Principles  (p. 75, text)
+     The goal of Data Governance is to enable an organization to manage data as an asset...
+ 2. [+0.961] 1.2 Goals  (p. 22, text)
+ 3. [+0.926] 1.2 Goals and Principles  (p. 538, text)
+```
+
+### 設定
+
+所有可調參數集中在 `engine/config.py`，每一項都能用 `DAMA_*` 環境變數覆寫，
+不需要改程式。常用的幾個：
+
+| 變數 | 預設 | 說明 |
+|---|---|---|
+| `DAMA_EMBEDDING_MODEL` | `BAAI/bge-m3` | 換掉會強制重建索引 |
+| `DAMA_RERANK_MODEL` | `BAAI/bge-reranker-v2-m3` | |
+| `DAMA_OLLAMA_MODEL` | `qwen3.6:35b-a3b` | |
+| `DAMA_RETRIEVE_K` | `20` | 向量召回數量 |
+| `DAMA_RERANK_K` | `8` | 重排後保留數量 |
+| `DAMA_MAX_SOURCES` | `4` | 進 prompt 的 source 上限 |
+| `DAMA_NUM_CTX` | `32768` | Ollama context window |
+| `DAMA_ANSWER_LANGUAGE` | `auto` | `auto` 依問句字集自動判定；也可固定成 `en` 或 `zh-hant` |
+| `DAMA_DEVICE` | 自動 | `mps` / `cuda` / `cpu` |
+| `DAMA_THINK` | `0` | qwen3.6 預設開 thinking，RAG 不需要 |
+
+`uv run dama-rag info` 會印出實際生效的設定。
+
+### 程式介面
+
+```python
+from engine.pipeline import build_pipeline
+
+pipeline = build_pipeline()
+answer = pipeline.answer("What does a Data Steward do?")
+
+print(answer.answer)
+for citation in answer.citations:
+    print(citation.source_id, citation.title, citation.pages)
+```
+
+`engine/ports.py` 定義了 Embedder、Reranker、VectorStore、LanguageModel 四個協定，
+`engine/pipeline.py` 是唯一決定「哪個實作接哪個協定」的地方。換模型是改設定，
+不是改程式；測試則可以直接用假的 adapter 組出整條流程。
+
+### 測試
+
+```bash
+uv run pytest tests/test_engine.py      # 引擎：21 個測試，不需要下載模型
+uv run --extra ingest pytest            # 全部，含 chunk pipeline 的既有測試
+```
+
+引擎測試用假的 adapter 跑完整條漏斗，因此不到一秒就跑完；
+`RealCorpusTest` 則會真的去讀 `output/` 裡已進版控的 chunk 檔案，
+確保 chunk pipeline 的改動若破壞了載入契約，會在這裡失敗而不是在回答問題時才爆。
+
+### 回答語言由程式決定，不由模型決定
+
+`auto` 原本是 prompt 裡的一句「用問句的語言回答」，實測 qwen3.6 會把英文問句用中文回答 ——
+語料是英文、模型中文強，那一句規則在十一條裡輸掉了。
+現在 `engine/prompting.py` 的 `detect_language()` 在 Python 裡看問句字集（CJK → 繁中，否則英文），
+prompt 收到的是確定的規則而不是選擇題。英文問句只含拉丁字母，所以不會誤判成中文。
