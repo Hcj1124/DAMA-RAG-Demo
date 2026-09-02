@@ -1,5 +1,5 @@
 {
-  "chunks": 1191,
+  "chunks": 1199,
   "min_observed_tokens": 9,
   "max_observed_tokens": 480,
   "over_limit": 0,
@@ -8,11 +8,17 @@
   "missing_pages": 0,
   "missing_docling_refs": 0,
   "forbidden_table_picture_refs": 0,
+  "navigation_chunks": 0,
   "schema_errors": 0,
-  "tokenizer_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "tokenizer_name": "BAAI/bge-m3",
   "target_tokens": 480,
   "max_tokens": 512,
   "text_overlap": 0,
   "chunker": "docling_hybrid",
-  "merge_peers": true
+  "merge_peers": true,
+  "input_sha256": "ceda0748dca6099180dfa30d8a03323f2792527fa2e128672f73a4b382686255",
+  "schema_sha256": "1b551c2069d1d56696c433d62c6ab27093f2139868ec1d5a08a0cf3d9d94162e",
+  "docling_version": "2.123.1",
+  "docling_core_version": "2.92.0",
+  "transformers_version": "5.16.1"
 }

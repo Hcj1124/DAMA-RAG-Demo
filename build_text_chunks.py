@@ -10,6 +10,8 @@ Run:
 from __future__ import annotations
 
 import argparse
+import hashlib
+import importlib.metadata
 import json
 import re
 from pathlib import Path
@@ -23,6 +25,17 @@ from transformers.utils import logging as transformers_logging
 
 
 SCHEMA_VERSION = "1.0.0"
+DEFAULT_TOKENIZER_MODEL = "BAAI/bge-m3"
+
+
+def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+
+    with path.open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+
+    return digest.hexdigest()
 
 
 def write_jsonl(
@@ -302,6 +315,21 @@ def validate_records(
             f"{forbidden_refs[:5]}"
         )
 
+    navigation_chunks = [
+        record["record_id"]
+        for record in records
+        if any(
+            str(heading).strip().casefold() == "index"
+            for heading in record["metadata"].get("headings", [])
+        )
+    ]
+
+    if navigation_chunks:
+        raise AssertionError(
+            "Index/navigation chunks found in text output: "
+            f"{navigation_chunks[:5]}"
+        )
+
     schema_validator = Draft202012Validator(
         schema
     )
@@ -345,6 +373,7 @@ def validate_records(
         "forbidden_table_picture_refs": len(
             forbidden_refs
         ),
+        "navigation_chunks": len(navigation_chunks),
         "schema_errors": len(schema_errors),
     }
 
@@ -375,8 +404,7 @@ def main() -> None:
     parser.add_argument(
         "--tokenizer-model",
         default=(
-            "sentence-transformers/"
-            "all-MiniLM-L6-v2"
+            DEFAULT_TOKENIZER_MODEL
         ),
     )
 
@@ -502,10 +530,19 @@ def main() -> None:
             "text_overlap": 0,
             "chunker": "docling_hybrid",
             "merge_peers": True,
+            "input_sha256": file_sha256(input_path),
+            "schema_sha256": file_sha256(schema_path),
+            "docling_version": importlib.metadata.version("docling"),
+            "docling_core_version": importlib.metadata.version("docling-core"),
+            "transformers_version": importlib.metadata.version("transformers"),
         }
     )
 
     output_path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+    qa_output_path.parent.mkdir(
         parents=True,
         exist_ok=True,
     )

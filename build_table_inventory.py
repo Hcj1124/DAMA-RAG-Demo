@@ -23,6 +23,8 @@ USER_REVIEW_OVERRIDES = {
     25: ("er_diagram", "ER 圖中的實體，不是表格"),
     30: ("attribute_template", "只有屬性的示意表格，包含空值列"),
     44: ("flowchart", "流程圖，不是表格"),
+    59: ("acknowledgements", "Primary Contributors 名單，不是知識表格"),
+    60: ("acknowledgements", "Reviewers and Commenters 名單，不是知識表格"),
     61: ("index", "書末索引，不是資料表格"),
     62: ("index", "書末索引，不是資料表格"),
 }

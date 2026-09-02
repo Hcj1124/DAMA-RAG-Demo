@@ -1,11 +1,21 @@
 {
-  "records": 1243,
-  "text_records": 1191,
-  "table_child_records": 52,
+  "records": 1250,
+  "text_records": 1199,
+  "table_child_records": 51,
   "duplicate_ids": 0,
   "invalid_content_types": 0,
   "empty_embedding_text": 0,
+  "over_limit": 0,
+  "tokenizer_name": "BAAI/bge-m3",
+  "document_id": "dama-dmbok-2nd-edition",
+  "invalid_parent_links": 0,
   "schema_errors": 0,
   "text_input": "output\\text-chunks.jsonl",
-  "table_input": "output\\table-chunks.jsonl"
+  "table_input": "output\\table-chunks.jsonl",
+  "table_parents_input": "output\\table-parents.jsonl",
+  "text_input_sha256": "809dc38fb24c50c781462a60d81e29fc224aecd2a7f30300fdf306476d46a915",
+  "table_input_sha256": "f96ecb96962c188395d8dfb1dcbccefca40b28fe3f10ca44687406971f536410",
+  "table_parents_input_sha256": "1f2a86acddc68d6856519f0d3bd4a17ef9134670cdf55722d6ba0f5e7f9c0487",
+  "schema_sha256": "1b551c2069d1d56696c433d62c6ab27093f2139868ec1d5a08a0cf3d9d94162e",
+  "max_tokens": 512
 }

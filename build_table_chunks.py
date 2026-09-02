@@ -8,6 +8,8 @@ exactly one child. The resulting JSONL records conform to ``chunk-schema.json``.
 from __future__ import annotations
 
 import argparse
+import hashlib
+import importlib.metadata
 import json
 import re
 from dataclasses import dataclass
@@ -17,6 +19,19 @@ from typing import Any, Iterable
 from docling_core.transforms.chunker.tokenizer.huggingface import HuggingFaceTokenizer
 from jsonschema import Draft202012Validator
 from transformers.utils import logging as transformers_logging
+
+
+DEFAULT_TOKENIZER_MODEL = "BAAI/bge-m3"
+
+
+def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+
+    with path.open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+
+    return digest.hexdigest()
 
 
 @dataclass(frozen=True)
@@ -464,15 +479,19 @@ def main() -> None:
     parser.add_argument("--output", default="output/table-chunks.jsonl")
     parser.add_argument("--qa-output", default="output/table-chunks-qa.json")
     parser.add_argument("--schema", default="output/chunk-schema.json")
-    parser.add_argument("--tokenizer-model", default="sentence-transformers/all-MiniLM-L6-v2")
+    parser.add_argument("--tokenizer-model", default=DEFAULT_TOKENIZER_MODEL)
     parser.add_argument("--target-tokens", type=int, default=480)
     parser.add_argument("--max-tokens", type=int, default=512)
     args = parser.parse_args()
     if args.target_tokens <= 0 or args.max_tokens <= 0 or args.target_tokens > args.max_tokens:
         raise ValueError("Require 0 < target-tokens <= max-tokens")
 
-    parents = read_jsonl(Path(args.input))
-    schema = json.loads(Path(args.schema).read_text(encoding="utf-8"))
+    input_path = Path(args.input)
+    output_path = Path(args.output)
+    qa_output_path = Path(args.qa_output)
+    schema_path = Path(args.schema)
+    parents = read_jsonl(input_path)
+    schema = json.loads(schema_path.read_text(encoding="utf-8"))
     # Candidate groups may temporarily exceed the model limit while the packer
     # decides where to split; final children are checked strictly below.
     transformers_logging.set_verbosity_error()
@@ -503,10 +522,16 @@ def main() -> None:
             "target_tokens": args.target_tokens,
             "max_tokens": args.max_tokens,
             "row_overlap": 0,
+            "input_sha256": file_sha256(input_path),
+            "schema_sha256": file_sha256(schema_path),
+            "docling_core_version": importlib.metadata.version("docling-core"),
+            "transformers_version": importlib.metadata.version("transformers"),
         }
     )
-    write_jsonl(Path(args.output), children)
-    Path(args.qa_output).write_text(json.dumps(qa, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    qa_output_path.parent.mkdir(parents=True, exist_ok=True)
+    write_jsonl(output_path, children)
+    qa_output_path.write_text(json.dumps(qa, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(qa, ensure_ascii=False))
 
 

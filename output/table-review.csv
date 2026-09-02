@@ -58,7 +58,7 @@
 #/tables/56,56,604,include,true_table,accepted_after_user_review,
 #/tables/57,57,606,include,true_table,accepted_after_user_review,
 #/tables/58,58,612,include,true_table,accepted_after_user_review,
-#/tables/59,59,616,include,true_table,accepted_after_user_review,
-#/tables/60,60,616,include,true_table,accepted_after_user_review,
+#/tables/59,59,616,exclude,acknowledgements,user_review,Primary Contributors 名單，不是知識表格
+#/tables/60,60,616,exclude,acknowledgements,user_review,Reviewers and Commenters 名單，不是知識表格
 #/tables/61,61,619,exclude,index,user_review,書末索引，不是資料表格
 #/tables/62,62,619,exclude,index,user_review,書末索引，不是資料表格

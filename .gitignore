@@ -19,6 +19,7 @@ input/*
 # Large Docling intermediates (reproducible from the source document)
 output/sample.json
 output/sample.md
+output/sample-text-only.json
 
 # Vector databases and model caches
 chroma/
@@ -32,6 +33,3 @@ chroma_db/
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# tests and temporary files
-inspect_text_chunks.py

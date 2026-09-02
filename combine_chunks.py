@@ -12,12 +12,23 @@ Outputs:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable
 
 from jsonschema import Draft202012Validator
+
+
+def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+
+    with path.open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+
+    return digest.hexdigest()
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -51,6 +62,8 @@ def write_jsonl(
 def validate_combined(
     records: list[dict[str, Any]],
     schema: dict[str, Any],
+    table_parent_ids: set[str],
+    hard_max_tokens: int,
 ) -> dict[str, Any]:
 
     if not records:
@@ -107,6 +120,58 @@ def validate_combined(
             f"Empty embedding text detected: {empty_text[:5]}"
         )
 
+    over_limit = [
+        (
+            record["record_id"],
+            record["metadata"].get("token_count"),
+        )
+        for record in records
+        if record["metadata"].get("token_count", hard_max_tokens + 1)
+        > hard_max_tokens
+    ]
+
+    if over_limit:
+        raise AssertionError(
+            f"Combined chunks exceed token limit: {over_limit[:5]}"
+        )
+
+    tokenizer_names = {
+        record["metadata"].get("tokenizer_name")
+        for record in records
+    }
+
+    if len(tokenizer_names) != 1 or None in tokenizer_names:
+        raise AssertionError(
+            "Combined inputs use incompatible tokenizers: "
+            f"{sorted(str(value) for value in tokenizer_names)}"
+        )
+
+    document_ids = {
+        record["source"].get("document_id")
+        for record in records
+    }
+
+    if len(document_ids) != 1 or None in document_ids:
+        raise AssertionError(
+            "Combined inputs contain incompatible documents: "
+            f"{sorted(str(value) for value in document_ids)}"
+        )
+
+    invalid_parent_links = [
+        (record["record_id"], record.get("parent_id"))
+        for record in records
+        if (
+            record["content_type"] == "table_child"
+            and record.get("parent_id") not in table_parent_ids
+        )
+    ]
+
+    if invalid_parent_links:
+        raise AssertionError(
+            "Table children reference missing parents: "
+            f"{invalid_parent_links[:5]}"
+        )
+
     # ---------------------------------------------------------
     # Shared schema validation
     # ---------------------------------------------------------
@@ -143,6 +208,10 @@ def validate_combined(
         ),
         "invalid_content_types": len(invalid_types),
         "empty_embedding_text": len(empty_text),
+        "over_limit": len(over_limit),
+        "tokenizer_name": next(iter(tokenizer_names)),
+        "document_id": next(iter(document_ids)),
+        "invalid_parent_links": len(invalid_parent_links),
         "schema_errors": len(schema_errors),
     }
 
@@ -175,6 +244,17 @@ def main() -> None:
         default="output/chunk-schema.json",
     )
 
+    parser.add_argument(
+        "--table-parents",
+        default="output/table-parents.jsonl",
+    )
+
+    parser.add_argument(
+        "--max-tokens",
+        type=int,
+        default=512,
+    )
+
     args = parser.parse_args()
 
     text_path = Path(args.text_input)
@@ -182,11 +262,13 @@ def main() -> None:
     output_path = Path(args.output)
     qa_path = Path(args.qa_output)
     schema_path = Path(args.schema)
+    table_parents_path = Path(args.table_parents)
 
     for path in (
         text_path,
         table_path,
         schema_path,
+        table_parents_path,
     ):
         if not path.exists():
             raise FileNotFoundError(
@@ -195,6 +277,12 @@ def main() -> None:
 
     text_records = read_jsonl(text_path)
     table_records = read_jsonl(table_path)
+    table_parent_records = read_jsonl(table_parents_path)
+    table_parent_ids = {
+        record["record_id"]
+        for record in table_parent_records
+        if record.get("content_type") == "table_parent"
+    }
 
     # Keep source order within each pipeline.
     combined_records = (
@@ -211,16 +299,28 @@ def main() -> None:
     qa = validate_combined(
         records=combined_records,
         schema=schema,
+        table_parent_ids=table_parent_ids,
+        hard_max_tokens=args.max_tokens,
     )
 
     qa.update(
         {
             "text_input": str(text_path),
             "table_input": str(table_path),
+            "table_parents_input": str(table_parents_path),
+            "text_input_sha256": file_sha256(text_path),
+            "table_input_sha256": file_sha256(table_path),
+            "table_parents_input_sha256": file_sha256(table_parents_path),
+            "schema_sha256": file_sha256(schema_path),
+            "max_tokens": args.max_tokens,
         }
     )
 
     output_path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+    qa_path.parent.mkdir(
         parents=True,
         exist_ok=True,
     )

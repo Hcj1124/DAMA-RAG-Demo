@@ -2,7 +2,7 @@
 
 本專案以 Docling 解析 DAMA-DMBOK PDF，分別處理一般文字與表格，再將兩者轉成共同 record schema，供後續 embedding、Chroma hybrid retrieval 與 parent-child table retrieval 使用。
 
-目前已完成表格 pipeline 的盤點、人工審查、canonical parents、row-aware children 與自動 QA；文字 pipeline、合併、embedding 與 Chroma 寫入仍是後續工作。
+目前已完成表格 pipeline、text-only 過濾、Hybrid text chunking、共同 schema 驗證，以及文字與表格 children 合併。Embedding、Chroma、reranking、generation 與 runtime parent retrieval 尚未實作。
 
 ## 整體架構
 
@@ -16,7 +16,7 @@ DoclingDocument（output/sample.json）
   │    └─ text-only view
   │         └─ HybridChunker
   │              └─ schema adapter
-  │                   └─ text-chunks.jsonl          [尚未實作]
+  │                   └─ text-chunks.jsonl          [已完成]
   │
   └─ tables[]
        └─ inventory + review
@@ -26,8 +26,8 @@ DoclingDocument（output/sample.json）
 
 text-chunks.jsonl + table-chunks.jsonl
   └─ chunk-schema validation
-       └─ combined-chunks.jsonl                      [尚未實作]
-            └─ embedding model
+       └─ combined-chunks.jsonl                      [已完成]
+            └─ BAAI/bge-m3 embedding model
                  └─ Chroma dama_chunks collection   [尚未實作]
 ```
 
@@ -50,17 +50,25 @@ text-chunks.jsonl + table-chunks.jsonl
 │  ├─ sample.md                      # Docling Markdown，不提交 Git
 │  ├─ chunk-schema.json              # 文字與表格共同 record schema
 │  ├─ table-inventory.all.jsonl      # 原始 63 個 table items
-│  ├─ table-inventory.jsonl          # 46 張核准表格
+│  ├─ table-inventory.jsonl          # 44 張核准表格
 │  ├─ table-inventory-excluded-toc.jsonl
 │  ├─ table-inventory-excluded-review.jsonl
 │  ├─ table-review.csv               # 自動與人工審查結果
-│  ├─ table-parents.jsonl            # 46 個完整 canonical parents
+│  ├─ table-parents.jsonl            # 44 個完整 canonical parents
 │  ├─ canonical-tables/              # 每張 parent 的 JSON 與 Markdown
-│  ├─ table-chunks.jsonl             # 52 個 embedding children
-│  └─ table-chunks-qa.json           # 表格 chunk QA 摘要
+│  ├─ table-chunks.jsonl             # embedding-ready table children
+│  ├─ table-chunks-qa.json           # 表格 chunk QA 摘要
+│  ├─ text-chunks.jsonl              # embedding-ready text records
+│  ├─ text-chunks-qa.json            # 文字 chunk QA 摘要
+│  ├─ combined-chunks.jsonl          # text + table_child records
+│  └─ combined-chunks-qa.json        # 合併與交叉 QA
 ├─ table-caption-overrides.json      # 人工補充的跨頁表格 captions
 ├─ build_table_inventory.py          # 提取目標表格與前處理
 ├─ build_table_chunks.py             # 表格 chunking
+├─ build_text_only.py                # 排除 table/picture/navigation 內容
+├─ build_text_chunks.py              # HybridChunker 與 text schema adapter
+├─ combine_chunks.py                 # 合併與交叉驗證
+├─ tests/                             # pipeline regression tests
 └─ test_docling.py                   # PDF → Docling JSON/Markdown
 ```
 
@@ -74,21 +82,23 @@ text-chunks.jsonl + table-chunks.jsonl
 | 4 | 建立 canonical table parents | 完成 | `table-parents.jsonl` |
 | 5 | 建立 row-aware table children | 完成 | `table-chunks.jsonl` |
 | 6 | 表格 chunk QA | 完成 | `table-chunks-qa.json` |
-| 7 | 合併文字與表格 chunks | 未開始 | `combined-chunks.jsonl` |
-| 8 | Embedding 與 Chroma 寫入 | 未開始 | `dama_chunks` |
-| 9 | Retrieval 測試問題 | 未開始 | Retrieval evaluation |
-| 10 | 決定 parent-child retrieval 策略 | 未開始 | v0.2 design |
+| 7 | 建立及驗證 text chunks | 完成 | `text-chunks.jsonl` |
+| 8 | 合併文字與表格 chunks | 完成 | `combined-chunks.jsonl` |
+| 9 | BGE-M3 embedding 與 Chroma 寫入 | 未開始 | `dama_chunks` |
+| 10 | BGE reranking 與 retrieval evaluation | 未開始 | Retrieval evaluation |
+| 11 | Runtime parent store 與 parent fetch | 未開始 | Parent retrieval |
+| 12 | Qwen generation via Ollama | 未開始 | RAG answer generation |
 
 ### 表格審查結果
 
 ```text
 Docling 原始 table items：63
 排除的目錄：11
-人工排除的非表格 items：6
-核准 canonical tables：46
+人工排除／非檢索用 items：8
+核准 canonical tables：44
 ```
 
-人工排除項目包含 Figure、ER 圖、只有屬性的示意版面、流程圖與書末 index。人工補充的 caption 保存在 `table-caption-overrides.json`，重跑產生器時不會被原始 Docling JSON 覆寫。
+人工排除項目包含 Figure、ER 圖、只有屬性的示意版面、流程圖、書末 index，以及不具知識檢索價值的 contributors/reviewers 名單。人工補充的 caption 保存在 `table-caption-overrides.json`，重跑產生器時不會被原始 Docling JSON 覆寫。
 
 ## 環境設定
 
@@ -147,7 +157,7 @@ output/sample.md
 預期摘要：
 
 ```text
-all=63 included=46 excluded_toc=11 excluded_review=6 parents=46
+all=63 included=44 excluded_toc=11 excluded_review=8 parents=44
 ```
 
 此步驟會：
@@ -169,7 +179,7 @@ Canonical JSON 是權威版本，保留原始 cell、row/column span 與 bbox；
 預設參數：
 
 ```text
-tokenizer：sentence-transformers/all-MiniLM-L6-v2
+tokenizer：BAAI/bge-m3
 target tokens：480
 hard limit：512
 row overlap：0
@@ -183,7 +193,7 @@ row overlap：0
   --output output/table-chunks.jsonl `
   --qa-output output/table-chunks-qa.json `
   --schema output/chunk-schema.json `
-  --tokenizer-model "sentence-transformers/all-MiniLM-L6-v2" `
+  --tokenizer-model "BAAI/bge-m3" `
   --target-tokens 480 `
   --max-tokens 512
 ```
@@ -234,11 +244,11 @@ ISBN, Print ed.: 9781634622349
 ### 目前 table chunk QA
 
 ```text
-Parents：46
-Children：52
+Parents：44
+Children：51
 Fragmented rows：0
-Minimum observed tokens：35
-Maximum observed tokens：439
+Minimum observed tokens：34
+Maximum observed tokens：479
 Over 512：0
 Schema errors：0
 Attribute-value errors：0
@@ -342,6 +352,14 @@ QA 會確認：
 
 ## Tokenizer 與 embedding model
 
+目標模型組合：
+
+| 階段 | 模型 | 目前狀態 |
+|---|---|---|
+| Embedding | `BAAI/bge-m3` | tokenizer 已接入 chunk pipeline；embedding 尚未實作 |
+| Reranking | `BAAI/bge-reranker-v2-m3` | 尚未實作 |
+| Generation | `qwen3.6:35b-a3b` via Ollama | 尚未實作 |
+
 Tokenizer 是 embedding model 的前置處理：
 
 ```text
@@ -352,9 +370,9 @@ content.text
 → vector
 ```
 
-目前 table chunker 只載入 `all-MiniLM-L6-v2` 的 tokenizer 來計數，沒有載入 embedding model 權重，也沒有產生 embeddings。
+文字與表格 chunker 預設只載入 `BAAI/bge-m3` 的 tokenizer 來計數，沒有載入 embedding model 權重，也沒有產生 embeddings。BGE-M3 可接受較長輸入，但本專案仍採 target 480／hard limit 512，因為模型上限不等於適合檢索的 chunk 粒度。
 
-最終決定 embedding model 後，必須使用該模型對應的 tokenizer 重新產生文字與表格 children。不同 tokenizer 對同一段文字可能產生不同 token 數，不能用目前的 MiniLM token count 保證另一個模型仍低於 512。
+Embedding 模型已選定為 `BAAI/bge-m3`，因此文字與表格 children 必須都使用該 tokenizer 重新產生。不同 tokenizer 對同一段文字可能產生不同 token 數，不能沿用舊 MiniLM 的 token metadata。
 
 更換 HuggingFace embedding model 時：
 
@@ -367,7 +385,7 @@ content.text
 
 Canonical parents 不需要重建；只需以新 tokenizer 重新建立 children 與 embeddings。若新模型不是 HuggingFace tokenizer，需要實作相對應的 tokenizer adapter。
 
-## 後續文字處理方法
+## 文字處理方法
 
 ### 1. 建立 text-only DoclingDocument view
 
@@ -387,6 +405,14 @@ output/sample.json (加入 sample.json 至 /output)
 
 不要直接對完整文件 chunk 後，只靠 `content_type` 丟棄表格 chunks；HybridChunker 可能在結構合併時產生混合 doc items。較安全的方法是先建立 text-only view，再執行 HybridChunker。
 
+以本機 `output/sample.json` 建立 text-only view：
+
+```powershell
+.\.venv\Scripts\python.exe build_text_only.py
+```
+
+此步驟會移除 table、picture、caption、page header/footer、第 21 頁以前內容，以及偵測到 `Index` 章節後的內容，並將來源 `sample.json` SHA-256 寫入 QA。
+
 ### 2. 使用和 embedding model 相同的 tokenizer
 
 規劃值：
@@ -398,6 +424,13 @@ text overlap：先採 0
 ```
 
 HybridChunker 沒有一般 splitter 的 `chunk_overlap` 參數。它會先依 Docling 文件階層與 metadata 分組，再以 tokenizer 做超限切分，並可合併相同 heading metadata 下的短 chunks。
+
+```powershell
+.\.venv\Scripts\python.exe build_text_chunks.py `
+  --tokenizer-model "BAAI/bge-m3" `
+  --target-tokens 480 `
+  --max-tokens 512
+```
 
 ### 3. 使用 HybridChunker 保留文件結構
 
@@ -481,7 +514,7 @@ tokenizer count                  → metadata.token_count
 
 ## 合併與 embedding
 
-階段 7 僅合併可被 embedding 的 records：
+階段 8 僅合併可被 embedding 的 records：
 
 ```text
 text-chunks.jsonl
@@ -489,7 +522,25 @@ text-chunks.jsonl
 = combined-chunks.jsonl
 ```
 
-`table-parents.jsonl` 通常不直接送 embedding，而是放入 parent store，或以另一個 collection 保存。Table child 被檢索命中後，再由 `parent_id` 取得完整表格。
+```powershell
+.\.venv\Scripts\python.exe combine_chunks.py
+```
+
+合併 QA 會檢查 schema、全域 ID、token 上限、tokenizer/document 相容性，以及每個 table child 的 `parent_id` 是否存在於 `table-parents.jsonl`。
+
+目前以本機 `sample.json` 與 `BAAI/bge-m3` tokenizer 產生：
+
+```text
+Text records：1199
+Table children：51
+Combined records：1250
+Over 512：0
+Invalid parent links：0
+Schema errors：0
+Index/navigation chunks：0
+```
+
+`table-parents.jsonl` 不直接放入 `combined-chunks.jsonl`。目前每個 table child 已有 `parent_id`，離線 JSONL 已具備 parent-child 關係；但 parent store、Chroma 寫入及命中 child 後自動取得 parent 的 runtime 程式尚未實作。Text records 目前 `parent_id=null`，沒有 text parent-child。
 
 Embedding model 實際輸入：
 
