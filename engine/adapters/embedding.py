@@ -7,6 +7,8 @@ may never need.
 
 from __future__ import annotations
 
+import hashlib
+import json
 import logging
 from typing import Sequence
 
@@ -36,6 +38,17 @@ class SentenceTransformerEmbedder:
     @property
     def name(self) -> str:
         return self._settings.model
+
+    @property
+    def index_fingerprint(self) -> str:
+        payload = {
+            "model": self._settings.model,
+            "normalize": self._settings.normalize,
+            "max_seq_length": self._settings.max_seq_length,
+            "document_prompt": self._settings.document_prompt,
+        }
+        serialized = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+        return hashlib.sha256(serialized.encode("utf-8")).hexdigest()[:16]
 
     @property
     def device(self) -> str:

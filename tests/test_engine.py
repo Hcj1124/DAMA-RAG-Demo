@@ -63,6 +63,7 @@ class FakeEmbedder:
     """Embeds by counting characters -- deterministic and dependency-free."""
 
     name = "fake-embedder"
+    index_fingerprint = "fake-embedder-default"
     dimension = 2
 
     def embed_documents(self, texts, *, show_progress=False):
@@ -205,11 +206,25 @@ class IndexingTest(unittest.TestCase):
 
         class OtherEmbedder(FakeEmbedder):
             name = "other-embedder"
+            index_fingerprint = "other-embedder-default"
 
         report = Indexer(embedder=OtherEmbedder(), store=self.store).build(corpus)
         self.assertTrue(report.rebuilt)
         self.assertEqual(report.embedded, 1)
         self.assertEqual(self.store.metadata()[METADATA_MODEL], "other-embedder")
+
+    def test_changing_document_embedding_settings_forces_a_rebuild(self):
+        corpus = Corpus(records=(text_record(1),), parents={})
+        self.indexer.build(corpus)
+
+        class SameModelDifferentSettings(FakeEmbedder):
+            index_fingerprint = "fake-embedder-normalize-off"
+
+        report = Indexer(
+            embedder=SameModelDifferentSettings(), store=self.store
+        ).build(corpus)
+        self.assertTrue(report.rebuilt)
+        self.assertEqual(report.embedded, 1)
 
 
 class RetrievalGuardTest(unittest.TestCase):
@@ -365,6 +380,10 @@ class PromptingTest(unittest.TestCase):
         bundle = builder.build("q", [long_block])
         self.assertIn("section truncated", bundle.prompt)
         self.assertEqual(bundle.truncated, ("x",))
+        context = bundle.prompt.split("CONTEXT:\n\n", 1)[1].rsplit(
+            "\n\n\nANSWER:", 1
+        )[0]
+        self.assertLessEqual(len(context), 600)
 
 
 class LanguageSelectionTest(unittest.TestCase):

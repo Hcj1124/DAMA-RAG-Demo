@@ -14,7 +14,7 @@ from typing import Any, Sequence
 
 from engine.config import RetrievalSettings
 from engine.errors import IndexNotBuiltError, IndexStaleError
-from engine.indexing import METADATA_MODEL
+from engine.indexing import METADATA_FINGERPRINT, METADATA_MODEL
 from engine.ports import Embedder, Reranker, VectorStore
 
 logger = logging.getLogger(__name__)
@@ -88,10 +88,19 @@ class Retriever:
                 getattr(self._store, "path", "?"),
             )
         indexed_with = self._store.metadata().get(METADATA_MODEL)
-        if indexed_with and indexed_with != self._embedder.name:
+        indexed_fingerprint = self._store.metadata().get(METADATA_FINGERPRINT)
+        expected_fingerprint = self._embedder.index_fingerprint
+        if indexed_with and (
+            indexed_with != self._embedder.name
+            or indexed_fingerprint != expected_fingerprint
+        ):
             raise IndexStaleError(
-                indexed_with=str(indexed_with),
-                querying_with=self._embedder.name,
+                indexed_with=(
+                    f"{indexed_with}@{indexed_fingerprint or 'unknown'}"
+                ),
+                querying_with=(
+                    f"{self._embedder.name}@{expected_fingerprint}"
+                ),
             )
         self._checked = True
 

@@ -1,9 +1,9 @@
 """Command line interface.
 
-    uv run dama-rag doctor            # is everything in place?
-    uv run dama-rag index             # stage 9: embed chunks into Chroma
-    uv run dama-rag ask "question"    # stages 10-12: the full pipeline
-    uv run dama-rag search "query"    # retrieval only, no generation
+    dama-rag doctor            # is everything in place?
+    dama-rag index             # stage 9: embed chunks into Chroma
+    dama-rag ask "question"    # stages 10-12: the full pipeline
+    dama-rag search "query"    # retrieval only, no generation
 """
 
 from __future__ import annotations
@@ -88,11 +88,12 @@ def _cmd_doctor(args: argparse.Namespace) -> int:
             f"  ok    {store.count()} vectors in "
             f"'{settings.retrieval.collection_name}' "
             f"(model: {meta.get('embedding_model', '?')}, "
-            f"dim: {meta.get('embedding_dimension', '?')})"
+            f"dim: {meta.get('embedding_dimension', '?')}, "
+            f"fingerprint: {meta.get('embedding_index_fingerprint', '?')})"
         )
     else:
         problems += 1
-        print("  FAIL  no vectors yet -- run: uv run dama-rag index")
+        print("  FAIL  no vectors yet -- run: dama-rag index")
 
     print("ollama")
     try:
@@ -124,7 +125,7 @@ def _cmd_doctor(args: argparse.Namespace) -> int:
     if problems:
         print(f"{problems} problem(s) found.")
         return 1
-    print("Ready. Ask a question:  uv run dama-rag ask \"...\"")
+    print("Ready. Ask a question:  dama-rag ask \"...\"")
     return 0
 
 

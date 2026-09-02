@@ -25,6 +25,10 @@ class Embedder(Protocol):
         """Identifier recorded in the index so staleness can be detected."""
 
     @property
+    def index_fingerprint(self) -> str:
+        """Stable identity of settings that change stored document vectors."""
+
+    @property
     def dimension(self) -> int: ...
 
     def embed_documents(

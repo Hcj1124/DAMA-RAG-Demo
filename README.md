@@ -213,9 +213,63 @@ uv run dama-rag doctor
 `uv sync` 依 `pyproject.toml` 與 `uv.lock` 建立 `.venv`。`doctor` 會逐項檢查 chunk 檔案、
 torch device、Chroma 索引與 Ollama，任何一項不過都會直接告訴你補救指令。
 
+### 檢索引擎（Windows PowerShell，手動 `.venv`）
+
+不使用 uv 時，可直接建立並啟用專案內的 `.venv`：
+
+```powershell
+cd D:\docling_testing
+
+py -3.13 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -e .
+```
+
+若 PowerShell 阻擋 `Activate.ps1`，只調整目前這個終端工作階段：
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+```
+
+啟用後，命令列前方會出現 `(.venv)`，接著執行：
+
+```powershell
+dama-rag doctor
+dama-rag index
+dama-rag search "資料治理的核心目標是什麼？" -k 3
+dama-rag ask "資料治理的核心目標是什麼？"
+```
+
+不啟用環境也可以使用完整路徑：
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -e .
+.\.venv\Scripts\dama-rag.exe doctor
+.\.venv\Scripts\dama-rag.exe index
+```
+
+執行測試：
+
+```powershell
+python -m pip install pytest
+python -m pytest
+```
+
+離開虛擬環境：
+
+```powershell
+deactivate
+```
+
 已驗證環境：
 
 ```text
+Python 3.13.3          Windows / NVIDIA CUDA
+torch 2.12.1+cu132    sentence-transformers 6.0.1
+chromadb 1.5.9        ollama 0.6.2 (client)
+
 Python 3.12.11          macOS 26.6 / Apple Silicon / MPS
 torch 2.13.0            sentence-transformers 6.0.1
 chromadb 1.5.9          ollama 0.6.2 (client) / 0.33.2 (server)
@@ -238,6 +292,13 @@ Embedding 與 reranker 會在第一次使用時從 Hugging Face 下載（合計�
 uv sync --extra ingest
 ```
 
+手動 `.venv` 對應命令：
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m pip install -e ".[ingest]"
+```
+
 原始 chunk pipeline 的驗證環境是 Python 3.13.3 / docling 2.123.1 / docling-core 2.92.0；
 `requirements.txt` 保留那組已驗證的版本，`docling-core` 由相容版本的 `docling` 帶入，
 不另外釘選以避免和 Docling 的相依約束衝突。
@@ -248,7 +309,7 @@ uv sync --extra ingest
 input/dama-dmbok-2nd-edition.pdf
 ```
 
-Windows PowerShell 的原始安裝方式：
+若只想安裝原始 chunk pipeline 的固定版本：
 
 ```powershell
 cd D:\docling_testing
@@ -486,9 +547,9 @@ QA 會確認：
 
 | 階段 | 模型 | 目前狀態 |
 |---|---|---|
-| Embedding | `BAAI/bge-m3` | tokenizer 已接入 chunk pipeline；embedding 尚未實作 |
-| Reranking | `BAAI/bge-reranker-v2-m3` | 尚未實作 |
-| Generation | `qwen3.6:35b-a3b` via Ollama | 尚未實作 |
+| Embedding | `BAAI/bge-m3` | tokenizer、embedding adapter 與 Chroma indexing 已實作 |
+| Reranking | `BAAI/bge-reranker-v2-m3` | cross-encoder adapter 與 retrieval funnel 已實作 |
+| Generation | `qwen3.6:35b-a3b` via Ollama | Ollama adapter、prompt 與 CLI 已實作 |
 
 Tokenizer 是 embedding model 的前置處理：
 
@@ -795,7 +856,7 @@ for citation in answer.citations:
 ### 測試
 
 ```bash
-uv run pytest tests/test_engine.py      # 引擎：21 個測試，不需要下載模型
+uv run pytest tests/test_engine.py      # 引擎：26 個測試，不需要下載模型
 uv run --extra ingest pytest            # 全部，含 chunk pipeline 的既有測試
 ```
 

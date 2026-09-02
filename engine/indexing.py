@@ -21,6 +21,7 @@ logger = logging.getLogger(__name__)
 
 METADATA_MODEL = "embedding_model"
 METADATA_DIMENSION = "embedding_dimension"
+METADATA_FINGERPRINT = "embedding_index_fingerprint"
 
 
 @dataclass(frozen=True, slots=True)
@@ -61,16 +62,23 @@ class Indexer:
 
     def build(self, corpus: Corpus, *, rebuild: bool = False) -> IndexReport:
         model = self._embedder.name
-        indexed_with = self._store.metadata().get(METADATA_MODEL)
+        fingerprint = self._embedder.index_fingerprint
+        metadata = self._store.metadata()
+        indexed_with = metadata.get(METADATA_MODEL)
+        indexed_fingerprint = metadata.get(METADATA_FINGERPRINT)
 
         # Mixing vectors from two models produces plausible-looking nonsense
         # rather than an error, so a model change forces a clean rebuild.
-        if indexed_with and indexed_with != model:
+        if indexed_with and (
+            indexed_with != model or indexed_fingerprint != fingerprint
+        ):
             logger.warning(
-                "Index was built with %s but the configured model is %s; "
+                "Index embedding configuration changed (%s/%s -> %s/%s); "
                 "dropping the collection",
                 indexed_with,
+                indexed_fingerprint or "unknown",
                 model,
+                fingerprint,
             )
             rebuild = True
 
@@ -95,7 +103,11 @@ class Indexer:
 
         dimension = self._embedder.dimension
         self._store.set_metadata(
-            {METADATA_MODEL: model, METADATA_DIMENSION: dimension}
+            {
+                METADATA_MODEL: model,
+                METADATA_DIMENSION: dimension,
+                METADATA_FINGERPRINT: fingerprint,
+            }
         )
 
         return IndexReport(

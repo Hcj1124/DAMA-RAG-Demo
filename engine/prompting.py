@@ -171,28 +171,51 @@ class PromptBuilder:
         truncated: list[str] = []
         budget = self._settings.max_context_chars
 
-        for number, block in enumerate(blocks, start=1):
-            source_id = f"Source {number}"
-            section, was_truncated = self._fit(block.section, budget)
-            budget -= len(section)
-            if was_truncated:
-                truncated.append(block.matched_record_id)
+        for block in blocks:
+            if budget <= 0:
+                break
 
+            number = len(rendered) + 1
+            source_id = f"Source {number}"
             pages = (
                 str(block.start_page)
                 if block.start_page == block.end_page
                 else f"{block.start_page} - {block.end_page}"
             )
             template = _TABLE_BLOCK if block.expanded else _TEXT_BLOCK
-            rendered.append(
+            overhead = len(
                 template.format(
                     source_id=source_id,
                     title=block.title,
                     pages=pages,
                     passage=block.passage,
-                    section=section,
+                    section="",
                 )
             )
+            if overhead >= budget:
+                logger.warning(
+                    "Skipping %s because its context header/passage exceeds "
+                    "the remaining %d-character budget",
+                    block.matched_record_id,
+                    budget,
+                )
+                break
+
+            section, was_truncated = self._fit(
+                block.section, budget - overhead
+            )
+            if was_truncated:
+                truncated.append(block.matched_record_id)
+
+            rendered_block = template.format(
+                source_id=source_id,
+                title=block.title,
+                pages=pages,
+                passage=block.passage,
+                section=section,
+            )
+            rendered.append(rendered_block)
+            budget -= len(rendered_block)
             citations.append(
                 Citation(
                     source_id=source_id,
@@ -239,5 +262,7 @@ class PromptBuilder:
 
         if len(text) <= budget:
             return text, False
-        keep = max(budget - len(_TRUNCATION_NOTE), 500)
+        if budget <= len(_TRUNCATION_NOTE):
+            return _TRUNCATION_NOTE[: max(budget, 0)], True
+        keep = max(budget - len(_TRUNCATION_NOTE), 0)
         return text[:keep].rstrip() + _TRUNCATION_NOTE, True
