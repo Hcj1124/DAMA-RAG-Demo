@@ -12,12 +12,17 @@ import argparse
 import json
 import logging
 import sys
-from typing import Sequence
+from typing import Mapping, Sequence
 
 from engine.config import Settings
 from engine.corpus import Corpus
 from engine.errors import EngineError
-from engine.pipeline import build_pipeline
+from engine.indexing import (
+    METADATA_DIMENSION,
+    METADATA_FINGERPRINT,
+    METADATA_MODEL,
+)
+from engine.pipeline import build_embedder, build_pipeline, build_store
 
 logger = logging.getLogger(__name__)
 
@@ -52,16 +57,62 @@ def _cmd_info(args: argparse.Namespace) -> int:
     return 0
 
 
+def _index_problems(
+    *,
+    vector_count: int,
+    corpus_count: int | None,
+    metadata: Mapping[str, object],
+    expected_model: str,
+    expected_fingerprint: str,
+) -> list[str]:
+    """比對索引數量與 embedding metadata，回傳需要修復的項目。"""
+
+    if vector_count <= 0:
+        return ["no vectors yet -- run: dama-rag index"]
+
+    issues: list[str] = []
+    if corpus_count is not None and vector_count != corpus_count:
+        issues.append(
+            f"vector count {vector_count} does not match corpus count "
+            f"{corpus_count}"
+        )
+
+    indexed_model = metadata.get(METADATA_MODEL)
+    if not indexed_model:
+        issues.append(f"missing index metadata: {METADATA_MODEL}")
+    elif indexed_model != expected_model:
+        issues.append(
+            f"index model {indexed_model!r} does not match configured model "
+            f"{expected_model!r}"
+        )
+
+    indexed_fingerprint = metadata.get(METADATA_FINGERPRINT)
+    if not indexed_fingerprint:
+        issues.append(f"missing index metadata: {METADATA_FINGERPRINT}")
+    elif indexed_fingerprint != expected_fingerprint:
+        issues.append(
+            "index fingerprint does not match the current embedding settings"
+        )
+
+    dimension = metadata.get(METADATA_DIMENSION)
+    if not isinstance(dimension, int) or dimension <= 0:
+        issues.append(f"missing or invalid index metadata: {METADATA_DIMENSION}")
+
+    return issues
+
+
 def _cmd_doctor(args: argparse.Namespace) -> int:
     """逐項檢查問答所需條件，並指出失敗項目。"""
 
     settings = Settings.from_env()
     problems = 0
+    corpus_count: int | None = None
 
     print("chunk files")
     try:
         corpus = Corpus.load(settings.paths)
         counts = corpus.counts()
+        corpus_count = counts["total"]
         print(
             f"  ok    {counts['total']} children "
             f"({counts.get('text', 0)} text, "
@@ -82,21 +133,36 @@ def _cmd_doctor(args: argparse.Namespace) -> int:
         print(f"  FAIL  {error}")
 
     print("vector index")
-    from engine.pipeline import build_store
-
-    store = build_store(settings)
-    if store.exists() and store.count():
+    try:
+        store = build_store(settings)
+        vector_count = store.count()
         meta = store.metadata()
-        print(
-            f"  ok    {store.count()} vectors in "
-            f"'{settings.retrieval.collection_name}' "
-            f"(model: {meta.get('embedding_model', '?')}, "
-            f"dim: {meta.get('embedding_dimension', '?')}, "
-            f"fingerprint: {meta.get('embedding_index_fingerprint', '?')})"
+        expected_fingerprint = build_embedder(settings).index_fingerprint
+        index_problems = _index_problems(
+            vector_count=vector_count,
+            corpus_count=corpus_count,
+            metadata=meta,
+            expected_model=settings.embedding.model,
+            expected_fingerprint=expected_fingerprint,
         )
-    else:
+
+        if index_problems:
+            problems += 1
+            for issue in index_problems:
+                print(f"  FAIL  {issue}")
+            if vector_count:
+                print("        run: dama-rag index --rebuild")
+        else:
+            print(
+                f"  ok    {vector_count} vectors in "
+                f"'{settings.retrieval.collection_name}' "
+                f"(model: {meta[METADATA_MODEL]}, "
+                f"dim: {meta[METADATA_DIMENSION]}, "
+                f"fingerprint: {meta[METADATA_FINGERPRINT]})"
+            )
+    except Exception as error:
         problems += 1
-        print("  FAIL  no vectors yet -- run: dama-rag index")
+        print(f"  FAIL  cannot inspect vector index ({error})")
 
     print("ollama")
     try:

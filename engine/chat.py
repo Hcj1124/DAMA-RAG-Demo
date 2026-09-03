@@ -1,7 +1,7 @@
 """單一指令即可啟動的 DAMA-DMBOK 互動問答程式。
 
 請從專案根目錄執行：
-    ./.venv/Scripts/python.exe -m engine.chat
+    uv run python -m engine.chat
 
 第一次執行時會視需要下載檢索模型並建立本機 Chroma 索引，之後可直接進入問答。
 預設讓檢索留在 CPU，避免與 Ollama 中的 Qwen 爭用 GPU 記憶體。

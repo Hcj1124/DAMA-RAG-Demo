@@ -8,11 +8,17 @@ from __future__ import annotations
 
 import unittest
 
+from engine.cli import _index_problems
 from engine.config import Paths, PromptSettings, RetrievalSettings
 from engine.context import ContextResolver
 from engine.corpus import Corpus, Record, TableParent
 from engine.errors import IndexNotBuiltError, IndexStaleError
-from engine.indexing import METADATA_MODEL, Indexer
+from engine.indexing import (
+    METADATA_DIMENSION,
+    METADATA_FINGERPRINT,
+    METADATA_MODEL,
+    Indexer,
+)
 from engine.prompting import PromptBuilder
 from engine.retrieval import Retriever
 
@@ -233,6 +239,50 @@ class IndexingTest(unittest.TestCase):
         ).build(corpus)
         self.assertTrue(report.rebuilt)
         self.assertEqual(report.embedded, 1)
+
+
+class DoctorIndexTest(unittest.TestCase):
+    """doctor 必須拒絕不完整、過期或筆數不一致的索引。"""
+
+    metadata = {
+        METADATA_MODEL: FakeEmbedder.name,
+        METADATA_DIMENSION: FakeEmbedder.dimension,
+        METADATA_FINGERPRINT: FakeEmbedder.index_fingerprint,
+    }
+
+    def problems(self, *, count=2, corpus_count=2, metadata=None):
+        return _index_problems(
+            vector_count=count,
+            corpus_count=corpus_count,
+            metadata=self.metadata if metadata is None else metadata,
+            expected_model=FakeEmbedder.name,
+            expected_fingerprint=FakeEmbedder.index_fingerprint,
+        )
+
+    def test_current_index_passes(self):
+        self.assertEqual(self.problems(), [])
+
+    def test_empty_index_is_rejected(self):
+        self.assertIn("no vectors yet", self.problems(count=0)[0])
+
+    def test_count_mismatch_is_rejected(self):
+        self.assertIn("does not match corpus count", self.problems(count=1)[0])
+
+    def test_missing_metadata_is_rejected(self):
+        issues = self.problems(metadata={})
+        self.assertTrue(any(METADATA_MODEL in issue for issue in issues))
+        self.assertTrue(any(METADATA_FINGERPRINT in issue for issue in issues))
+        self.assertTrue(any(METADATA_DIMENSION in issue for issue in issues))
+
+    def test_stale_model_and_fingerprint_are_rejected(self):
+        metadata = dict(self.metadata)
+        metadata[METADATA_MODEL] = "old-model"
+        metadata[METADATA_FINGERPRINT] = "old-fingerprint"
+        issues = self.problems(metadata=metadata)
+        self.assertTrue(any("configured model" in issue for issue in issues))
+        self.assertTrue(
+            any("current embedding settings" in issue for issue in issues)
+        )
 
 
 class RetrievalGuardTest(unittest.TestCase):

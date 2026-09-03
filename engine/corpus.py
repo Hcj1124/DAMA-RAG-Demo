@@ -28,7 +28,7 @@ def _read_jsonl(path: Path) -> Iterator[dict[str, Any]]:
     if not path.exists():
         raise CorpusError(
             f"Missing {path.name} at {path}.\n"
-            f"Run the chunk pipeline first (see README stages 1-8), or point "
+            f"Run the uv ingestion pipeline described in docs/guide.md, or point "
             f"DAMA_OUTPUT_DIR at a directory that has it."
         )
     with path.open(encoding="utf-8") as handle:
@@ -222,7 +222,9 @@ class Corpus:
                 f"{len(orphans)} table child record(s) reference a parent that "
                 f"is not in {paths.table_parents.name}, starting with "
                 f"{orphans[0]}. combined-chunks.jsonl and table-parents.jsonl "
-                f"are out of sync; re-run python -m ingest.combine_chunks."
+                f"are out of sync; re-run `uv run python -m "
+                f"ingest.tables.build_chunks`, then `uv run python -m "
+                f"ingest.combine_chunks`."
             )
 
         return cls(records=records, parents=parents)
